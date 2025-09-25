@@ -36,6 +36,41 @@ All colors MUST be HSL.
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
+    /* Conversion-focused colors */
+    --cta-primary: 16 100% 66%;
+    --cta-primary-foreground: 0 0% 100%;
+    --cta-primary-hover: 16 100% 60%;
+    
+    --cta-secondary: 25 95% 53%;
+    --cta-secondary-foreground: 0 0% 100%;
+    --cta-secondary-hover: 25 95% 47%;
+    
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 71% 95%;
+    
+    --warning: 48 96% 53%;
+    --warning-foreground: 222.2 84% 4.9%;
+    --warning-light: 48 96% 95%;
+    
+    --value: 262 83% 58%;
+    --value-foreground: 0 0% 100%;
+    --value-light: 262 83% 95%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(16 100% 66%), hsl(25 95% 53%));
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 55%));
+    --gradient-value: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 83% 68%));
+    
+    /* Shadows */
+    --shadow-cta: 0 10px 25px -5px hsl(16 100% 66% / 0.3);
+    --shadow-card: 0 4px 25px -4px hsl(222.2 84% 4.9% / 0.1);
+    --shadow-hero: 0 20px 50px -10px hsl(16 100% 66% / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;

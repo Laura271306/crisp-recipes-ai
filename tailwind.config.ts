@@ -47,6 +47,29 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        cta: {
+          primary: "hsl(var(--cta-primary))",
+          "primary-foreground": "hsl(var(--cta-primary-foreground))",
+          "primary-hover": "hsl(var(--cta-primary-hover))",
+          secondary: "hsl(var(--cta-secondary))",
+          "secondary-foreground": "hsl(var(--cta-secondary-foreground))",
+          "secondary-hover": "hsl(var(--cta-secondary-hover))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+          light: "hsl(var(--success-light))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+          light: "hsl(var(--warning-light))",
+        },
+        value: {
+          DEFAULT: "hsl(var(--value))",
+          foreground: "hsl(var(--value-foreground))",
+          light: "hsl(var(--value-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
