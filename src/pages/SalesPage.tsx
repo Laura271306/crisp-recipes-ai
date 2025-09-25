@@ -33,7 +33,7 @@ const SalesPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-                ¿10 minutos para comer bien, <span className="text-cta-primary">sin adivinar?</span>
+                <span className="text-cta-primary">21 días para dominar tu AirFryer</span> – Kit Maestro de Recetas (Edición Premium)
               </h1>
               <p className="text-xl text-muted-foreground mb-6">
                 Domina tu AirFryer con recetas probadas, <strong>tiempos exactos</strong> y menús semanales listos: <strong>crujiente por fuera, jugoso por dentro</strong>.
