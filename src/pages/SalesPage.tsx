@@ -35,11 +35,8 @@ const SalesPage = () => {
               <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                 <span className="text-cta-primary">21 días para dominar tu AirFryer</span> – Kit Maestro de Recetas (Edición Premium)
               </h1>
-              <p className="text-xl text-muted-foreground mb-6">
-                Domina tu AirFryer con recetas probadas, <strong>tiempos exactos</strong> y menús semanales listos: <strong>crujiente por fuera, jugoso por dentro</strong>.
-              </p>
-              <p className="text-lg text-foreground mb-8">
-                <strong>AirFryer Perfecta – Kit Maestro de Recetas (Edición Premium)</strong> — Más de 400 recetas por objetivo + tablas y guías prácticas.
+              <p className="text-xl text-muted-foreground mb-8">
+                Domina tu AirFryer con más de 400 recetas exactas, menús listos y resultados infalibles: <strong>crujiente por fuera, jugoso por dentro</strong>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button variant="cta" size="xl" onClick={handleCTAClick} className="flex-1 sm:flex-none">
