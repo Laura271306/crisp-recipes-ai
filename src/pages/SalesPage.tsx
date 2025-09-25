@@ -8,6 +8,9 @@ import { CheckCircle, Clock, Users, Utensils, Award, Shield, DollarSign, Zap } f
 import heroKitMockup from "@/assets/hero-kit-mockup.jpg";
 import crispSystemInfographic from "@/assets/crisp-system-infographic.jpg";
 import recipeCardsPreview from "@/assets/recipe-cards-preview.jpg";
+import healthyIngredientsMinimal from "@/assets/healthy-ingredients-minimal.jpg";
+import airfryerPerfectResults from "@/assets/airfryer-perfect-results.jpg";
+import timeTemperatureIcons from "@/assets/time-temperature-icons.jpg";
 
 const SalesPage = () => {
   const handleCTAClick = () => {
@@ -75,22 +78,22 @@ const SalesPage = () => {
       {/* Dolor Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-              ¿Te suena familiar?
+              ¿Te suena familiar? 🤔
             </h2>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">"Paso más tiempo buscando recetas que cocinando."</p>
+                <p className="text-foreground font-medium">"Paso más tiempo buscando recetas que cocinando." ⏰</p>
               </div>
               <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">"Mi AirFryer deja la comida blanda o seca."</p>
+                <p className="text-foreground font-medium">"Alimentación llena de frituras y poco saludable." 🍟</p>
               </div>
               <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">"Gasto demasiado en delivery entre semana."</p>
+                <p className="text-foreground font-medium">"Gasto demasiado en delivery entre semana." 💸</p>
               </div>
               <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">"Termino repitiendo 5 recetas y me aburro."</p>
+                <p className="text-foreground font-medium">"Termino repitiendo 5 recetas y me aburro." 😴</p>
               </div>
             </div>
             <Button variant="cta-secondary" size="lg" onClick={handleCTAClick}>
@@ -106,7 +109,7 @@ const SalesPage = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                ¿Por qué <span className="text-cta-primary">AirFryer Perfecta</span> funciona cuando otras recetas fallan?
+                ¿Por qué <span className="text-cta-primary">AirFryer Perfecta</span> funciona cuando otras recetas fallan? ✨
               </h2>
               <p className="text-xl text-muted-foreground">
                 Aplicamos el <strong>Sistema C.R.I.S.P.</strong>
@@ -175,6 +178,11 @@ const SalesPage = () => {
             </div>
 
             <div className="text-center p-8 bg-success-light rounded-lg border border-success/20">
+              <img 
+                src={airfryerPerfectResults} 
+                alt="Resultados perfectos con AirFryer: comida crujiente y jugosa" 
+                className="w-full max-w-sm mx-auto rounded-lg shadow-md mb-4"
+              />
               <p className="text-lg font-semibold text-foreground">
                 <strong>Resultado:</strong> platos listos en <span className="text-success">10–15 minutos</span> con textura consistente, incluso si eres principiante.
               </p>
@@ -188,8 +196,8 @@ const SalesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Prueba en 24 horas
+               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Prueba en 24 horas ⚡
               </h2>
               <p className="text-xl text-muted-foreground">
                 Empieza hoy, sin curva de ensayo-error.
@@ -231,8 +239,8 @@ const SalesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Lo que vas a recibir
+               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Lo que vas a recibir 📦
               </h2>
             </div>
 
@@ -248,11 +256,12 @@ const SalesPage = () => {
                 title="Menús Semanales (4 semanas)"
                 description="Planificación completa con listas de compras incluidas para que no tengas que pensar qué cocinar"
               />
-              <ValueCard
-                icon={<Clock />}
-                title="Tablas de Tiempo/Temperatura"
-                description="Ajustes exactos por modelo y capacidad de AirFryer. Sin más adivinanzas."
-              />
+                <ValueCard
+                  icon={<Clock />}
+                  title="Tablas de Tiempo/Temperatura"
+                  description="Ajustes exactos por modelo y capacidad de AirFryer. Sin más adivinanzas."
+                  image={timeTemperatureIcons}
+                />
               <ValueCard
                 icon={<Zap />}
                 title="Guía de Limpieza Exprés"
@@ -264,6 +273,13 @@ const SalesPage = () => {
               <p className="text-lg text-muted-foreground mb-6">
                 ✓ Rapidez ✓ Variedad ✓ Bajo aceite ✓ Recetas "de diario" ✓ Listas de compras ✓ Texturas consistentes
               </p>
+              <div className="mt-8">
+                <img 
+                  src={healthyIngredientsMinimal} 
+                  alt="Ingredientes saludables organizados de forma minimalista" 
+                  className="w-full max-w-md mx-auto rounded-lg shadow-md"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -274,8 +290,8 @@ const SalesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Bonos por tiempo limitado
+               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Bonos por tiempo limitado 🎁
               </h2>
               <Badge variant="destructive" className="text-lg px-4 py-2">
                 Bonos 3 y 4 disponibles solo esta semana
@@ -328,8 +344,8 @@ const SalesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Por qué funciona
+               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Por qué funciona 🎯
               </h2>
             </div>
 
@@ -364,8 +380,8 @@ const SalesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Economía y valor
+               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Economía y Valor 💰
               </h2>
             </div>
 
@@ -424,9 +440,9 @@ const SalesPage = () => {
       <section className="py-20 bg-gradient-to-br from-cta-primary/10 to-cta-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Oferta Especial de Hoy
-            </h2>
+             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+               Oferta Especial de Hoy 🔥
+             </h2>
             <div className="p-8 bg-card rounded-2xl border border-border shadow-xl mb-8">
               <h3 className="text-2xl font-bold text-foreground mb-4">
                 AirFryer Perfecta – Kit Maestro de Recetas (Edición Premium)
@@ -451,9 +467,9 @@ const SalesPage = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="p-8 bg-success-light rounded-2xl border border-success/20">
               <Shield className="w-16 h-16 text-success mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                Garantía Doble 7×7 (sin riesgo)
-              </h2>
+               <h2 className="text-3xl font-bold text-foreground mb-6">
+                 Garantía Doble 7×7 (sin riesgo) 🛡️
+               </h2>
               <p className="text-xl text-foreground mb-4">
                 <strong>Pruébalo 7 días sin riesgo.</strong>
               </p>
@@ -470,9 +486,9 @@ const SalesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Preguntas Frecuentes
-              </h2>
+               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                 Preguntas Frecuentes ❓
+               </h2>
             </div>
 
             <div className="space-y-6">
