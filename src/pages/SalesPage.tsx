@@ -36,18 +36,18 @@ const SalesPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-                <span className="text-cta-primary">21 días para dominar tu AirFryer</span> – Kit Maestro de Recetas (Edición Premium)
+                ¿Cansado de perder tiempo en la cocina y comer siempre lo mismo, <span className="text-cta-primary">sin sabor?</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                Domina tu AirFryer con más de 400 recetas exactas, menús listos y resultados infalibles: <strong>crujiente por fuera, jugoso por dentro</strong>.
+              <p className="text-xl text-muted-foreground mb-4">
+                Descubre cómo transformar tu AirFryer en una máquina de crear platos rápidos, saludables y deliciosos en pocos minutos.
+              </p>
+              <p className="text-lg text-cta-primary font-semibold mb-8">
+                👉 Más de 100 recetas exclusivas, prácticas y sin gluten, para impresionar a tu familia y cuidar tu salud.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button variant="cta" size="xl" onClick={handleCTAClick} className="flex-1 sm:flex-none">
-                  Quiero cocinar mejor hoy (US$ 7,00)
-                </Button>
-                <Button variant="outline" size="xl" className="flex-1 sm:flex-none">
-                  Ver recetas de muestra
-                </Button>
+              <Button variant="cta" size="xl" onClick={handleCTAClick} className="flex-1 sm:flex-none">
+                ¡Quiero mis recetas ahora!
+              </Button>
               </div>
               <div className="flex flex-wrap gap-4">
                 <Badge variant="secondary" className="px-3 py-1">
@@ -80,98 +80,75 @@ const SalesPage = () => {
         <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-              ¿Te suena familiar? 🤔
+              ⚡ El problema que enfrentas hoy:
             </h2>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">"Paso más tiempo buscando recetas que cocinando." ⏰</p>
+                <p className="text-foreground font-medium">❌ Falta de tiempo para cocinar</p>
               </div>
               <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">"Alimentación llena de frituras y poco saludable." 🍟</p>
+                <p className="text-foreground font-medium">❌ Alimentación llena de frituras y poco saludable</p>
               </div>
               <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">"Gasto demasiado en delivery entre semana." 💸</p>
+                <p className="text-foreground font-medium">❌ Siempre las mismas recetas, aburridas y repetitivas</p>
               </div>
               <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">"Termino repitiendo 5 recetas y me aburro." 😴</p>
+                <p className="text-foreground font-medium">❌ Gastando demasiado en delivery por falta de opciones rápidas</p>
               </div>
             </div>
-            <Button variant="cta-secondary" size="lg" onClick={handleCTAClick}>
-              Quiero una solución simple y rápida →
-            </Button>
           </div>
         </div>
       </section>
 
-      {/* Sistema C.R.I.S.P. */}
+      {/* La solución */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                ¿Por qué <span className="text-cta-primary">AirFryer Perfecta</span> funciona cuando otras recetas fallan? ✨
+                ✅ La solución: <span className="text-cta-primary">AirFryer Perfecta</span>
               </h2>
-              <p className="text-xl text-muted-foreground">
-                Aplicamos el <strong>Sistema C.R.I.S.P.</strong>
+              <p className="text-xl text-muted-foreground mb-8">
+                AirFryer Perfecta es un programa completo con <strong>10 mini eBooks</strong>, cada uno con 10 recetas, ¡sumando <strong>100 recetas probadas y aprobadas</strong>!
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
               <div>
                 <img 
-                  src={crispSystemInfographic} 
-                  alt="Infográfico del Sistema C.R.I.S.P. con 5 pasos para cocinar perfecto" 
+                  src={recipeCardsPreview} 
+                  alt="Vista previa de las tarjetas de recetas organizadas" 
                   className="w-full rounded-lg shadow-lg"
                 />
               </div>
               <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Con él podrás:</h3>
+                
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-cta-primary text-cta-primary-foreground flex items-center justify-center font-bold text-xl">
-                    C
-                  </div>
+                  <CheckCircle className="w-6 h-6 text-success mt-1" />
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2"><strong>Clasificar:</strong></h3>
-                    <p className="text-muted-foreground">recetas por objetivo (rápidas, proteicas, fit, postres) para decidir sin pensar.</p>
+                    <p className="text-foreground font-medium">Cocinar en minutos sin perder sabor</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-cta-primary text-cta-primary-foreground flex items-center justify-center font-bold text-xl">
-                    R
-                  </div>
+                  <CheckCircle className="w-6 h-6 text-success mt-1" />
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2"><strong>Reloj:</strong></h3>
-                    <p className="text-muted-foreground"><strong>tiempos exactos</strong> por alimento (+ tablas para ajustar por modelo/capacidad).</p>
+                    <p className="text-foreground font-medium">Comer saludable, sin frituras y sin gluten</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-cta-primary text-cta-primary-foreground flex items-center justify-center font-bold text-xl">
-                    I
-                  </div>
+                  <CheckCircle className="w-6 h-6 text-success mt-1" />
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2"><strong>Ingrediente:</strong></h3>
-                    <p className="text-muted-foreground">sustitutos saludables y lista corta (sin ingredientes raros).</p>
+                    <p className="text-foreground font-medium">Sorprender a tu familia con platos variados y gourmet</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-cta-primary text-cta-primary-foreground flex items-center justify-center font-bold text-xl">
-                    S
-                  </div>
+                  <CheckCircle className="w-6 h-6 text-success mt-1" />
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2"><strong>Sazonar:</strong></h3>
-                    <p className="text-muted-foreground">combinaciones probadas para más sabor con menos aceite.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-cta-primary text-cta-primary-foreground flex items-center justify-center font-bold text-xl">
-                    P
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2"><strong>Precalentar:</strong></h3>
-                    <p className="text-muted-foreground">protocolo de 3–5 min para lograr la <strong>crocancia</strong> perfecta.</p>
+                    <p className="text-foreground font-medium">Ahorrar tiempo y dinero en el día a día</p>
                   </div>
                 </div>
               </div>
@@ -184,7 +161,7 @@ const SalesPage = () => {
                 className="w-full max-w-sm mx-auto rounded-lg shadow-md mb-4"
               />
               <p className="text-lg font-semibold text-foreground">
-                <strong>Resultado:</strong> platos listos en <span className="text-success">10–15 minutos</span> con textura consistente, incluso si eres principiante.
+                <strong>Resultado:</strong> platos listos en <span className="text-success">10–15 minutos</span> con textura perfecta, crujiente por fuera y jugoso por dentro.
               </p>
             </div>
           </div>
@@ -245,12 +222,12 @@ const SalesPage = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <ValueCard
-                icon={<Utensils />}
-                title="4 Colecciones Organizadas"
-                description="400+ recetas por objetivo: Rápidas & Saludables, Proteínas & Comidas Familiares, Veggie & AirFryer Fit, Postres & Snacks"
-                highlight={true}
-              />
+                <ValueCard
+                  icon={<Utensils />}
+                  title="10 mini eBooks organizados por temas"
+                  description="Recetas para desayuno, proteínas, postres, fitness, veganas y gourmet - 100 recetas en total"
+                  highlight={true}
+                />
               <ValueCard
                 icon={<Users />}
                 title="Menús Semanales (4 semanas)"
