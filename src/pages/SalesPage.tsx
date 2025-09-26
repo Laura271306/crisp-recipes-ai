@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { StickyButton } from "@/components/sales/StickyButton";
 import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
-import { CheckCircle, Clock, Users, Utensils, Award, Shield, DollarSign, Zap } from "lucide-react";
+import { CheckCircle, Clock, Users, Utensils, Award, Shield, DollarSign, Zap, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
 import heroKitMockup from "@/assets/hero-kit-mockup.jpg";
 import crispSystemInfographic from "@/assets/crisp-system-infographic.jpg";
 import recipeCardsPreview from "@/assets/recipe-cards-preview.jpg";
@@ -20,36 +21,51 @@ const SalesPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header Sticky */}
+      {/* Header Sticky Mobile */}
       <header className="sticky top-0 bg-background/95 backdrop-blur-sm border-b border-border z-40">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="font-bold text-lg text-cta-primary">AirFryer Perfecta</div>
-          <Button variant="cta" size="lg" onClick={handleCTAClick}>
-            Quiero cocinar mejor hoy (US$ 7,00)
+          <Button variant="cta" size="sm" onClick={handleCTAClick} className="hidden md:block">
+            Quiero crocancia hoy (US$ 7,00)
           </Button>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-background to-cta-primary/5">
+      {/* Hero Section V1 */}
+      <section className="py-8 md:py-16 bg-gradient-to-br from-background to-cta-primary/5">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-                ¿Cansado de perder tiempo en la cocina y comer siempre lo mismo, <span className="text-cta-primary">sin sabor?</span>
+              <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
+                Tu AirFryer no está fallando: <span className="text-cta-primary">te falta un sistema.</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-4">
-                Descubre cómo transformar tu AirFryer en una máquina de crear platos rápidos, saludables y deliciosos en pocos minutos.
+              <p className="text-lg md:text-xl text-muted-foreground mb-4">
+                Consigue <strong>crocancia real en 10–15 min</strong> con <strong>tiempos exactos</strong> y recetas por objetivo. El <strong>Sistema C.R.I.S.P.</strong> elimina el ensayo‑error desde el día 1.
               </p>
-              <p className="text-lg text-cta-primary font-semibold mb-8">
-                👉 Más de 100 recetas exclusivas, prácticas y sin gluten, para impresionar a tu familia y cuidar tu salud.
+              <p className="text-base md:text-lg text-cta-primary font-semibold mb-6">
+                <strong>AirFryer Perfecta – Kit Maestro de Recetas (Edición Premium)</strong> — 400+ recetas, menús de 4 semanas y tablas por alimento.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button variant="cta" size="xl" onClick={handleCTAClick} className="flex-1 sm:flex-none">
-                ¡Quiero mis recetas ahora!
-              </Button>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-success" />
+                  <span className="text-foreground">Verás tiempos/temperaturas claros en cada receta</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-success" />
+                  <span className="text-foreground">Menos decisiones: menús y listas de compras</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-success" />
+                  <span className="text-foreground">Precio en USD • Acceso inmediato • Garantía 7 días</span>
+                </div>
               </div>
-              <div className="flex flex-wrap gap-4">
+
+              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto mb-6">
+                Quiero crocancia hoy (US$ 7,00)
+              </Button>
+
+              <div className="flex flex-wrap gap-3">
                 <Badge variant="secondary" className="px-3 py-1">
                   <CheckCircle className="w-4 h-4 mr-2" />
                   Acceso inmediato
@@ -67,101 +83,99 @@ const SalesPage = () => {
             <div className="relative">
               <img 
                 src={heroKitMockup} 
-                alt="Kit de recetas AirFryer Perfecta con guías y tablas de tiempo" 
+                alt="Kit Maestro de Recetas AirFryer Perfecta con tablas de tiempo y temperatura exactas" 
                 className="w-full rounded-2xl shadow-[var(--shadow-hero)]"
               />
+              <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-3 shadow-lg">
+                <p className="text-sm font-medium text-foreground">📊 Tablas de tiempo exactas</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Dolor Section */}
-      <section className="py-16 bg-muted/30">
+      {/* Dor do Avatar */}
+      <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-              ⚡ El problema que enfrentas hoy:
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+              Si te reconoces en esto, este kit es para ti:
             </h2>
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">❌ Falta de tiempo para cocinar</p>
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-8">
+              <div className="p-4 md:p-6 bg-card rounded-lg border border-border text-left">
+                <p className="text-foreground font-medium">"Mi AirFryer deja la comida <strong>blanda o seca</strong>."</p>
               </div>
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">❌ Alimentación llena de frituras y poco saludable</p>
+              <div className="p-4 md:p-6 bg-card rounded-lg border border-border text-left">
+                <p className="text-foreground font-medium">"Paso más tiempo <strong>buscando</strong> que cocinando."</p>
               </div>
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">❌ Siempre las mismas recetas, aburridas y repetitivas</p>
+              <div className="p-4 md:p-6 bg-card rounded-lg border border-border text-left">
+                <p className="text-foreground font-medium">"Repito las mismas 5 recetas y me <strong>aburro</strong>."</p>
               </div>
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <p className="text-foreground font-medium">❌ Gastando demasiado en delivery por falta de opciones rápidas</p>
+              <div className="p-4 md:p-6 bg-card rounded-lg border border-border text-left">
+                <p className="text-foreground font-medium">"Termino pidiendo <strong>delivery</strong> entre semana."</p>
               </div>
             </div>
+            <Button variant="outline" onClick={handleCTAClick} className="mt-4">
+              Quiero una solución simple →
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* La solución */}
-      <section className="py-16">
+      {/* Solução + Mecanismo C.R.I.S.P. */}
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                ✅ La solución: <span className="text-cta-primary">AirFryer Perfecta</span>
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                ¿Por qué esto funciona cuando otras recetas fallan?
               </h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                AirFryer Perfecta es un programa completo con <strong>10 mini eBooks</strong>, cada uno con 10 recetas, ¡sumando <strong>100 recetas probadas y aprobadas</strong>!
+              <p className="text-lg md:text-xl text-muted-foreground mb-8">
+                Aplicamos el <strong className="text-cta-primary">Sistema C.R.I.S.P.</strong>:
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-              <div>
-                <img 
-                  src={recipeCardsPreview} 
-                  alt="Vista previa de las tarjetas de recetas organizadas" 
-                  className="w-full rounded-lg shadow-lg"
-                />
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-12">
+              <div className="text-center p-4 bg-card rounded-lg border border-border">
+                <div className="w-12 h-12 bg-cta-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <ChefHat className="w-6 h-6 text-cta-primary" />
+                </div>
+                <h3 className="font-bold text-foreground mb-2">Clasificar</h3>
+                <p className="text-sm text-muted-foreground">recetas por objetivo para decidir sin pensar</p>
               </div>
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Con él podrás:</h3>
-                
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-success mt-1" />
-                  <div>
-                    <p className="text-foreground font-medium">Cocinar en minutos sin perder sabor</p>
-                  </div>
+              <div className="text-center p-4 bg-card rounded-lg border border-border">
+                <div className="w-12 h-12 bg-cta-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Timer className="w-6 h-6 text-cta-primary" />
                 </div>
-                
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-success mt-1" />
-                  <div>
-                    <p className="text-foreground font-medium">Comer saludable, sin frituras y sin gluten</p>
-                  </div>
+                <h3 className="font-bold text-foreground mb-2">Reloj</h3>
+                <p className="text-sm text-muted-foreground"><strong>tiempos exactos</strong> por alimento + ajustes por capacidad</p>
+              </div>
+              <div className="text-center p-4 bg-card rounded-lg border border-border">
+                <div className="w-12 h-12 bg-cta-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <ShoppingCart className="w-6 h-6 text-cta-primary" />
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-success mt-1" />
-                  <div>
-                    <p className="text-foreground font-medium">Sorprender a tu familia con platos variados y gourmet</p>
-                  </div>
+                <h3 className="font-bold text-foreground mb-2">Ingrediente</h3>
+                <p className="text-sm text-muted-foreground">sustitutos simples del súper</p>
+              </div>
+              <div className="text-center p-4 bg-card rounded-lg border border-border">
+                <div className="w-12 h-12 bg-cta-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Star className="w-6 h-6 text-cta-primary" />
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-success mt-1" />
-                  <div>
-                    <p className="text-foreground font-medium">Ahorrar tiempo y dinero en el día a día</p>
-                  </div>
+                <h3 className="font-bold text-foreground mb-2">Sazonar</h3>
+                <p className="text-sm text-muted-foreground">combinaciones probadas con menos aceite</p>
+              </div>
+              <div className="text-center p-4 bg-card rounded-lg border border-border">
+                <div className="w-12 h-12 bg-cta-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <ThermometerSun className="w-6 h-6 text-cta-primary" />
                 </div>
+                <h3 className="font-bold text-foreground mb-2">Precalentar</h3>
+                <p className="text-sm text-muted-foreground">protocolo 3–5 min para crocancia consistente</p>
               </div>
             </div>
 
-            <div className="text-center p-8 bg-success-light rounded-lg border border-success/20">
-              <img 
-                src={airfryerPerfectResults} 
-                alt="Resultados perfectos con AirFryer: comida crujiente y jugosa" 
-                className="w-full max-w-sm mx-auto rounded-lg shadow-md mb-4"
-              />
-              <p className="text-lg font-semibold text-foreground">
-                <strong>Resultado:</strong> platos listos en <span className="text-success">10–15 minutos</span> con textura perfecta, crujiente por fuera y jugoso por dentro.
+            <div className="text-center p-6 md:p-8 bg-success-light rounded-lg border border-success/20">
+              <p className="text-lg md:text-xl font-semibold text-foreground">
+                <strong>Resultado:</strong> platos listos en <span className="text-cta-primary font-bold">10–15 min</span>, incluso si eres principiante.
               </p>
             </div>
           </div>
@@ -169,243 +183,272 @@ const SalesPage = () => {
       </section>
 
       {/* Prueba en 24h */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Prueba en 24 horas ⚡
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 md:mb-6">
+                Cocina 3 platos perfectos hoy mismo:
               </h2>
-              <p className="text-xl text-muted-foreground">
-                Empieza hoy, sin curva de ensayo-error.
+              <p className="text-lg md:text-xl text-muted-foreground">
+                Sin curva de ensayo‑error. Solo sigue los tiempos.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
               <RecipeCard
                 name="Pollo parmesano"
                 time="12 min"
                 temperature="190°C"
-                instructions="Voltear a mitad del tiempo para textura perfecta"
+                instructions="voltear a mitad"
               />
               <RecipeCard
                 name="Camarones al ajo"
                 time="8 min"
                 temperature="180°C"
-                instructions="Jugosos por dentro, dorados por fuera"
+                instructions="listo en una sola vez"
               />
               <RecipeCard
                 name="Chips de batata"
                 time="10-12 min"
                 temperature="200°C"
-                instructions="Agitar a mitad para crocancia uniforme"
+                instructions="agitar a mitad"
               />
             </div>
 
-            <div className="text-center mt-12">
-              <Button variant="cta" size="xl" onClick={handleCTAClick}>
-                Quiero todas las recetas ahora (US$ 7,00)
+            <div className="text-center mt-8 md:mt-12">
+              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
+                Quiero tiempos exactos (US$ 7,00)
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Lo que vas a recibir */}
-      <section className="py-16">
+      {/* Ver por dentro - Carrossel */}
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Lo que vas a recibir 📦
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                Mira lo que recibes por dentro
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <ValueCard
-                  icon={<Utensils />}
-                  title="10 mini eBooks organizados por temas"
-                  description="Recetas para desayuno, proteínas, postres, fitness, veganas y gourmet - 100 recetas en total"
-                  highlight={true}
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+              <div className="bg-card rounded-lg border border-border p-6">
+                <img 
+                  src={recipeCardsPreview} 
+                  alt="Colecciones organizadas por objetivos: Rápidas & Saludables, Proteínas & Familia" 
+                  className="w-full rounded-lg shadow-md mb-4"
                 />
-              <ValueCard
-                icon={<Users />}
-                title="Menús Semanales (4 semanas)"
-                description="Planificación completa con listas de compras incluidas para que no tengas que pensar qué cocinar"
-              />
-                <ValueCard
-                  icon={<Clock />}
-                  title="Tablas de Tiempo/Temperatura"
-                  description="Ajustes exactos por modelo y capacidad de AirFryer. Sin más adivinanzas."
-                  image={timeTemperatureIcons}
+                <h3 className="font-bold text-foreground mb-2">Colecciones por objetivo</h3>
+                <p className="text-sm text-muted-foreground">Rápidas & Saludables, Proteínas & Familia, Veggie & Fit, Postres & Snacks</p>
+              </div>
+              <div className="bg-card rounded-lg border border-border p-6">
+                <img 
+                  src={timeTemperatureIcons} 
+                  alt="Receta con tiempos destacados y temperaturas exactas" 
+                  className="w-full rounded-lg shadow-md mb-4"
                 />
-              <ValueCard
-                icon={<Zap />}
-                title="Guía de Limpieza Exprés"
-                description="Mantenimiento rápido para que tu AirFryer siempre funcione como el primer día"
-              />
+                <h3 className="font-bold text-foreground mb-2">Menús de 4 semanas</h3>
+                <p className="text-sm text-muted-foreground">+ listas de compras organizadas</p>
+              </div>
+              <div className="bg-card rounded-lg border border-border p-6">
+                <img 
+                  src={airfryerPerfectResults} 
+                  alt="Tablas de tiempo/temperatura imprimibles" 
+                  className="w-full rounded-lg shadow-md mb-4"
+                />
+                <h3 className="font-bold text-foreground mb-2">Tablas tiempo/temperatura</h3>
+                <p className="text-sm text-muted-foreground">Imprime o úsalo en el móvil</p>
+              </div>
+              <div className="bg-card rounded-lg border border-border p-6">
+                <img 
+                  src={healthyIngredientsMinimal} 
+                  alt="Checklist de errores comunes en AirFryer" 
+                  className="w-full rounded-lg shadow-md mb-4"
+                />
+                <h3 className="font-bold text-foreground mb-2">Guía exprés de limpieza</h3>
+                <p className="text-sm text-muted-foreground">y mantenimiento rápido</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lo que vas a recibir */}
+      <section className="py-12 md:py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                Lo que vas a recibir
+              </h2>
+            </div>
+
+            <div className="space-y-6 mb-8">
+              <div className="p-6 bg-card rounded-lg border border-border">
+                <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-3">
+                  <Utensils className="w-6 h-6 text-cta-primary" />
+                  Colecciones (4)
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
+                  <div>• Rápidas & Saludables — 100+ recetas organizadas por objetivo</div>
+                  <div>• Proteínas & Comidas Familiares</div>
+                  <div>• Veggie & AirFryer Fit</div>
+                  <div>• Postres & Snacks</div>
+                </div>
+              </div>
+
+              <div className="p-6 bg-card rounded-lg border border-border">
+                <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-3">
+                  <Clock className="w-6 h-6 text-cta-primary" />
+                  Además recibes:
+                </h3>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <div>• Menús de 4 semanas + listas de compras</div>
+                  <div>• Tablas tiempo/temperatura por alimento</div>
+                  <div>• Guía exprés de limpieza/mantenimiento</div>
+                </div>
+              </div>
             </div>
 
             <div className="text-center">
-              <p className="text-lg text-muted-foreground mb-6">
-                ✓ Rapidez ✓ Variedad ✓ Bajo aceite ✓ Recetas "de diario" ✓ Listas de compras ✓ Texturas consistentes
+              <p className="text-base text-muted-foreground mb-6">
+                ✓ rapidez ✓ variedad ✓ menos aceite ✓ resultados consistentes ✓ uso diario ✓ cero complicaciones
               </p>
-              <div className="mt-8">
-                <img 
-                  src={healthyIngredientsMinimal} 
-                  alt="Ingredientes saludables organizados de forma minimalista" 
-                  className="w-full max-w-md mx-auto rounded-lg shadow-md"
-                />
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bonos */}
-      <section className="py-16 bg-value-light">
+      {/* Bonos + Urgência Ética */}
+      <section className="py-12 md:py-16 bg-value-light">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Bonos por tiempo limitado 🎁
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                Bonos exclusivos por tiempo limitado
               </h2>
-              <Badge variant="destructive" className="text-lg px-4 py-2">
-                Bonos 3 y 4 disponibles solo esta semana
+              <Badge variant="destructive" className="text-sm md:text-lg px-3 md:px-4 py-1 md:py-2">
+                Bonos 3 y 4 incluidos solo esta semana
               </Badge>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <ValueCard
-                icon={<CheckCircle />}
-                title="Bono 1: 10 Errores que arruinan tus recetas"
-                description="Checklist visual para evitar los errores más comunes en la AirFryer"
-                value="US$ 9"
-              />
-              <ValueCard
-                icon={<Award />}
-                title="Bono 2: 15 Postres Fit sin azúcar refinada"
-                description="Dulces saludables que no sabotean tu alimentación"
-                value="US$ 12"
-              />
-              <ValueCard
-                icon={<Clock />}
-                title="Bono 3: Calendario sencillo de cocina (30 días)"
-                description="Organización diaria para que nunca te quedes sin ideas"
-                value="US$ 9"
-                highlight={true}
-              />
-              <ValueCard
-                icon={<DollarSign />}
-                title="Bono 4: Guía de compras inteligentes"
-                description="Cómo ahorrar comprando los ingredientes correctos"
-                value="US$ 9"
-                highlight={true}
-              />
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+              <div className="p-4 md:p-6 bg-card rounded-lg border border-border">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-5 h-5 text-success" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-2">1. 10 Errores que arruinan tus recetas</h3>
+                    <p className="text-sm text-muted-foreground mb-2">checklist visual</p>
+                    <Badge variant="secondary" className="text-xs">Valor: US$ 9</Badge>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-4 md:p-6 bg-card rounded-lg border border-border">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Award className="w-5 h-5 text-success" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-2">2. 15 Postres Fit sin azúcar refinada</h3>
+                    <p className="text-sm text-muted-foreground mb-2">dulces saludables</p>
+                    <Badge variant="secondary" className="text-xs">Valor: US$ 12</Badge>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-4 md:p-6 bg-card rounded-lg border border-cta-primary/30 bg-cta-primary/5">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-cta-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-cta-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-2">3. Calendario sencillo (30 días)</h3>
+                    <p className="text-sm text-muted-foreground mb-2">organización diaria</p>
+                    <div className="flex gap-2">
+                      <Badge variant="secondary" className="text-xs">Valor: US$ 9</Badge>
+                      <Badge className="text-xs bg-cta-primary text-white">Incluido hoy</Badge>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-4 md:p-6 bg-card rounded-lg border border-cta-primary/30 bg-cta-primary/5">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-cta-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <DollarSign className="w-5 h-5 text-cta-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-2">4. Guía de compras inteligentes</h3>
+                    <p className="text-sm text-muted-foreground mb-2">cómo ahorrar comprando correcto</p>
+                    <div className="flex gap-2">
+                      <Badge variant="secondary" className="text-xs">Valor: US$ 9</Badge>
+                      <Badge className="text-xs bg-cta-primary text-white">Incluido hoy</Badge>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="text-center p-8 bg-value text-value-foreground rounded-xl">
-              <p className="text-2xl font-bold mb-2">
-                Valor total de los bonos: US$ 39
-              </p>
-              <p className="text-xl">
-                Incluidos hoy: <span className="text-3xl font-bold">US$ 0</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Por qué funciona */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Por qué funciona 🎯
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <CheckCircle className="w-8 h-8 text-success mb-4" />
-                <h3 className="font-semibold text-foreground mb-2">Organización por objetivos</h3>
-                <p className="text-muted-foreground">→ eliges en segundos.</p>
-              </div>
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <CheckCircle className="w-8 h-8 text-success mb-4" />
-                <h3 className="font-semibold text-foreground mb-2">Menús + listas</h3>
-                <p className="text-muted-foreground">→ menos decisiones, más acción.</p>
-              </div>
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <CheckCircle className="w-8 h-8 text-success mb-4" />
-                <h3 className="font-semibold text-foreground mb-2">Tablas</h3>
-                <p className="text-muted-foreground">→ tiempo/temperatura sin adivinar.</p>
-              </div>
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <CheckCircle className="w-8 h-8 text-success mb-4" />
-                <h3 className="font-semibold text-foreground mb-2">Enfoque saludable</h3>
-                <p className="text-muted-foreground">→ menos aceite, más sabor.</p>
-              </div>
+            <div className="text-center">
+              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
+                Sí, quiero mis bonos hoy (US$ 7,00)
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Economía y valor */}
-      <section className="py-16 bg-muted/30">
+      {/* Economía y Valor */}
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Economía y Valor 💰
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                Con 2 pedidos de delivery menos por semana
               </h2>
+              <p className="text-lg md:text-xl text-muted-foreground mb-6">
+                ahorras <span className="font-bold text-success">US$ 80–120/mes</span>. El kit cuesta <span className="font-bold text-cta-primary">US$ 7,00</span> y se paga <strong>hoy</strong>.
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Con 2 pedidos de delivery menos por semana
-                </h3>
-                <p className="text-xl text-muted-foreground mb-6">
-                  ahorras <span className="font-bold text-success">US$ 80–120/mes</span>
-                </p>
-                <p className="text-lg text-foreground">
-                  El kit cuesta <span className="font-bold text-cta-primary">US$ 7,00</span> y se paga <strong>hoy</strong>.
-                </p>
-              </div>
-              <div className="p-8 bg-card rounded-xl border border-border shadow-lg">
-                <h4 className="font-bold text-center text-foreground mb-6">Valor Total del Stack</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span>Colecciones (4)</span>
-                    <span className="font-semibold">US$ 28</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Menús + listas</span>
-                    <span className="font-semibold">US$ 17</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Tablas</span>
-                    <span className="font-semibold">US$ 12</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Guía de limpieza</span>
-                    <span className="font-semibold">US$ 7</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Bonos (4)</span>
-                    <span className="font-semibold">US$ 39</span>
-                  </div>
-                  <hr className="border-border" />
-                  <div className="flex justify-between text-lg">
-                    <span className="font-bold">Valor total:</span>
-                    <span className="font-bold line-through text-muted-foreground">US$ 103</span>
-                  </div>
-                  <div className="flex justify-between text-2xl">
-                    <span className="font-bold text-cta-primary">Hoy:</span>
-                    <span className="font-bold text-cta-primary">US$ 7,00</span>
-                  </div>
+            <div className="p-6 md:p-8 bg-card rounded-xl border border-border shadow-lg">
+              <h3 className="font-bold text-center text-foreground mb-6">Stack de Valor</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span>Colecciones (4)</span>
+                  <span className="font-semibold">US$ 28</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Menús + listas</span>
+                  <span className="font-semibold">US$ 17</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Tablas</span>
+                  <span className="font-semibold">US$ 12</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Guía de limpieza</span>
+                  <span className="font-semibold">US$ 7</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Bonos (4)</span>
+                  <span className="font-semibold">US$ 39</span>
+                </div>
+                <hr className="border-border" />
+                <div className="flex justify-between text-lg">
+                  <span className="font-bold">Valor total:</span>
+                  <span className="font-bold line-through text-muted-foreground">US$ 103</span>
+                </div>
+                <div className="flex justify-between text-2xl">
+                  <span className="font-bold text-cta-primary">Hoy:</span>
+                  <span className="font-bold text-cta-primary">US$ 7,00</span>
                 </div>
               </div>
             </div>
@@ -413,123 +456,121 @@ const SalesPage = () => {
         </div>
       </section>
 
-      {/* Oferta Especial */}
-      <section className="py-20 bg-gradient-to-br from-cta-primary/10 to-cta-secondary/10">
+      {/* Oferta Especial de Hoy */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-cta-primary/10 to-cta-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-               Oferta Especial de Hoy 🔥
-             </h2>
-            <div className="p-8 bg-card rounded-2xl border border-border shadow-xl mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                AirFryer Perfecta – Kit Maestro de Recetas (Edición Premium)
-              </h3>
-              <div className="text-6xl font-bold text-cta-primary mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+              AirFryer Perfecta – Kit Maestro de Recetas (Edición Premium)
+            </h2>
+            
+            <div className="p-6 md:p-8 bg-card rounded-2xl border border-border shadow-xl mb-8">
+              <div className="text-4xl md:text-6xl font-bold text-cta-primary mb-4">
                 US$ 7,00
               </div>
-              <p className="text-lg text-muted-foreground mb-6">
-                Acceso inmediato y actualizaciones del kit
+              <p className="text-base md:text-lg text-muted-foreground mb-6">
+                Acceso inmediato y actualizaciones del kit.
               </p>
-              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
+              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto mb-4">
                 Quiero mis recetas ahora (US$ 7,00)
               </Button>
+              
+              <div className="flex flex-wrap justify-center gap-3 mt-4">
+                <Badge variant="secondary" className="px-3 py-1">
+                  <CheckCircle className="w-4 h-4 mr-2" />
+                  Acceso inmediato
+                </Badge>
+                <Badge variant="secondary" className="px-3 py-1">
+                  <DollarSign className="w-4 h-4 mr-2" />
+                  Precio en USD
+                </Badge>
+                <Badge variant="secondary" className="px-3 py-1">
+                  <Shield className="w-4 h-4 mr-2" />
+                  7 días de garantía
+                </Badge>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Garantía */}
-      <section className="py-16">
+      {/* Garantía Doble 7×7 */}
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="p-8 bg-success-light rounded-2xl border border-success/20">
-              <Shield className="w-16 h-16 text-success mx-auto mb-6" />
-               <h2 className="text-3xl font-bold text-foreground mb-6">
-                 Garantía Doble 7×7 (sin riesgo) 🛡️
-               </h2>
-              <p className="text-xl text-foreground mb-4">
-                <strong>Pruébalo 7 días sin riesgo.</strong>
-              </p>
-              <p className="text-lg text-muted-foreground">
-                Si no te ahorra tiempo en la cocina <strong>o</strong> no consigues buena textura, <strong>te devolvemos tu dinero</strong>. <strong>Sin preguntas.</strong>
+            <div className="p-6 md:p-8 bg-success-light rounded-2xl border border-success/20">
+              <Shield className="w-12 md:w-16 h-12 md:h-16 text-success mx-auto mb-6" />
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                Pruébalo 7 días sin riesgo.
+              </h2>
+              <p className="text-lg md:text-xl text-foreground mb-4">
+                Si no te ahorra tiempo <strong>o</strong> no mejoras textura, <strong>te devolvemos el dinero</strong>. <strong>Sin preguntas.</strong>
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-16 bg-muted/30">
+      {/* FAQ - Objecciones Reales */}
+      <section className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                 Preguntas Frecuentes ❓
-               </h2>
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                Preguntas Frecuentes
+              </h2>
             </div>
 
-            <div className="space-y-6">
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <h3 className="font-semibold text-foreground mb-2">¿Sirve para cualquier modelo (3,5 L / 5,5 L)?</h3>
-                <p className="text-muted-foreground">Sí. Indicamos ajustes por capacidad.</p>
-              </div>
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <h3 className="font-semibold text-foreground mb-2">¿Necesito ingredientes caros?</h3>
-                <p className="text-muted-foreground">No: básicos del súper con sustitutos.</p>
-              </div>
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <h3 className="font-semibold text-foreground mb-2">¿Hay opciones sin gluten/fit?</h3>
-                <p className="text-muted-foreground">Sí, están marcadas.</p>
-              </div>
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <h3 className="font-semibold text-foreground mb-2">¿Cuánto tardo en organizarme?</h3>
-                <p className="text-muted-foreground">15 min con nuestro calendario de 30 días.</p>
-              </div>
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <h3 className="font-semibold text-foreground mb-2">¿Cómo recibo el material?</h3>
-                <p className="text-muted-foreground">100% digital, acceso inmediato (PDF A4 y versión móvil).</p>
-              </div>
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <h3 className="font-semibold text-foreground mb-2">¿Hay reembolso?</h3>
-                <p className="text-muted-foreground">Sí, Garantía Doble 7×7.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem value="item-1" className="bg-card rounded-lg border border-border px-6">
+                <AccordionTrigger className="font-semibold text-foreground">¿Sirve para 3,5 L / 5,5 L?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">Sí. Indicamos ajustes por capacidad y potencia.</AccordionContent>
+              </AccordionItem>
+              
+              <AccordionItem value="item-2" className="bg-card rounded-lg border border-border px-6">
+                <AccordionTrigger className="font-semibold text-foreground">¿Ingredientes caros?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">No: básicos del súper + sustitutos.</AccordionContent>
+              </AccordionItem>
 
-      {/* Urgencia final */}
-      <section className="py-16 bg-destructive/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              ⏰ Últimas horas
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              <strong>Bonos 3 y 4 incluidos solo hasta el domingo</strong> o hasta agotar el lote de lanzamiento.
-            </p>
-            <Button variant="cta" size="xl" onClick={handleCTAClick}>
-              Sí, quiero cocinar mejor hoy (US$ 7,00)
-            </Button>
+              <AccordionItem value="item-3" className="bg-card rounded-lg border border-border px-6">
+                <AccordionTrigger className="font-semibold text-foreground">¿Opciones fit/sin gluten?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">Incluidas y <strong>marcadas</strong>.</AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="bg-card rounded-lg border border-border px-6">
+                <AccordionTrigger className="font-semibold text-foreground">¿Cuánto tardo en organizarme?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">15 min con el calendario de 30 días.</AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="bg-card rounded-lg border border-border px-6">
+                <AccordionTrigger className="font-semibold text-foreground">¿Formato y acceso?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">100% digital, PDF A4 y versión móvil. Acceso inmediato.</AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="bg-card rounded-lg border border-border px-6">
+                <AccordionTrigger className="font-semibold text-foreground">¿Reembolso?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">Garantía Doble 7×7 dentro de 7 días.</AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
 
       {/* CTA Final */}
-      <section className="py-20 bg-gradient-to-br from-cta-primary to-cta-secondary">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-cta-primary to-cta-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               AirFryer Perfecta – Kit Maestro de Recetas
             </h2>
-            <p className="text-xl mb-4">(Edición Premium)</p>
-            <div className="text-5xl font-bold mb-8">US$ 7,00</div>
-            <p className="text-xl mb-8">acceso inmediato</p>
+            <p className="text-lg md:text-xl mb-2">(Edición Premium)</p>
+            <div className="text-4xl md:text-5xl font-bold mb-6">US$ 7,00</div>
+            <p className="text-lg md:text-xl mb-8">acceso inmediato</p>
             <Button 
               variant="secondary" 
               size="xl" 
               onClick={handleCTAClick}
-              className="bg-white text-cta-primary hover:bg-white/90 font-bold"
+              className="bg-white text-cta-primary hover:bg-white/90 font-bold w-full md:w-auto"
             >
               Sí, quiero cocinar mejor hoy
             </Button>
