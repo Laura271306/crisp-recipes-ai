@@ -8,10 +8,10 @@ import { RecipeCard } from "@/components/sales/RecipeCard";
 import { CheckCircle, Clock, Users, Utensils, Award, Shield, DollarSign, Zap, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
 import heroKitMockup from "@/assets/hero-kit-mockup.jpg";
 import crispSystemInfographic from "@/assets/crisp-system-infographic.jpg";
-import recipeCardsPreview from "@/assets/recipe-cards-preview.jpg";
-import healthyIngredientsMinimal from "@/assets/healthy-ingredients-minimal.jpg";
-import airfryerPerfectResults from "@/assets/airfryer-perfect-results.jpg";
-import timeTemperatureIcons from "@/assets/time-temperature-icons.jpg";
+import recipeCollectionsIndex from "@/assets/recipe-collections-index.jpg";
+import recipeTimeTemperature from "@/assets/recipe-time-temperature.jpg";
+import weeklyMenuShopping from "@/assets/weekly-menu-shopping.jpg";
+import cleaningGuideVisual from "@/assets/cleaning-guide-visual.jpg";
 
 const SalesPage = () => {
   const handleCTAClick = () => {
@@ -26,7 +26,7 @@ const SalesPage = () => {
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="font-bold text-lg text-cta-primary">AirFryer Perfecta</div>
           <Button variant="cta" size="sm" onClick={handleCTAClick} className="hidden md:block">
-            Quiero crocancia hoy (US$ 7,00)
+            Quiero crocancia hoy (US$ 5,50)
           </Button>
         </div>
       </header>
@@ -57,22 +57,18 @@ const SalesPage = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-success" />
-                  <span className="text-foreground">Precio en USD • Acceso inmediato • Garantía 7 días</span>
+                  <span className="text-foreground">Acceso inmediato • Garantía 7 días</span>
                 </div>
               </div>
 
               <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto mb-6">
-                Quiero crocancia hoy (US$ 7,00)
+                Quiero crocancia hoy (US$ 5,50)
               </Button>
 
               <div className="flex flex-wrap gap-3">
                 <Badge variant="secondary" className="px-3 py-1">
                   <CheckCircle className="w-4 h-4 mr-2" />
                   Acceso inmediato
-                </Badge>
-                <Badge variant="secondary" className="px-3 py-1">
-                  <DollarSign className="w-4 h-4 mr-2" />
-                  Precio en USD
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1">
                   <Shield className="w-4 h-4 mr-2" />
@@ -218,7 +214,7 @@ const SalesPage = () => {
 
             <div className="text-center mt-8 md:mt-12">
               <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
-                Quiero tiempos exactos (US$ 7,00)
+                Quiero tiempos exactos (US$ 5,50)
               </Button>
             </div>
           </div>
@@ -238,7 +234,7 @@ const SalesPage = () => {
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
               <div className="bg-card rounded-lg border border-border p-6">
                 <img 
-                  src={recipeCardsPreview} 
+                  src={recipeCollectionsIndex} 
                   alt="Colecciones organizadas por objetivos: Rápidas & Saludables, Proteínas & Familia" 
                   className="w-full rounded-lg shadow-md mb-4"
                 />
@@ -247,8 +243,17 @@ const SalesPage = () => {
               </div>
               <div className="bg-card rounded-lg border border-border p-6">
                 <img 
-                  src={timeTemperatureIcons} 
+                  src={recipeTimeTemperature} 
                   alt="Receta con tiempos destacados y temperaturas exactas" 
+                  className="w-full rounded-lg shadow-md mb-4"
+                />
+                <h3 className="font-bold text-foreground mb-2">Recetas con tiempos exactos</h3>
+                <p className="text-sm text-muted-foreground">Temperaturas y tiempos destacados claramente</p>
+              </div>
+              <div className="bg-card rounded-lg border border-border p-6">
+                <img 
+                  src={weeklyMenuShopping} 
+                  alt="Menús semanales con listas de compras organizadas" 
                   className="w-full rounded-lg shadow-md mb-4"
                 />
                 <h3 className="font-bold text-foreground mb-2">Menús de 4 semanas</h3>
@@ -256,17 +261,8 @@ const SalesPage = () => {
               </div>
               <div className="bg-card rounded-lg border border-border p-6">
                 <img 
-                  src={airfryerPerfectResults} 
-                  alt="Tablas de tiempo/temperatura imprimibles" 
-                  className="w-full rounded-lg shadow-md mb-4"
-                />
-                <h3 className="font-bold text-foreground mb-2">Tablas tiempo/temperatura</h3>
-                <p className="text-sm text-muted-foreground">Imprime o úsalo en el móvil</p>
-              </div>
-              <div className="bg-card rounded-lg border border-border p-6">
-                <img 
-                  src={healthyIngredientsMinimal} 
-                  alt="Checklist de errores comunes en AirFryer" 
+                  src={cleaningGuideVisual} 
+                  alt="Guía visual de limpieza y mantenimiento de AirFryer" 
                   className="w-full rounded-lg shadow-md mb-4"
                 />
                 <h3 className="font-bold text-foreground mb-2">Guía exprés de limpieza</h3>
@@ -398,7 +394,7 @@ const SalesPage = () => {
 
             <div className="text-center">
               <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
-                Sí, quiero mis bonos hoy (US$ 7,00)
+                Sí, quiero mis bonos hoy (US$ 5,50)
               </Button>
             </div>
           </div>
@@ -414,7 +410,7 @@ const SalesPage = () => {
                 Con 2 pedidos de delivery menos por semana
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground mb-6">
-                ahorras <span className="font-bold text-success">US$ 80–120/mes</span>. El kit cuesta <span className="font-bold text-cta-primary">US$ 7,00</span> y se paga <strong>hoy</strong>.
+                ahorras <span className="font-bold text-success">US$ 80–120/mes</span>. El kit cuesta <span className="font-bold text-cta-primary">US$ 5,50</span> y se paga <strong>hoy</strong>.
               </p>
             </div>
 
@@ -448,7 +444,7 @@ const SalesPage = () => {
                 </div>
                 <div className="flex justify-between text-2xl">
                   <span className="font-bold text-cta-primary">Hoy:</span>
-                  <span className="font-bold text-cta-primary">US$ 7,00</span>
+                  <span className="font-bold text-cta-primary">US$ 5,50</span>
                 </div>
               </div>
             </div>
@@ -466,23 +462,19 @@ const SalesPage = () => {
             
             <div className="p-6 md:p-8 bg-card rounded-2xl border border-border shadow-xl mb-8">
               <div className="text-4xl md:text-6xl font-bold text-cta-primary mb-4">
-                US$ 7,00
+                US$ 5,50
               </div>
               <p className="text-base md:text-lg text-muted-foreground mb-6">
                 Acceso inmediato y actualizaciones del kit.
               </p>
               <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto mb-4">
-                Quiero mis recetas ahora (US$ 7,00)
+                Quiero mis recetas ahora (US$ 5,50)
               </Button>
               
               <div className="flex flex-wrap justify-center gap-3 mt-4">
                 <Badge variant="secondary" className="px-3 py-1">
                   <CheckCircle className="w-4 h-4 mr-2" />
                   Acceso inmediato
-                </Badge>
-                <Badge variant="secondary" className="px-3 py-1">
-                  <DollarSign className="w-4 h-4 mr-2" />
-                  Precio en USD
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1">
                   <Shield className="w-4 h-4 mr-2" />
@@ -564,7 +556,7 @@ const SalesPage = () => {
               AirFryer Perfecta – Kit Maestro de Recetas
             </h2>
             <p className="text-lg md:text-xl mb-2">(Edición Premium)</p>
-            <div className="text-4xl md:text-5xl font-bold mb-6">US$ 7,00</div>
+            <div className="text-4xl md:text-5xl font-bold mb-6">US$ 5,50</div>
             <p className="text-lg md:text-xl mb-8">acceso inmediato</p>
             <Button 
               variant="secondary" 
@@ -581,7 +573,7 @@ const SalesPage = () => {
       {/* Sticky Button Mobile */}
       <StickyButton 
         text="Quiero el kit ahora" 
-        price="US$ 7,00" 
+        price="US$ 5,50" 
         onClick={handleCTAClick}
       />
 
