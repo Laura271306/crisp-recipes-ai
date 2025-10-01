@@ -37,13 +37,10 @@ const SalesPage = () => {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
-                Tu AirFryer no está fallando: <span className="text-cta-primary">te falta un sistema.</span>
+                Método C.R.I.S.P.: <span className="text-cta-primary">crocancia en 10–15 min con tiempos exactos.</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-4">
-                Consigue <strong>crocancia real en 10–15 min</strong> con <strong>tiempos exactos</strong> y recetas por objetivo. El <strong>Sistema C.R.I.S.P.</strong> elimina el ensayo‑error desde el día 1.
-              </p>
-              <p className="text-base md:text-lg text-cta-primary font-semibold mb-6">
-                <strong>AirFryer Perfecta – Kit Maestro de Recetas (Edición Premium)</strong> — 400+ recetas, menús de 4 semanas y tablas por alimento.
+              <p className="text-lg md:text-xl text-muted-foreground mb-6">
+                <strong>600+ recetas AirFryer</strong> por objetivo, menús listos y bonos. <strong>Cero ensayo-error</strong> desde el día 1. <strong>Garantía 7 días.</strong>
               </p>
               
               <div className="space-y-3 mb-6">
