@@ -12,6 +12,13 @@ import recipeCollectionsIndex from "@/assets/recipe-collections-index.jpg";
 import recipeTimeTemperature from "@/assets/recipe-time-temperature.jpg";
 import weeklyMenuShopping from "@/assets/weekly-menu-shopping.jpg";
 import cleaningGuideVisual from "@/assets/cleaning-guide-visual.jpg";
+import airfryerChickenWings from "@/assets/airfryer-chicken-wings.jpg";
+import airfryerFrenchFries from "@/assets/airfryer-french-fries.jpg";
+import airfryerSalmon from "@/assets/airfryer-salmon.jpg";
+import airfryerVegetables from "@/assets/airfryer-vegetables.jpg";
+import airfryerMozzarellaSticks from "@/assets/airfryer-mozzarella-sticks.jpg";
+import airfryerEmpanadas from "@/assets/airfryer-empanadas.jpg";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const SalesPage = () => {
   const handleCTAClick = () => {
@@ -73,6 +80,133 @@ const SalesPage = () => {
               <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-3 shadow-lg">
                 <p className="text-sm font-medium text-foreground">📊 Tablas de tiempo exactas</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Carrossel de Resultados */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-cta-primary/5 to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Esto es lo que puedes lograr con tu AirFryer
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                Resultados reales, crocancia perfecta en minutos
+              </p>
+            </div>
+            
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryerChickenWings} 
+                        alt="Alitas de pollo crujientes hechas en AirFryer" 
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Alitas de pollo crujientes</h3>
+                        <p className="text-sm text-muted-foreground">12 min a 190°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryerFrenchFries} 
+                        alt="Papas fritas doradas hechas en AirFryer" 
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Papas fritas perfectas</h3>
+                        <p className="text-sm text-muted-foreground">15 min a 200°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryerSalmon} 
+                        alt="Salmón crujiente hecho en AirFryer" 
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Salmón con costra dorada</h3>
+                        <p className="text-sm text-muted-foreground">10 min a 180°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryerVegetables} 
+                        alt="Verduras asadas crujientes hechas en AirFryer" 
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Verduras asadas</h3>
+                        <p className="text-sm text-muted-foreground">12 min a 190°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryerMozzarellaSticks} 
+                        alt="Palitos de mozzarella crujientes hechos en AirFryer" 
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Palitos de mozzarella</h3>
+                        <p className="text-sm text-muted-foreground">8 min a 180°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryerEmpanadas} 
+                        alt="Empanadas doradas hechas en AirFryer" 
+                        className="w-full h-64 object-cover"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Empanadas doradas</h3>
+                        <p className="text-sm text-muted-foreground">14 min a 190°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
+            
+            <div className="text-center mt-8">
+              <p className="text-lg text-muted-foreground mb-4">
+                <strong className="text-cta-primary">600+ recetas como estas</strong> te esperan
+              </p>
+              <Button variant="cta" size="lg" onClick={handleCTAClick}>
+                Quiero cocinar así (US$ 5,50)
+              </Button>
             </div>
           </div>
         </div>
