@@ -21,15 +21,6 @@ const SalesPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header Sticky Mobile */}
-      <header className="sticky top-0 bg-background/95 backdrop-blur-sm border-b border-border z-40">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="font-bold text-lg text-cta-primary">AirFryer Perfecta</div>
-          <Button variant="cta" size="sm" onClick={handleCTAClick} className="hidden md:block">
-            Quiero crocancia hoy (US$ 5,50)
-          </Button>
-        </div>
-      </header>
 
       {/* Hero Section V1 */}
       <section className="py-8 md:py-16 bg-gradient-to-br from-background to-cta-primary/5">
@@ -108,7 +99,7 @@ const SalesPage = () => {
                 <p className="text-foreground font-medium">"Termino pidiendo <strong>delivery</strong> entre semana."</p>
               </div>
             </div>
-            <Button variant="outline" onClick={handleCTAClick} className="mt-4">
+            <Button variant="cta" size="xl" onClick={handleCTAClick} className="mt-4 w-full md:w-auto">
               Quiero una solución simple →
             </Button>
           </div>
