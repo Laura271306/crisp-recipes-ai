@@ -40,7 +40,7 @@ const SalesPage = () => {
                 Método C.R.I.S.P.: <span className="text-cta-primary">crocancia en 10–15 min con tiempos exactos.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-6">
-                <strong>600+ recetas AirFryer</strong> por objetivo, menús listos y bonos. <strong>Cero ensayo-error</strong> desde el día 1. <strong>Garantía 7 días.</strong>
+                <strong>600+ recetas AirFryer</strong> por objetivo. <strong>Cero ensayo-error desde el día 1.</strong>
               </p>
               
               <div className="space-y-3 mb-6">
