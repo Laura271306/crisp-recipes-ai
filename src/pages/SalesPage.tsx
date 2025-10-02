@@ -56,20 +56,9 @@ const SalesPage = () => {
                 </div>
               </div>
 
-              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto mb-6">
+              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
                 Quiero crocancia hoy (US$ 5,50)
               </Button>
-
-              <div className="flex flex-wrap gap-3">
-                <Badge variant="secondary" className="px-3 py-1">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  Acceso inmediato
-                </Badge>
-                <Badge variant="secondary" className="px-3 py-1">
-                  <Shield className="w-4 h-4 mr-2" />
-                  Garantía 7 días
-                </Badge>
-              </div>
             </div>
             <div className="relative">
               <img 
