@@ -21,7 +21,6 @@ import airfryerEmpanadas from "@/assets/airfryer-empanadas.jpg";
 import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
 import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
 import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
-import timeTemperatureIcons from "@/assets/time-temperature-icons.jpg";
 import recipeBookMockup from "@/assets/recipe-book-mockup.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
@@ -34,19 +33,19 @@ const SalesPage = () => {
   return (
     <div className="min-h-screen bg-background">
 
-      {/* Hero Section V1 */}
-      <section className="py-8 md:py-16 bg-gradient-to-br from-background to-cta-primary/5">
+      {/* Hero Section */}
+      <section className="py-16 bg-gradient-to-br from-background to-cta-primary/5">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
                 Método C.R.I.S.P.: <span className="text-cta-primary">crocancia en 10–15 min con tiempos exactos.</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-6">
+              <p className="text-lg md:text-xl text-muted-foreground mb-8">
                 <strong>600+ recetas AirFryer</strong> por objetivo. <strong>Cero ensayo-error desde el día 1.</strong>
               </p>
               
-              <div className="space-y-3 mb-6">
+              <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-success" />
                   <span className="text-foreground">Verás tiempos/temperaturas claros en cada receta</span>
@@ -80,11 +79,11 @@ const SalesPage = () => {
       </section>
 
       {/* Carrossel de Resultados */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-cta-primary/5 to-background">
+      <section className="py-16 bg-gradient-to-br from-cta-primary/5 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Esto es lo que puedes lograr con tu AirFryer
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground">
@@ -207,23 +206,23 @@ const SalesPage = () => {
       </section>
 
       {/* Dor do Avatar */}
-      <section className="py-12 md:py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
               Si te reconoces en esto, este kit es para ti:
             </h2>
-            <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-8">
-              <div className="p-4 md:p-6 bg-card rounded-lg border border-border text-left">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10">
+              <div className="p-6 bg-card rounded-lg border border-border text-left">
                 <p className="text-foreground font-medium">"Mi AirFryer deja la comida <strong>blanda o seca</strong>."</p>
               </div>
-              <div className="p-4 md:p-6 bg-card rounded-lg border border-border text-left">
+              <div className="p-6 bg-card rounded-lg border border-border text-left">
                 <p className="text-foreground font-medium">"Paso más tiempo <strong>buscando</strong> que cocinando."</p>
               </div>
-              <div className="p-4 md:p-6 bg-card rounded-lg border border-border text-left">
+              <div className="p-6 bg-card rounded-lg border border-border text-left">
                 <p className="text-foreground font-medium">"Repito las mismas 5 recetas y me <strong>aburro</strong>."</p>
               </div>
-              <div className="p-4 md:p-6 bg-card rounded-lg border border-border text-left">
+              <div className="p-6 bg-card rounded-lg border border-border text-left">
                 <p className="text-foreground font-medium">"Termino pidiendo <strong>delivery</strong> entre semana."</p>
               </div>
             </div>
@@ -235,19 +234,19 @@ const SalesPage = () => {
       </section>
 
       {/* Solução + Mecanismo C.R.I.S.P. */}
-      <section className="py-12 md:py-16">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 ¿Por qué esto funciona cuando otras recetas fallan?
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8">
+              <p className="text-lg md:text-xl text-muted-foreground">
                 Aplicamos el <strong className="text-cta-primary">Sistema C.R.I.S.P.</strong>:
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-6 mb-8 md:mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 mb-10">
               <div className="text-center p-4 bg-card rounded-lg border border-border">
                 <div className="w-12 h-12 bg-cta-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                   <ChefHat className="w-6 h-6 text-cta-primary" />
@@ -295,11 +294,11 @@ const SalesPage = () => {
       </section>
 
       {/* Prueba en 24h */}
-      <section className="py-12 md:py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 md:mb-6">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Cocina 3 platos perfectos hoy mismo:
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground">
@@ -331,7 +330,7 @@ const SalesPage = () => {
               />
             </div>
 
-            <div className="text-center mt-8 md:mt-12">
+            <div className="text-center mt-10">
               <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
                 Quiero tiempos exactos (US$ 5,50)
               </Button>
@@ -341,11 +340,11 @@ const SalesPage = () => {
       </section>
 
       {/* Economía Estimada */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-success-light to-background">
+      <section className="py-16 bg-gradient-to-br from-success-light to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 El kit se paga solo en el primer día
               </h2>
             </div>
@@ -392,17 +391,17 @@ const SalesPage = () => {
         </div>
       </section>
 
-      {/* Ver por dentro - Carrossel */}
-      <section className="py-12 md:py-16">
+      {/* Ver por dentro */}
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Mira lo que recibes por dentro
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <div className="bg-card rounded-lg border border-border p-6">
                 <img 
                   src={recipeBookMockup} 
@@ -436,11 +435,11 @@ const SalesPage = () => {
       </section>
 
       {/* Universal y fácil de aplicar */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-cta-primary/5 to-background">
+      <section className="py-16 bg-gradient-to-br from-cta-primary/5 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Universal y fácil de aplicar
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground">
@@ -448,54 +447,45 @@ const SalesPage = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center mb-8">
-              <div>
-                <img 
-                  src={timeTemperatureIcons} 
-                  alt="Tablas de ajuste por capacidad de AirFryer: 3.5L, 4L, 5.5L+" 
-                  className="w-full rounded-lg shadow-md"
-                />
+            <div className="space-y-6 md:space-y-8 mb-10">
+              <div className="p-6 bg-card rounded-lg border border-border">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-success" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-1">Tablas de tiempo/temperatura por alimento</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Cada receta incluye tiempos base probados para los alimentos más comunes
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="space-y-4">
-                <div className="p-4 bg-card rounded-lg border border-border">
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <CheckCircle className="w-5 h-5 text-success" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-foreground mb-1">Tablas de tiempo/temperatura por alimento</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Cada receta incluye tiempos base probados para los alimentos más comunes
-                      </p>
-                    </div>
+
+              <div className="p-6 bg-card rounded-lg border border-border">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-success" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-1">Guía rápida de ajuste por capacidad</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Ajustes simples para 3,5 L / 4 L / 5,5 L+ según tu modelo
+                    </p>
                   </div>
                 </div>
+              </div>
 
-                <div className="p-4 bg-card rounded-lg border border-border">
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <CheckCircle className="w-5 h-5 text-success" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-foreground mb-1">Guía rápida de ajuste por capacidad</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Ajustes simples para 3,5 L / 4 L / 5,5 L+ según tu modelo
-                      </p>
-                    </div>
+              <div className="p-6 bg-card rounded-lg border border-border">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-success" />
                   </div>
-                </div>
-
-                <div className="p-4 bg-card rounded-lg border border-border">
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <CheckCircle className="w-5 h-5 text-success" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-foreground mb-1">Crocancia consistente sin ensayo-error</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Uses la marca que uses, obtendrás resultados perfectos desde el día 1
-                      </p>
-                    </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-1">Crocancia consistente sin ensayo-error</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Uses la marca que uses, obtendrás resultados perfectos desde el día 1
+                    </p>
                   </div>
                 </div>
               </div>
@@ -511,16 +501,16 @@ const SalesPage = () => {
       </section>
 
       {/* Lo que vas a recibir */}
-      <section className="py-12 md:py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Lo que vas a recibir
               </h2>
             </div>
 
-            <div className="space-y-6 mb-8">
+            <div className="space-y-6 mb-10">
               <div className="p-6 bg-card rounded-lg border border-border">
                 <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-3">
                   <Utensils className="w-6 h-6 text-cta-primary" />
@@ -556,12 +546,12 @@ const SalesPage = () => {
         </div>
       </section>
 
-      {/* Bonos + Urgência Ética */}
-      <section className="py-12 md:py-16 bg-value-light">
+      {/* Bonos */}
+      <section className="py-16 bg-value-light">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Bonos exclusivos por tiempo limitado
               </h2>
               <Badge variant="destructive" className="text-sm md:text-lg px-3 md:px-4 py-1 md:py-2">
@@ -569,8 +559,8 @@ const SalesPage = () => {
               </Badge>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-              <div className="p-4 md:p-6 bg-card rounded-lg border border-border">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10">
+              <div className="p-6 bg-card rounded-lg border border-border">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-5 h-5 text-success" />
@@ -583,7 +573,7 @@ const SalesPage = () => {
                 </div>
               </div>
 
-              <div className="p-4 md:p-6 bg-card rounded-lg border border-border">
+              <div className="p-6 bg-card rounded-lg border border-border">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <Award className="w-5 h-5 text-success" />
@@ -596,7 +586,7 @@ const SalesPage = () => {
                 </div>
               </div>
 
-              <div className="p-4 md:p-6 bg-card rounded-lg border border-cta-primary/30 bg-cta-primary/5">
+              <div className="p-6 bg-card rounded-lg border border-cta-primary/30 bg-cta-primary/5">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-cta-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5 text-cta-primary" />
@@ -612,7 +602,7 @@ const SalesPage = () => {
                 </div>
               </div>
 
-              <div className="p-4 md:p-6 bg-card rounded-lg border border-cta-primary/30 bg-cta-primary/5">
+              <div className="p-6 bg-card rounded-lg border border-cta-primary/30 bg-cta-primary/5">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-cta-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
                     <DollarSign className="w-5 h-5 text-cta-primary" />
@@ -639,14 +629,14 @@ const SalesPage = () => {
       </section>
 
       {/* Economía y Valor */}
-      <section className="py-12 md:py-16">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Con 2 pedidos de delivery menos por semana
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground mb-6">
+              <p className="text-lg md:text-xl text-muted-foreground">
                 ahorras <span className="font-bold text-success">US$ 80–120/mes</span>. El kit cuesta <span className="font-bold text-cta-primary">US$ 5,50</span> y se paga <strong>hoy</strong>.
               </p>
             </div>
@@ -689,11 +679,11 @@ const SalesPage = () => {
         </div>
       </section>
 
-      {/* Oferta Especial de Hoy */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-cta-primary/10 to-cta-secondary/10">
+      {/* Oferta Especial */}
+      <section className="py-16 bg-gradient-to-br from-cta-primary/10 to-cta-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10">
               AirFryer Perfecta – Kit Maestro de Recetas (Edición Premium)
             </h2>
             
@@ -723,16 +713,16 @@ const SalesPage = () => {
         </div>
       </section>
 
-      {/* Garantía Doble 7×7 */}
-      <section className="py-12 md:py-16">
+      {/* Garantía */}
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="p-6 md:p-8 bg-success-light rounded-2xl border border-success/20">
-              <Shield className="w-12 md:w-16 h-12 md:h-16 text-success mx-auto mb-6" />
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            <div className="p-8 bg-success-light rounded-2xl border border-success/20">
+              <Shield className="w-16 h-16 text-success mx-auto mb-6" />
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Pruébalo 7 días sin riesgo.
               </h2>
-              <p className="text-lg md:text-xl text-foreground mb-4">
+              <p className="text-lg md:text-xl text-foreground">
                 Si no te ahorra tiempo <strong>o</strong> no mejoras textura, <strong>te devolvemos el dinero</strong>. <strong>Sin preguntas.</strong>
               </p>
             </div>
@@ -740,12 +730,12 @@ const SalesPage = () => {
         </div>
       </section>
 
-      {/* FAQ - Objecciones Reales */}
-      <section className="py-12 md:py-16 bg-muted/30">
+      {/* FAQ */}
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Preguntas Frecuentes
               </h2>
             </div>
@@ -786,7 +776,7 @@ const SalesPage = () => {
       </section>
 
       {/* CTA Final */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-cta-primary to-cta-secondary">
+      <section className="py-16 bg-gradient-to-br from-cta-primary to-cta-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
