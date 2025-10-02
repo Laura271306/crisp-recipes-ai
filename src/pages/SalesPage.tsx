@@ -22,6 +22,7 @@ import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
 import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
 import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
 import timeTemperatureIcons from "@/assets/time-temperature-icons.jpg";
+import recipeBookMockup from "@/assets/recipe-book-mockup.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const SalesPage = () => {
@@ -404,12 +405,12 @@ const SalesPage = () => {
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
               <div className="bg-card rounded-lg border border-border p-6">
                 <img 
-                  src={recipeCollectionsIndex} 
-                  alt="Colecciones organizadas por objetivos: Rápidas & Saludables, Proteínas & Familia" 
+                  src={recipeBookMockup} 
+                  alt="Kit Maestro de Recetas AirFryer con 600+ recetas organizadas" 
                   className="w-full rounded-lg shadow-md mb-4"
                 />
-                <h3 className="font-bold text-foreground mb-2">Colecciones por objetivo</h3>
-                <p className="text-sm text-muted-foreground">Rápidas & Saludables, Proteínas & Familia, Veggie & Fit, Postres & Snacks</p>
+                <h3 className="font-bold text-foreground mb-2">Kit completo de recetas</h3>
+                <p className="text-sm text-muted-foreground">600+ recetas organizadas por objetivos y ocasiones</p>
               </div>
               <div className="bg-card rounded-lg border border-border p-6">
                 <img 
@@ -428,15 +429,6 @@ const SalesPage = () => {
                 />
                 <h3 className="font-bold text-foreground mb-2">Menús de 4 semanas</h3>
                 <p className="text-sm text-muted-foreground">+ listas de compras organizadas</p>
-              </div>
-              <div className="bg-card rounded-lg border border-border p-6">
-                <img 
-                  src={cleaningGuideVisual} 
-                  alt="Guía visual de limpieza y mantenimiento de AirFryer" 
-                  className="w-full rounded-lg shadow-md mb-4"
-                />
-                <h3 className="font-bold text-foreground mb-2">Guía exprés de limpieza</h3>
-                <p className="text-sm text-muted-foreground">y mantenimiento rápido</p>
               </div>
             </div>
           </div>
