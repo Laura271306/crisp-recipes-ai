@@ -21,6 +21,7 @@ import airfryerEmpanadas from "@/assets/airfryer-empanadas.jpg";
 import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
 import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
 import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
+import timeTemperatureIcons from "@/assets/time-temperature-icons.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const SalesPage = () => {
@@ -437,6 +438,81 @@ const SalesPage = () => {
                 <h3 className="font-bold text-foreground mb-2">Guía exprés de limpieza</h3>
                 <p className="text-sm text-muted-foreground">y mantenimiento rápido</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Universal y fácil de aplicar */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-cta-primary/5 to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Universal y fácil de aplicar
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                El Método <strong className="text-cta-primary">C.R.I.S.P.</strong> funciona con todas las AirFryer
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center mb-8">
+              <div>
+                <img 
+                  src={timeTemperatureIcons} 
+                  alt="Tablas de ajuste por capacidad de AirFryer: 3.5L, 4L, 5.5L+" 
+                  className="w-full rounded-lg shadow-md"
+                />
+              </div>
+              <div className="space-y-4">
+                <div className="p-4 bg-card rounded-lg border border-border">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle className="w-5 h-5 text-success" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">Tablas de tiempo/temperatura por alimento</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Cada receta incluye tiempos base probados para los alimentos más comunes
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-card rounded-lg border border-border">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle className="w-5 h-5 text-success" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">Guía rápida de ajuste por capacidad</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Ajustes simples para 3,5 L / 4 L / 5,5 L+ según tu modelo
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-card rounded-lg border border-border">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle className="w-5 h-5 text-success" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">Crocancia consistente sin ensayo-error</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Uses la marca que uses, obtendrás resultados perfectos desde el día 1
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center p-6 bg-success-light rounded-lg border border-success/20">
+              <p className="text-lg font-semibold text-foreground">
+                🎯 Compatible con <strong className="text-cta-primary">todas las marcas:</strong> Philips, Ninja, Cosori, Instant Pot y más
+              </p>
             </div>
           </div>
         </div>
