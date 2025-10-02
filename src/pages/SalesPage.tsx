@@ -18,6 +18,9 @@ import airfryerSalmon from "@/assets/airfryer-salmon.jpg";
 import airfryerVegetables from "@/assets/airfryer-vegetables.jpg";
 import airfryerMozzarellaSticks from "@/assets/airfryer-mozzarella-sticks.jpg";
 import airfryerEmpanadas from "@/assets/airfryer-empanadas.jpg";
+import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
+import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
+import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const SalesPage = () => {
@@ -308,24 +311,79 @@ const SalesPage = () => {
                 time="12 min"
                 temperature="190°C"
                 instructions="voltear a mitad"
+                image={recipePolloParmesano}
               />
               <RecipeCard
                 name="Camarones al ajo"
                 time="8 min"
                 temperature="180°C"
                 instructions="listo en una sola vez"
+                image={recipeCamaronesAjo}
               />
               <RecipeCard
                 name="Chips de batata"
                 time="10-12 min"
                 temperature="200°C"
                 instructions="agitar a mitad"
+                image={recipeChipsBatata}
               />
             </div>
 
             <div className="text-center mt-8 md:mt-12">
               <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
                 Quiero tiempos exactos (US$ 5,50)
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Economía Estimada */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-success-light to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                El kit se paga solo en el primer día
+              </h2>
+            </div>
+
+            <div className="bg-card rounded-lg border-2 border-success/30 p-6 md:p-8 shadow-lg">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th className="pb-4 text-muted-foreground font-medium">Situación</th>
+                      <th className="pb-4 text-muted-foreground font-medium text-right">Costo mensual</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-border">
+                      <td className="py-4 text-foreground">Delivery 2 veces/semana (US$ 12–15 por pedido)</td>
+                      <td className="py-4 text-right font-semibold text-foreground">US$ 96–120</td>
+                    </tr>
+                    <tr className="border-b border-border">
+                      <td className="py-4 text-foreground">Kit Maestro AirFryer Perfecta (único pago)</td>
+                      <td className="py-4 text-right font-bold text-cta-primary text-lg">US$ 5,50</td>
+                    </tr>
+                    <tr>
+                      <td className="pt-4 text-foreground font-semibold">Ahorro estimado (primer mes)</td>
+                      <td className="pt-4 text-right font-bold text-success text-xl">US$ 90–114</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <div className="mt-6 p-4 bg-success-light rounded-lg border border-success/20">
+                <p className="text-center text-foreground font-medium">
+                  💡 <strong>Si pides 2 veces/semana (US$ 12–15 por pedido), el kit se paga en el primer día.</strong>
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
+                Empezar a ahorrar hoy (US$ 5,50)
               </Button>
             </div>
           </div>
