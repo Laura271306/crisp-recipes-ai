@@ -391,44 +391,222 @@ const SalesPage = () => {
         </div>
       </section>
 
-      {/* Ver por dentro */}
+      {/* Todo lo que recibes - Principal + Bônus */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Mira lo que recibes por dentro
+                Todo lo que recibes hoy
               </h2>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                Acceso inmediato a todo el contenido digital
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-              <div className="bg-card rounded-lg border border-border p-6">
-                <img 
-                  src={recipeBookMockup} 
-                  alt="Kit Maestro de Recetas AirFryer con 600+ recetas organizadas" 
-                  className="w-full rounded-lg shadow-md mb-4"
-                />
-                <h3 className="font-bold text-foreground mb-2">Kit completo de recetas</h3>
-                <p className="text-sm text-muted-foreground">600+ recetas organizadas por objetivos y ocasiones</p>
+            {/* Producto Principal */}
+            <div className="mb-10">
+              <div className="bg-gradient-to-br from-cta-primary/10 to-cta-primary/5 rounded-xl p-6 md:p-8 border-2 border-cta-primary/30 mb-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-cta-primary rounded-full flex items-center justify-center">
+                    <Utensils className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Producto Principal</h3>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Coleção "Fundamentos + Guías Prácticas da Airfryer"</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Coleção "Receitas Rápidas & do Dia a Dia" (variadas)</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">365 recetas en tu freidora de aire</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Coleção "Proteínas & Comidas para a Família"</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Coleção "Veggie, Fit & Sem Glúten" (opções saudáveis)</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">15 Postres Fit</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Coleção "Postres & Snacks"</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-card rounded-lg border border-border p-6">
-                <img 
-                  src={recipeTimeTemperature} 
-                  alt="Receta con tiempos destacados y temperaturas exactas" 
-                  className="w-full rounded-lg shadow-md mb-4"
-                />
-                <h3 className="font-bold text-foreground mb-2">Recetas con tiempos exactos</h3>
-                <p className="text-sm text-muted-foreground">Temperaturas y tiempos destacados claramente</p>
+            </div>
+
+            {/* Bônus e Complementos */}
+            <div>
+              <div className="bg-value-light rounded-xl p-6 md:p-8 border-2 border-success/30">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-success rounded-full flex items-center justify-center">
+                    <Award className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">Bônus e complementos</h3>
+                    <Badge variant="destructive" className="text-xs mt-1">Incluidos por tiempo limitado</Badge>
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Checklist "10 Errores que arruinan tus recetas en la Airfryer"</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">15 Postres Fit — dulce sin culpa</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Calendario sencillo de cocina (30 días)</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Guia de Compras Inteligentes / Economia mensal</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Guia Exprés: Limpeza e Manutenção</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Mis mejores recetas en freidora de aire</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Receta de la Freidora de Aire / Air Fryer Cookbook</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">Libro de cocina AirFryer</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">El Libro de Cocina de la Freidora de Aire</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">100+ Recetas Airfryer</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-4 bg-card rounded-lg border border-border">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-foreground">100 Deliciosas Recetas</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-6 text-center p-4 bg-success/10 rounded-lg">
+                  <p className="text-sm text-muted-foreground">
+                    🎁 Todo el contenido está en <strong className="text-foreground">español</strong>
+                  </p>
+                </div>
               </div>
-              <div className="bg-card rounded-lg border border-border p-6">
-                <img 
-                  src={weeklyMenuShopping} 
-                  alt="Menús semanales con listas de compras organizadas" 
-                  className="w-full rounded-lg shadow-md mb-4"
-                />
-                <h3 className="font-bold text-foreground mb-2">Menús de 4 semanas</h3>
-                <p className="text-sm text-muted-foreground">+ listas de compras organizadas</p>
-              </div>
+            </div>
+
+            <div className="text-center mt-10">
+              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
+                Quiero todo esto ahora (US$ 5,50)
+              </Button>
             </div>
           </div>
         </div>
@@ -500,133 +678,7 @@ const SalesPage = () => {
         </div>
       </section>
 
-      {/* Lo que vas a recibir */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Lo que vas a recibir
-              </h2>
-            </div>
 
-            <div className="space-y-6 mb-10">
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-3">
-                  <Utensils className="w-6 h-6 text-cta-primary" />
-                  Colecciones (4)
-                </h3>
-                <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
-                  <div>• Rápidas & Saludables — 100+ recetas organizadas por objetivo</div>
-                  <div>• Proteínas & Comidas Familiares</div>
-                  <div>• Veggie & AirFryer Fit</div>
-                  <div>• Postres & Snacks</div>
-                </div>
-              </div>
-
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-3">
-                  <Clock className="w-6 h-6 text-cta-primary" />
-                  Además recibes:
-                </h3>
-                <div className="space-y-2 text-sm text-muted-foreground">
-                  <div>• Menús de 4 semanas + listas de compras</div>
-                  <div>• Tablas tiempo/temperatura por alimento</div>
-                  <div>• Guía exprés de limpieza/mantenimiento</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <p className="text-base text-muted-foreground mb-6">
-                ✓ rapidez ✓ variedad ✓ menos aceite ✓ resultados consistentes ✓ uso diario ✓ cero complicaciones
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bonos */}
-      <section className="py-16 bg-value-light">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Bonos exclusivos por tiempo limitado
-              </h2>
-              <Badge variant="destructive" className="text-sm md:text-lg px-3 md:px-4 py-1 md:py-2">
-                Bonos 3 y 4 incluidos solo esta semana
-              </Badge>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10">
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-5 h-5 text-success" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-2">1. 10 Errores que arruinan tus recetas</h3>
-                    <p className="text-sm text-muted-foreground mb-2">checklist visual</p>
-                    <Badge variant="secondary" className="text-xs">Valor: US$ 9</Badge>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6 bg-card rounded-lg border border-border">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Award className="w-5 h-5 text-success" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-2">2. 15 Postres Fit sin azúcar refinada</h3>
-                    <p className="text-sm text-muted-foreground mb-2">dulces saludables</p>
-                    <Badge variant="secondary" className="text-xs">Valor: US$ 12</Badge>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6 bg-card rounded-lg border border-cta-primary/30 bg-cta-primary/5">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-cta-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-cta-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-2">3. Calendario sencillo (30 días)</h3>
-                    <p className="text-sm text-muted-foreground mb-2">organización diaria</p>
-                    <div className="flex gap-2">
-                      <Badge variant="secondary" className="text-xs">Valor: US$ 9</Badge>
-                      <Badge className="text-xs bg-cta-primary text-white">Incluido hoy</Badge>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6 bg-card rounded-lg border border-cta-primary/30 bg-cta-primary/5">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-cta-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <DollarSign className="w-5 h-5 text-cta-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-2">4. Guía de compras inteligentes</h3>
-                    <p className="text-sm text-muted-foreground mb-2">cómo ahorrar comprando correcto</p>
-                    <div className="flex gap-2">
-                      <Badge variant="secondary" className="text-xs">Valor: US$ 9</Badge>
-                      <Badge className="text-xs bg-cta-primary text-white">Incluido hoy</Badge>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
-                Sí, quiero mis bonos hoy (US$ 5,50)
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Economía y Valor */}
       <section className="py-16">
