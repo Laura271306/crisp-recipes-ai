@@ -12,7 +12,7 @@ export const StickyButton = ({ text, price, onClick }: StickyButtonProps) => {
       <Button 
         className="w-full" 
         variant="cta" 
-        size="xl"
+        size="2xl"
         onClick={onClick}
       >
         {text} ({price})

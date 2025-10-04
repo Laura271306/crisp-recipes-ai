@@ -60,7 +60,7 @@ const SalesPage = () => {
                 </div>
               </div>
 
-              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
+              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
                 Quiero crocancia hoy (US$ 5,50)
               </Button>
             </div>
@@ -197,7 +197,7 @@ const SalesPage = () => {
               <p className="text-lg text-muted-foreground mb-4">
                 <strong className="text-cta-primary">600+ recetas como estas</strong> te esperan
               </p>
-              <Button variant="cta" size="lg" onClick={handleCTAClick}>
+              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
                 Quiero cocinar así (US$ 5,50)
               </Button>
             </div>
@@ -226,7 +226,7 @@ const SalesPage = () => {
                 <p className="text-foreground font-medium">"Termino pidiendo <strong>delivery</strong> entre semana."</p>
               </div>
             </div>
-            <Button variant="cta" size="xl" onClick={handleCTAClick} className="mt-4 w-full md:w-auto">
+            <Button variant="cta" size="2xl" onClick={handleCTAClick} className="mt-4 w-full md:w-auto">
               Quiero una solución simple →
             </Button>
           </div>
@@ -331,7 +331,7 @@ const SalesPage = () => {
             </div>
 
             <div className="text-center mt-10">
-              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
+              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
                 Quiero tiempos exactos (US$ 5,50)
               </Button>
             </div>
@@ -383,7 +383,7 @@ const SalesPage = () => {
             </div>
 
             <div className="text-center mt-8">
-              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
+              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
                 Empezar a ahorrar hoy (US$ 5,50)
               </Button>
             </div>
@@ -604,7 +604,7 @@ const SalesPage = () => {
             </div>
 
             <div className="text-center mt-10">
-              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto">
+              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
                 Quiero todo esto ahora (US$ 5,50)
               </Button>
             </div>
@@ -746,7 +746,7 @@ const SalesPage = () => {
               <p className="text-base md:text-lg text-muted-foreground mb-6">
                 Acceso inmediato y actualizaciones del kit.
               </p>
-              <Button variant="cta" size="xl" onClick={handleCTAClick} className="w-full md:w-auto mb-4">
+              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto mb-4">
                 Quiero mis recetas ahora (US$ 5,50)
               </Button>
               
@@ -838,10 +838,10 @@ const SalesPage = () => {
             <div className="text-4xl md:text-5xl font-bold mb-6">US$ 5,50</div>
             <p className="text-lg md:text-xl mb-8">acceso inmediato</p>
             <Button 
-              variant="secondary" 
-              size="xl" 
+              variant="cta" 
+              size="2xl" 
               onClick={handleCTAClick}
-              className="bg-white text-cta-primary hover:bg-white/90 font-bold w-full md:w-auto"
+              className="bg-white text-accent hover:bg-white/90 hover:text-accent w-full md:w-auto shadow-2xl"
             >
               Sí, quiero cocinar mejor hoy
             </Button>
