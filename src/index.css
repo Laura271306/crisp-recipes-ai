@@ -17,59 +17,59 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 142 71% 45%;
+    --primary: 19 90% 40%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
+    --secondary: 214 32% 91%;
     --secondary-foreground: 222 47% 11%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 25% 27%;
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 20% 35%;
 
-    --accent: 210 40% 96%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 78 87% 35%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 74% 42%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 142 77% 85%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 19 90% 75%;
 
-    /* Fresh & Crunchy color system */
-    --cta-primary: 142 71% 45%;
+    /* Cozy & Gourmet color system */
+    --cta-primary: 19 90% 40%;
     --cta-primary-foreground: 0 0% 100%;
-    --cta-primary-hover: 142 76% 36%;
+    --cta-primary-hover: 19 78% 34%;
     
-    --cta-secondary: 38 92% 50%;
-    --cta-secondary-foreground: 222 47% 11%;
-    --cta-secondary-hover: 38 92% 45%;
+    --cta-secondary: 78 87% 35%;
+    --cta-secondary-foreground: 0 0% 100%;
+    --cta-secondary-hover: 78 87% 30%;
     
     --success: 142 76% 36%;
     --success-foreground: 0 0% 100%;
     --success-light: 142 77% 95%;
     
-    --warning: 38 92% 50%;
-    --warning-foreground: 222 47% 11%;
-    --warning-light: 38 92% 95%;
+    --warning: 19 90% 40%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 19 90% 95%;
     
-    --value: 142 71% 45%;
+    --value: 19 90% 40%;
     --value-foreground: 0 0% 100%;
-    --value-light: 142 71% 95%;
+    --value-light: 19 90% 95%;
     
-    --link: 199 89% 48%;
-    --link-hover: 199 97% 39%;
+    --link: 217 84% 54%;
+    --link-hover: 217 84% 45%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 76% 36%));
-    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 55%));
-    --gradient-value: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 76% 36%));
-    --gradient-accent: linear-gradient(135deg, hsl(38 92% 50%), hsl(38 92% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(19 90% 40%), hsl(19 78% 34%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-value: linear-gradient(135deg, hsl(19 90% 40%), hsl(19 90% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(78 87% 35%), hsl(78 87% 45%));
     
     /* Shadows */
-    --shadow-cta: 0 10px 25px -5px hsl(142 71% 45% / 0.3);
+    --shadow-cta: 0 10px 25px -5px hsl(19 90% 40% / 0.3);
     --shadow-card: 0 4px 25px -4px hsl(222 47% 11% / 0.08);
-    --shadow-hero: 0 20px 50px -10px hsl(142 71% 45% / 0.2);
+    --shadow-hero: 0 20px 50px -10px hsl(19 90% 40% / 0.2);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
