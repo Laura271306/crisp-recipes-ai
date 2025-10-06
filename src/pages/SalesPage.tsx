@@ -874,7 +874,7 @@ const SalesPage = () => {
       <footer className="py-8 bg-muted">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
-            © 2024 AirFryer Perfecta. Todos los derechos reservados.
+            © 2025 AirFryer Perfecta. Todos los derechos reservados.
           </p>
         </div>
       </footer>
