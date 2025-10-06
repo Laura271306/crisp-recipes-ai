@@ -32,6 +32,15 @@ const SalesPage = () => {
   return (
     <div className="min-h-screen bg-background">
 
+      {/* Micro-provas */}
+      <section className="py-4 bg-success/10 border-b border-success/20">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-sm md:text-base text-foreground font-medium">
+            ✓ Aprobado por principiantes • Resultados consistentes desde el primer uso
+          </p>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-background to-cta-primary/5">
         <div className="container mx-auto px-4">
@@ -771,10 +780,10 @@ const SalesPage = () => {
             <div className="p-8 bg-success-light rounded-2xl border border-success/20">
               <Shield className="w-16 h-16 text-success mx-auto mb-6" />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Pruébalo 7 días sin riesgo.
+                Garantía Doble 7×7
               </h2>
               <p className="text-lg md:text-xl text-foreground">
-                Si no te ahorra tiempo <strong>o</strong> no mejoras textura, <strong>te devolvemos el dinero</strong>. <strong>Sin preguntas.</strong>
+                Si en 7 días no ahorras tiempo en la cocina o no mejoras la textura (crujiente por fuera, jugoso por dentro), <strong>te devolvemos el dinero. Sin preguntas.</strong>
               </p>
             </div>
           </div>
