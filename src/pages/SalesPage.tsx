@@ -26,8 +26,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const SalesPage = () => {
   const handleCTAClick = () => {
-    // Aquí iría la lógica para redirigir al checkout
-    console.log("Botón CTA clickeado");
+    window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
   };
 
   return (
