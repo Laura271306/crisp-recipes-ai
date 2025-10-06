@@ -501,6 +501,12 @@ const SalesPage = () => {
                     <Badge variant="destructive" className="text-xs mt-1">Incluidos por tiempo limitado</Badge>
                   </div>
                 </div>
+
+                <div className="mb-6 p-4 bg-warning/10 border border-warning/30 rounded-lg">
+                  <p className="text-sm md:text-base text-foreground text-center">
+                    ⚠️ <strong>Transparencia total:</strong> Los bonos adicionales están disponibles solo durante la promoción de lanzamiento. Después del lanzamiento, el kit volverá al precio regular de US$ 27 solo con el contenido principal.
+                  </p>
+                </div>
                 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="p-4 bg-card rounded-lg border border-border">
