@@ -6,6 +6,10 @@
     <title>AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 7)</title>
     <meta name="description" content="Más de 400 recetas por objetivo, menús semanales y tablas de tiempo/temperatura. Cocina en 10–15 min. Garantía 7 días." />
     <meta name="author" content="AirFryer Perfecta" />
+    
+    <!-- Preconnect para melhorar performance -->
+    <link rel="preconnect" href="https://connect.facebook.net" />
+    <link rel="dns-prefetch" href="https://connect.facebook.net" />
 
     <meta property="og:title" content="AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 7)" />
     <meta property="og:description" content="Más de 400 recetas por objetivo, menús semanales y tablas de tiempo/temperatura. Cocina en 10–15 min. Garantía 7 días." />
@@ -16,18 +20,27 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <!-- Facebook Pixel Code -->
+    <!-- Facebook Pixel Code (carregamento otimizado) -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1473737967177792');
-      fbq('track', 'PageView');
+      window.fbAsyncInit = function() {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1473737967177792');
+        fbq('track', 'PageView');
+      };
+      
+      // Carrega o pixel após o carregamento da página
+      if (document.readyState === 'complete') {
+        window.fbAsyncInit();
+      } else {
+        window.addEventListener('load', window.fbAsyncInit);
+      }
     </script>
     <!-- End Facebook Pixel Code -->
   </head>

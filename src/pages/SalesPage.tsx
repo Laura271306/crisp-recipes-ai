@@ -77,6 +77,8 @@ const SalesPage = () => {
                 src={heroKitMockup} 
                 alt="Kit Maestro de Recetas AirFryer Perfecta con tablas de tiempo y temperatura exactas" 
                 className="w-full rounded-2xl shadow-[var(--shadow-hero)]"
+                loading="eager"
+                fetchPriority="high"
               />
               <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-3 shadow-lg">
                 <p className="text-sm font-medium text-foreground">📊 Tablas de tiempo exactas</p>
@@ -108,6 +110,7 @@ const SalesPage = () => {
                         src={airfryerChickenWings} 
                         alt="Alitas de pollo crujientes hechas en AirFryer" 
                         className="w-full h-64 object-cover"
+                        loading="lazy"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Alitas de pollo crujientes</h3>
@@ -124,6 +127,7 @@ const SalesPage = () => {
                         src={airfryerFrenchFries} 
                         alt="Papas fritas doradas hechas en AirFryer" 
                         className="w-full h-64 object-cover"
+                        loading="lazy"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Papas fritas perfectas</h3>
@@ -140,6 +144,7 @@ const SalesPage = () => {
                         src={airfryerSalmon} 
                         alt="Salmón crujiente hecho en AirFryer" 
                         className="w-full h-64 object-cover"
+                        loading="lazy"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Salmón con costra dorada</h3>
@@ -156,6 +161,7 @@ const SalesPage = () => {
                         src={airfryerVegetables} 
                         alt="Verduras asadas crujientes hechas en AirFryer" 
                         className="w-full h-64 object-cover"
+                        loading="lazy"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Verduras asadas</h3>
@@ -172,6 +178,7 @@ const SalesPage = () => {
                         src={airfryerMozzarellaSticks} 
                         alt="Palitos de mozzarella crujientes hechos en AirFryer" 
                         className="w-full h-64 object-cover"
+                        loading="lazy"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Palitos de mozzarella</h3>
@@ -188,6 +195,7 @@ const SalesPage = () => {
                         src={airfryerEmpanadas} 
                         alt="Empanadas doradas hechas en AirFryer" 
                         className="w-full h-64 object-cover"
+                        loading="lazy"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Empanadas doradas</h3>
