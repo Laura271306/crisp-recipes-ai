@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: 0 0% 100%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
@@ -17,14 +17,14 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 19 90% 40%;
+    --primary: 19 90% 38%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 32% 91%;
+    --secondary: 214 32% 86%;
     --secondary-foreground: 222 47% 11%;
 
     --muted: 214 32% 91%;
-    --muted-foreground: 215 20% 35%;
+    --muted-foreground: 215 25% 25%;
 
     --accent: 78 87% 35%;
     --accent-foreground: 0 0% 100%;
@@ -140,5 +140,21 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Garantir espaçamento adequado entre elementos clicáveis */
+  button, a, [role="button"], [tabindex]:not([tabindex="-1"]) {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  /* Melhorar legibilidade do texto */
+  p, li, td {
+    @apply leading-relaxed;
+  }
+
+  /* Garantir tamanhos mínimos de texto */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
   }
 }
