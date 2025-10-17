@@ -77,6 +77,8 @@ const SalesPage = () => {
                 src={heroKitMockup} 
                 alt="Kit Maestro de Recetas AirFryer Perfecta con tablas de tiempo y temperatura exactas" 
                 className="w-full rounded-2xl shadow-[var(--shadow-hero)]"
+                width="800"
+                height="600"
                 loading="eager"
                 fetchPriority="high"
               />
@@ -110,6 +112,8 @@ const SalesPage = () => {
                         src={airfryerChickenWings} 
                         alt="Alitas de pollo crujientes hechas en AirFryer" 
                         className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
                         loading="lazy"
                       />
                       <div className="p-4 bg-card">
@@ -127,6 +131,8 @@ const SalesPage = () => {
                         src={airfryerFrenchFries} 
                         alt="Papas fritas doradas hechas en AirFryer" 
                         className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
                         loading="lazy"
                       />
                       <div className="p-4 bg-card">
@@ -144,6 +150,8 @@ const SalesPage = () => {
                         src={airfryerSalmon} 
                         alt="Salmón crujiente hecho en AirFryer" 
                         className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
                         loading="lazy"
                       />
                       <div className="p-4 bg-card">
@@ -161,6 +169,8 @@ const SalesPage = () => {
                         src={airfryerVegetables} 
                         alt="Verduras asadas crujientes hechas en AirFryer" 
                         className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
                         loading="lazy"
                       />
                       <div className="p-4 bg-card">
@@ -178,6 +188,8 @@ const SalesPage = () => {
                         src={airfryerMozzarellaSticks} 
                         alt="Palitos de mozzarella crujientes hechos en AirFryer" 
                         className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
                         loading="lazy"
                       />
                       <div className="p-4 bg-card">
@@ -195,6 +207,8 @@ const SalesPage = () => {
                         src={airfryerEmpanadas} 
                         alt="Empanadas doradas hechas en AirFryer" 
                         className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
                         loading="lazy"
                       />
                       <div className="p-4 bg-card">

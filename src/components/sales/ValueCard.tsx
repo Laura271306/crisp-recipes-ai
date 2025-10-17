@@ -18,6 +18,8 @@ export const ValueCard = ({ icon, title, description, value, highlight, image }:
             src={image} 
             alt={`Ilustración para ${title}`} 
             className="w-full h-32 object-cover rounded-lg"
+            width="400"
+            height="128"
             loading="lazy"
           />
         </div>

@@ -15,6 +15,8 @@ export const RecipeCard = ({ name, time, temperature, instructions, image }: Rec
             src={image} 
             alt={name}
             className="w-full h-full object-cover"
+            width="400"
+            height="128"
             loading="lazy"
           />
         </div>
