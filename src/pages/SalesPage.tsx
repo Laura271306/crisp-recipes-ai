@@ -267,6 +267,102 @@ const SalesPage = () => {
         </div>
       </section>
 
+      {/* WhatsApp Testimonials */}
+      <section className="py-16 bg-gradient-to-br from-success-light to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Lo que dicen nuestras usuarias
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                Testimonios reales de personas que transformaron su cocina
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+              {/* Testimonio 1 */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 max-w-sm mx-auto">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">M</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">María</p>
+                    <p className="text-xs text-gray-500">hace 2 días</p>
+                  </div>
+                </div>
+                <div className="bg-gray-100 rounded-2xl p-4 mb-3">
+                  <p className="text-gray-900 text-sm leading-relaxed">
+                    <strong>¡Salvó mis cenas entre semana!</strong>
+                  </p>
+                  <p className="text-gray-900 text-sm leading-relaxed mt-2">
+                    Mi freidora de aire era solo para papas fritas congeladas. Intenté hacer otras cosas, pero siempre quedaban secas o blandas. Como mamá de dos niños, no tengo tiempo para experimentar y fallar. Este recetario cambió todo. Ahora hago pollo jugoso, vegetales crujientes y hasta postres en menos de 20 minutos. ¡Mi familia está comiendo más sano y delicioso que nunca! Totalmente recomendado.
+                  </p>
+                </div>
+                <div className="flex justify-end">
+                  <span className="text-xs text-gray-400">✓✓</span>
+                </div>
+              </div>
+
+              {/* Testimonio 2 */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 max-w-sm mx-auto">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">C</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Carlos</p>
+                    <p className="text-xs text-gray-500">hace 1 día</p>
+                  </div>
+                </div>
+                <div className="bg-gray-100 rounded-2xl p-4 mb-3">
+                  <p className="text-gray-900 text-sm leading-relaxed">
+                    <strong>Pensé que mi freidora no servía, ¡el que no servía era yo!</strong>
+                  </p>
+                  <p className="text-gray-900 text-sm leading-relaxed mt-2">
+                    Estaba a punto de regalar mi Air Fryer. Todo lo que cocinaba era un desastre. Compré este ebook sin mucha fe y ¡wow! El problema no era el aparato, era que no tenía idea de los tiempos y temperaturas. Las instrucciones son súper fáciles de seguir, a prueba de tontos. La semana pasada hice unas alitas de pollo que quedaron mejores que las de mi restaurante favorito. ¡Increíble!
+                  </p>
+                </div>
+                <div className="flex justify-end">
+                  <span className="text-xs text-gray-400">✓✓</span>
+                </div>
+              </div>
+
+              {/* Testimonio 3 */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 max-w-sm mx-auto">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">A</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Ana</p>
+                    <p className="text-xs text-gray-500">hace 3 días</p>
+                  </div>
+                </div>
+                <div className="bg-gray-100 rounded-2xl p-4 mb-3">
+                  <p className="text-gray-900 text-sm leading-relaxed">
+                    <strong>Mucho más que solo papas fritas.</strong>
+                  </p>
+                  <p className="text-gray-900 text-sm leading-relaxed mt-2">
+                    Compré la Air Fryer para comer más saludable, pero estaba aburrida de comer siempre lo mismo. Expres al Sabor me abrió un mundo de posibilidades. He probado recetas de pescado, panes, quiches y hasta el pack sin gluten es fantástico. Las recetas son sabrosas y para nada aburridas. Por fin estoy usando mi freidora todos los días y disfrutando mi comida.
+                  </p>
+                </div>
+                <div className="flex justify-end">
+                  <span className="text-xs text-gray-400">✓✓</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-10">
+              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
+                Quiero resultados como estos (US$ 5,50)
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Solução + Mecanismo C.R.I.S.P. */}
       <section className="py-16">
         <div className="container mx-auto px-4">
