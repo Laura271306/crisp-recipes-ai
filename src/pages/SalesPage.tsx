@@ -68,6 +68,10 @@ const SalesPage = () => {
                 </div>
               </div>
 
+              <p className="text-base md:text-lg text-muted-foreground mb-6">
+                Con más de <strong className="text-cta-primary font-bold">600 recetas</strong> AirFryer por objetivo, garantizamos cero ensayo-error desde el primer día.
+              </p>
+
               <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
                 Quiero crocancia hoy (US$ 5,50)
               </Button>
