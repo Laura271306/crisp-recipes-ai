@@ -6,7 +6,7 @@ import { StickyButton } from "@/components/sales/StickyButton";
 import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
 import { CheckCircle, Clock, Users, Utensils, Award, Shield, DollarSign, Zap, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
-import heroKitMockup from "@/assets/hero-kit-mockup.jpg";
+import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
 import crispSystemInfographic from "@/assets/crisp-system-infographic.jpg";
 import recipeCollectionsIndex from "@/assets/recipe-collections-index.jpg";
 import recipeTimeTemperature from "@/assets/recipe-time-temperature.jpg";
