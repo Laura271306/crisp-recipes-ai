@@ -16,8 +16,6 @@ import airfryerChickenWings from "@/assets/airfryer-chicken-wings.jpg";
 import airfryerFrenchFries from "@/assets/airfryer-french-fries.jpg";
 import airfryerSalmon from "@/assets/airfryer-salmon.jpg";
 import airfryerVegetables from "@/assets/airfryer-vegetables.jpg";
-import airfryerMozzarellaSticks from "@/assets/airfryer-mozzarella-sticks.jpg";
-import airfryerEmpanadas from "@/assets/airfryer-empanadas.jpg";
 import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
 import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
 import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
@@ -185,43 +183,6 @@ const SalesPage = () => {
                   </div>
                 </CarouselItem>
                 
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryerMozzarellaSticks} 
-                        alt="Palitos de mozzarella crujientes hechos en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                      />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Palitos de mozzarella</h3>
-                        <p className="text-sm text-muted-foreground">8 min a 180°C</p>
-                      </div>
-                    </Card>
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryerEmpanadas} 
-                        alt="Empanadas doradas hechas en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                      />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Empanadas doradas</h3>
-                        <p className="text-sm text-muted-foreground">14 min a 190°C</p>
-                      </div>
-                    </Card>
-                  </div>
-                </CarouselItem>
               </CarouselContent>
               <CarouselPrevious className="hidden md:flex" />
               <CarouselNext className="hidden md:flex" />
