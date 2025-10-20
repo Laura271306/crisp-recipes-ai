@@ -522,19 +522,19 @@ const SalesPage = () => {
 
             </div>
 
-            {/* Stats/Números */}
-            <div className="grid grid-cols-3 gap-4 mt-12 text-center max-w-3xl mx-auto">
-              <div className="bg-white p-6 rounded-lg shadow-md border border-border">
-                <p className="text-3xl font-bold text-[#25D366] mb-1">500+</p>
-                <p className="text-sm text-muted-foreground">Mensajes como estos</p>
+           {/* Stats/Números */}
+            <div className="grid grid-cols-3 gap-3 md:gap-4 mt-8 md:mt-12 text-center max-w-3xl mx-auto">
+              <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
+                <p className="text-2xl md:text-3xl font-bold text-[#25D366] mb-1">500+</p>
+                <p className="text-xs md:text-sm text-muted-foreground leading-tight">Mensajes como estos</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md border border-border">
-                <p className="text-3xl font-bold text-[#25D366] mb-1">4.9★</p>
-                <p className="text-sm text-muted-foreground">Valoración promedio</p>
+              <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
+                <p className="text-2xl md:text-3xl font-bold text-[#25D366] mb-1">4.9★</p>
+                <p className="text-xs md:text-sm text-muted-foreground leading-tight">Valoración promedio</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md border border-border">
-                <p className="text-3xl font-bold text-[#25D366] mb-1">100%</p>
-                <p className="text-sm text-muted-foreground">Recomiendan</p>
+              <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
+                <p className="text-2xl md:text-3xl font-bold text-[#25D366] mb-1">100%</p>
+                <p className="text-xs md:text-sm text-muted-foreground leading-tight">Recomiendan</p>
               </div>
             </div>
 
