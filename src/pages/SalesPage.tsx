@@ -430,6 +430,181 @@ const SalesPage = () => {
               Quiero una solución simple →
             </Button>
           </div>
+          {/* Seção de Depoimentos Estilo WhatsApp */}
+      <section className="py-16 px-4 bg-gradient-to-b from-white to-green-50">
+        <div className="container mx-auto">
+          <div className="max-w-6xl mx-auto">
+            
+            {/* Título */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+                Lo que nos escriben nuestros clientes
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Mensajes reales de personas que transformaron su cocina
+              </p>
+            </div>
+
+            {/* Grid de Depoimentos WhatsApp */}
+            <div className="grid md:grid-cols-1 gap-6 max-w-4xl mx-auto">
+              
+              {/* Depoimento 1 - Sofía */}
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                {/* WhatsApp Header */}
+                <div className="bg-[#075E54] text-white px-4 py-3 flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full flex items-center justify-center font-bold text-lg">
+                    S
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-sm">Sofía L.</p>
+                    <p className="text-xs opacity-80">en línea</p>
+                  </div>
+                </div>
+                
+                {/* Mensagem */}
+                <div className="p-4 bg-[#ECE5DD]">
+                  <div className="bg-white rounded-lg rounded-tl-none p-4 shadow-sm mb-2 relative">
+                    <p className="text-gray-800 text-sm mb-3 leading-relaxed">
+                      <span className="font-bold text-gray-900">¡Salvó mis cenas entre semana!</span>
+                    </p>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      Mi freidora de aire era solo para papas fritas congeladas. Intenté hacer otras cosas, pero siempre quedaban secas o blandas. Como mamá de dos niños, no tengo tiempo para experimentar y fallar.
+                    </p>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      Este recetario cambió todo. Ahora hago pollo jugoso, vegetales crujientes y hasta postres en menos de 20 minutos. ¡Mi familia está comiendo más sano y delicioso que nunca! Totalmente recomendado. 🙌
+                    </p>
+                    <div className="flex items-center justify-between mt-3">
+                      <p className="text-xs text-gray-500 italic">
+                        Mamá de dos • Santiago, Chile 🇨🇱
+                      </p>
+                      <span className="text-xs text-gray-400">15:42</span>
+                    </div>
+                    <div className="flex gap-1 mt-2">
+                      <span>⭐</span>
+                      <span>⭐</span>
+                      <span>⭐</span>
+                      <span>⭐</span>
+                      <span>⭐</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Depoimento 2 - Javier */}
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                {/* WhatsApp Header */}
+                <div className="bg-[#075E54] text-white px-4 py-3 flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center font-bold text-lg">
+                    J
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-sm">Javier R.</p>
+                    <p className="text-xs opacity-80">en línea</p>
+                  </div>
+                </div>
+                
+                {/* Mensagem */}
+                <div className="p-4 bg-[#ECE5DD]">
+                  <div className="bg-white rounded-lg rounded-tl-none p-4 shadow-sm mb-2 relative">
+                    <p className="text-gray-800 text-sm mb-3 leading-relaxed">
+                      <span className="font-bold text-gray-900">Pensé que mi freidora no servía, ¡el que no servía era yo!</span>
+                    </p>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      Estaba a punto de regalar mi Air Fryer. Todo lo que cocinaba era un desastre. Compré este ebook sin mucha fe y ¡wow! 😱
+                    </p>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      El problema no era el aparato, era que no tenía idea de los tiempos y temperaturas. Las instrucciones son súper fáciles de seguir, a prueba de tontos. La semana pasada hice unas alitas de pollo que quedaron mejores que las de mi restaurante favorito. ¡Increíble! 🔥
+                    </p>
+                    <div className="flex items-center justify-between mt-3">
+                      <p className="text-xs text-gray-500 italic">
+                        Estudiante • Bogotá, Colombia 🇨🇴
+                      </p>
+                      <span className="text-xs text-gray-400">18:23</span>
+                    </div>
+                    <div className="flex gap-1 mt-2">
+                      <span>⭐</span>
+                      <span>⭐</span>
+                      <span>⭐</span>
+                      <span>⭐</span>
+                      <span>⭐</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Depoimento 3 - Isabella */}
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                {/* WhatsApp Header */}
+                <div className="bg-[#075E54] text-white px-4 py-3 flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center font-bold text-lg">
+                    I
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-sm">Isabella G.</p>
+                    <p className="text-xs opacity-80">en línea</p>
+                  </div>
+                </div>
+                
+                {/* Mensagem */}
+                <div className="p-4 bg-[#ECE5DD]">
+                  <div className="bg-white rounded-lg rounded-tl-none p-4 shadow-sm mb-2 relative">
+                    <p className="text-gray-800 text-sm mb-3 leading-relaxed">
+                      <span className="font-bold text-gray-900">Mucho más que solo papas fritas.</span>
+                    </p>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      Compré la Air Fryer para comer más saludable, pero estaba aburrida de comer siempre lo mismo.
+                    </p>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      <span className="font-semibold text-cta-primary">Expres al Sabor</span> me abrió un mundo de posibilidades. He probado recetas de pescado, panes, quiches y hasta el pack sin gluten es fantástico. 💚
+                    </p>
+                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                      Las recetas son sabrosas y para nada aburridas. Por fin estoy usando mi freidora todos los días y disfrutando mi comida.
+                    </p>
+                    <div className="flex items-center justify-between mt-3">
+                      <p className="text-xs text-gray-500 italic">
+                        Entusiasta del fitness • Quito, Ecuador 🇪🇨
+                      </p>
+                      <span className="text-xs text-gray-400">12:08</span>
+                    </div>
+                    <div className="flex gap-1 mt-2">
+                      <span>⭐</span>
+                      <span>⭐</span>
+                      <span>⭐</span>
+                      <span>⭐</span>
+                      <span>⭐</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Stats/Números */}
+            <div className="grid grid-cols-3 gap-4 mt-12 text-center max-w-3xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-md border border-border">
+                <p className="text-3xl font-bold text-[#25D366] mb-1">500+</p>
+                <p className="text-sm text-muted-foreground">Mensajes como estos</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md border border-border">
+                <p className="text-3xl font-bold text-[#25D366] mb-1">4.9★</p>
+                <p className="text-sm text-muted-foreground">Valoración promedio</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md border border-border">
+                <p className="text-3xl font-bold text-[#25D366] mb-1">100%</p>
+                <p className="text-sm text-muted-foreground">Recomiendan</p>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center mt-10">
+              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
+                Quiero resultados como estos (US$ 5,50)
+              </Button>
+            </div>
+
+          </div>
+        </div>
+      </section>
         </div>
       </section>
 
