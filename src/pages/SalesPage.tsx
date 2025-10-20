@@ -539,12 +539,12 @@ const SalesPage = () => {
             </div>
 
            {/* CTA */}
-            <div className="text-center mt-8 md:mt-10 px-2">
+            <div className="text-center mt-8 md:mt-10">
               <Button 
                 variant="cta" 
                 size="2xl" 
                 onClick={handleCTAClick} 
-                className="w-full md:w-auto text-sm md:text-base px-4 md:px-6 py-3 md:py-4 leading-tight"
+                className="w-full md:w-auto text-sm md:text-base"
               >
                 <span className="block md:inline">
                   Quiero resultados como estos
