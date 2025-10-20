@@ -538,10 +538,20 @@ const SalesPage = () => {
               </div>
             </div>
 
-            {/* CTA */}
-            <div className="text-center mt-10">
-              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
-                Quiero resultados como estos (US$ 5,50)
+           {/* CTA */}
+            <div className="text-center mt-8 md:mt-10 px-2">
+              <Button 
+                variant="cta" 
+                size="2xl" 
+                onClick={handleCTAClick} 
+                className="w-full md:w-auto text-sm md:text-base px-4 md:px-6 py-3 md:py-4 leading-tight"
+              >
+                <span className="block md:inline">
+                  Quiero resultados como estos
+                </span>
+                <span className="block md:inline md:ml-1">
+                  (US$ 5,50)
+                </span>
               </Button>
             </div>
 
