@@ -113,53 +113,15 @@ const SalesPage = () => {
                   <div className="p-2">
                     <Card className="overflow-hidden border-2 border-border">
                       <img 
-                        src={airfryerChickenWings} 
-                        alt="Alitas de pollo crujientes hechas en AirFryer" 
+                        src={airfryer1} 
+                        alt="Volcanes de chocolate hechos en AirFryer" 
                         className="w-full h-64 object-cover"
                         width="400"
                         height="256"
                         loading="lazy"
                       />
                       <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Alitas de pollo crujientes</h3>
-                        <p className="text-sm text-muted-foreground">12 min a 190°C</p>
-                      </div>
-                    </Card>
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryerFrenchFries} 
-                        alt="Papas fritas doradas hechas en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                      />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Papas fritas perfectas</h3>
-                        <p className="text-sm text-muted-foreground">15 min a 200°C</p>
-                      </div>
-                    </Card>
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryerSalmon} 
-                        alt="Salmón crujiente hecho en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                      />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Salmón con costra dorada</h3>
+                        <h3 className="font-bold text-foreground">Volcanes de chocolate</h3>
                         <p className="text-sm text-muted-foreground">10 min a 180°C</p>
                       </div>
                     </Card>
@@ -170,16 +132,16 @@ const SalesPage = () => {
                   <div className="p-2">
                     <Card className="overflow-hidden border-2 border-border">
                       <img 
-                        src={airfryerVegetables} 
-                        alt="Verduras asadas crujientes hechas en AirFryer" 
+                        src={airfryer2} 
+                        alt="Pan de plátano hecho en AirFryer" 
                         className="w-full h-64 object-cover"
                         width="400"
                         height="256"
                         loading="lazy"
                       />
                       <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Verduras asadas</h3>
-                        <p className="text-sm text-muted-foreground">12 min a 190°C</p>
+                        <h3 className="font-bold text-foreground">Pan de plátano</h3>
+                        <p className="text-sm text-muted-foreground">25 min a 160°C</p>
                       </div>
                     </Card>
                   </div>
@@ -189,7 +151,197 @@ const SalesPage = () => {
                   <div className="p-2">
                     <Card className="overflow-hidden border-2 border-border">
                       <img 
-                        src={airfryerMozzarellaSticks} 
+                        src={airfryer3} 
+                        alt="Fideos con vegetales hechos en AirFryer" 
+                        className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
+                        loading="lazy"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Fideos con vegetales</h3>
+                        <p className="text-sm text-muted-foreground">8 min a 200°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryer4} 
+                        alt="Bife jugoso hecho en AirFryer" 
+                        className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
+                        loading="lazy"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Bife perfecto</h3>
+                        <p className="text-sm text-muted-foreground">12 min a 200°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryer5} 
+                        alt="Alitas de pollo glaseadas hechas en AirFryer" 
+                        className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
+                        loading="lazy"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Alitas glaseadas</h3>
+                        <p className="text-sm text-muted-foreground">15 min a 190°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryer6} 
+                        alt="Papas fritas crujientes hechas en AirFryer" 
+                        className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
+                        loading="lazy"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Papas súper crujientes</h3>
+                        <p className="text-sm text-muted-foreground">18 min a 200°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryer7} 
+                        alt="Pollo cremoso con champiñones hecho en AirFryer" 
+                        className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
+                        loading="lazy"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Pollo cremoso</h3>
+                        <p className="text-sm text-muted-foreground">14 min a 180°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryer8} 
+                        alt="Tostadas con champiñones hechas en AirFryer" 
+                        className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
+                        loading="lazy"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Tostadas gourmet</h3>
+                        <p className="text-sm text-muted-foreground">8 min a 180°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryer9} 
+                        alt="Tostadas gratinadas hechas en AirFryer" 
+                        className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
+                        loading="lazy"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Tostadas gratinadas</h3>
+                        <p className="text-sm text-muted-foreground">6 min a 190°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryer10} 
+                        alt="Pollo con papas y vegetales hecho en AirFryer" 
+                        className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
+                        loading="lazy"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Plato completo</h3>
+                        <p className="text-sm text-muted-foreground">20 min a 190°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryer11} 
+                        alt="Pechuga de pollo jugosa hecha en AirFryer" 
+                        className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
+                        loading="lazy"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Pechuga jugosa</h3>
+                        <p className="text-sm text-muted-foreground">16 min a 180°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryer12} 
+                        alt="Repollo caramelizado hecho en AirFryer" 
+                        className="w-full h-64 object-cover"
+                        width="400"
+                        height="256"
+                        loading="lazy"
+                      />
+                      <div className="p-4 bg-card">
+                        <h3 className="font-bold text-foreground">Repollo caramelizado</h3>
+                        <p className="text-sm text-muted-foreground">12 min a 200°C</p>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-2">
+                    <Card className="overflow-hidden border-2 border-border">
+                      <img 
+                        src={airfryer13} 
                         alt="Palitos de mozzarella crujientes hechos en AirFryer" 
                         className="w-full h-64 object-cover"
                         width="400"
@@ -198,26 +350,26 @@ const SalesPage = () => {
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Palitos de mozzarella</h3>
-                        <p className="text-sm text-muted-foreground">8 min a 180°C</p>
+                        <p className="text-sm text-muted-foreground">7 min a 180°C</p>
                       </div>
                     </Card>
                   </div>
                 </CarouselItem>
-                
+
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
                     <Card className="overflow-hidden border-2 border-border">
                       <img 
-                        src={airfryerEmpanadas} 
-                        alt="Empanadas doradas hechas en AirFryer" 
+                        src={airfryer14} 
+                        alt="Aros de cebolla crujientes hechos en AirFryer" 
                         className="w-full h-64 object-cover"
                         width="400"
                         height="256"
                         loading="lazy"
                       />
                       <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Empanadas doradas</h3>
-                        <p className="text-sm text-muted-foreground">14 min a 190°C</p>
+                        <h3 className="font-bold text-foreground">Aros de cebolla</h3>
+                        <p className="text-sm text-muted-foreground">10 min a 190°C</p>
                       </div>
                     </Card>
                   </div>
