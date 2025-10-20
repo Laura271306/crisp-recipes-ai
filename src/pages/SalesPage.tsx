@@ -23,7 +23,21 @@ import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
 import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
 import recipeBookMockup from "@/assets/recipe-book-mockup.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-
+// ADICIONAR: imports das imagens usadas no Carousel
+import airfryer1 from "@/assets/airfryer1.jpg";
+import airfryer2 from "@/assets/airfryer2.jpg";
+import airfryer3 from "@/assets/airfryer3.jpg";
+import airfryer4 from "@/assets/airfryer4.jpg";
+import airfryer5 from "@/assets/airfryer5.jpg";
+import airfryer6 from "@/assets/airfryer6.jpg";
+import airfryer7 from "@/assets/airfryer7.jpg";
+import airfryer8 from "@/assets/airfryer8.jpg";
+import airfryer9 from "@/assets/airfryer9.jpg";
+import airfryer10 from "@/assets/airfryer10.jpg";
+import airfryer11 from "@/assets/airfryer11.jpg";
+import airfryer12 from "@/assets/airfryer12.jpg";
+import airfryer13 from "@/assets/airfryer13.jpg";
+import airfryer14 from "@/assets/airfryer14.jpg";
 const SalesPage = () => {
   const handleCTAClick = () => {
     window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
