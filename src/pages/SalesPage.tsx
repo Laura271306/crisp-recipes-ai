@@ -5,6 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { StickyButton } from "@/components/sales/StickyButton";
 import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
+import { TestimonialCard } from "@/components/sales/TestimonialCard";
 import { CheckCircle, Clock, Users, Utensils, Award, Shield, DollarSign, Zap, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
 import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
 import crispSystemInfographic from "@/assets/crisp-system-infographic.jpg";
@@ -77,14 +78,14 @@ const SalesPage = () => {
               </Button>
             </div>
             <div className="relative">
-              <img 
-                src={heroKitMockup} 
-                alt="Kit Maestro de Recetas AirFryer Perfecta con tablas de tiempo y temperatura exactas" 
+              <img
+                src={heroKitMockup}
+                alt="Kit Maestro de Recetas AirFryer Perfecta con tablas de tiempo y temperatura exactas"
                 className="w-full rounded-2xl shadow-[var(--shadow-hero)]"
                 width="800"
                 height="600"
                 loading="eager"
-                fetchPriority="high"
+                fetchpriority="high"
               />
               <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-3 shadow-lg">
                 <p className="text-sm font-medium text-foreground">📊 Tablas de tiempo exactas</p>
@@ -112,13 +113,14 @@ const SalesPage = () => {
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
                     <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryerChickenWings} 
-                        alt="Alitas de pollo crujientes hechas en AirFryer" 
+                      <img
+                        src={airfryerChickenWings}
+                        alt="Alitas de pollo crujientes hechas en AirFryer"
                         className="w-full h-64 object-cover"
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Alitas de pollo crujientes</h3>
@@ -138,6 +140,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Papas fritas perfectas</h3>
@@ -146,17 +149,18 @@ const SalesPage = () => {
                     </Card>
                   </div>
                 </CarouselItem>
-                
+
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
                     <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryerSalmon} 
-                        alt="Salmón crujiente hecho en AirFryer" 
+                      <img
+                        src={airfryerSalmon}
+                        alt="Salmón crujiente hecho en AirFryer"
                         className="w-full h-64 object-cover"
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Salmón con costra dorada</h3>
@@ -165,17 +169,18 @@ const SalesPage = () => {
                     </Card>
                   </div>
                 </CarouselItem>
-                
+
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
                     <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryerVegetables} 
-                        alt="Verduras asadas crujientes hechas en AirFryer" 
+                      <img
+                        src={airfryerVegetables}
+                        alt="Verduras asadas crujientes hechas en AirFryer"
                         className="w-full h-64 object-cover"
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Verduras asadas</h3>
@@ -184,17 +189,18 @@ const SalesPage = () => {
                     </Card>
                   </div>
                 </CarouselItem>
-                
+
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
                     <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryerMozzarellaSticks} 
-                        alt="Palitos de mozzarella crujientes hechos en AirFryer" 
+                      <img
+                        src={airfryerMozzarellaSticks}
+                        alt="Palitos de mozzarella crujientes hechos en AirFryer"
                         className="w-full h-64 object-cover"
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Palitos de mozzarella</h3>
@@ -203,17 +209,18 @@ const SalesPage = () => {
                     </Card>
                   </div>
                 </CarouselItem>
-                
+
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
                     <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryerEmpanadas} 
-                        alt="Empanadas doradas hechas en AirFryer" 
+                      <img
+                        src={airfryerEmpanadas}
+                        alt="Empanadas doradas hechas en AirFryer"
                         className="w-full h-64 object-cover"
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                       <div className="p-4 bg-card">
                         <h3 className="font-bold text-foreground">Empanadas doradas</h3>
@@ -263,6 +270,43 @@ const SalesPage = () => {
             <Button variant="cta" size="2xl" onClick={handleCTAClick} className="mt-4 w-full md:w-auto">
               Quiero una solución simple →
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonios */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Lo que dicen quienes ya transformaron su cocina
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                Resultados reales de personas reales
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+              <TestimonialCard
+                name="Sofía L., mamá de dos"
+                title="Santiago, Chile"
+                content="¡Salvó mis cenas entre semana! Mi freidora de aire era solo para papas fritas congeladas. Intenté hacer otras cosas, pero siempre quedaban secas o blandas. Como mamá de dos niños, no tengo tiempo para experimentar y fallar. Este recetario cambió todo. Ahora hago pollo jugoso, vegetales crujientes y hasta postres en menos de 20 minutos. ¡Mi familia está comiendo más sano y delicioso que nunca! Totalmente recomendado."
+                rating={5}
+              />
+              <TestimonialCard
+                name="Javier R., estudiante"
+                title="Bogotá, Colombia"
+                content="Pensé que mi freidora no servía, ¡el que no servía era yo! Estaba a punto de regalar mi Air Fryer. Todo lo que cocinaba era un desastre. Compré este ebook sin mucha fe y ¡wow! El problema no era el aparato, era que no tenía idea de los tiempos y temperaturas. Las instrucciones son súper fáciles de seguir, a prueba de tontos. La semana pasada hice unas alitas de pollo que quedaron mejores que las de mi restaurante favorito. ¡Increíble!"
+                rating={5}
+              />
+              <TestimonialCard
+                name="Isabella G., entusiasta del fitness"
+                title="Quito, Ecuador"
+                content="Mucho más que solo papas fritas. Compré la Air Fryer para comer más saludable, pero estaba aburrida de comer siempre lo mismo. Expres al Sabor me abrió un mundo de posibilidades. He probado recetas de pescado, panes, quiches y hasta el pack sin gluten es fantástico. Las recetas son sabrosas y para nada aburridas. Por fin estoy usando mi freidora todos los días y disfrutando mi comida."
+                rating={5}
+              />
+            </div>
           </div>
         </div>
       </section>
