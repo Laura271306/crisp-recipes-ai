@@ -127,8 +127,7 @@ const SalesPage = () => {
                   <div className="p-1 md:p-2">
                     <Card className="overflow-hidden border-2 border-border">
                       <img 
-                        src={airfryer1} 
-                        alt="Volcanes de chocolate hechos en AirFryer" 
+                        src={airfryer1}  
                         className="w-full h-48 md:h-64 object-cover"
                         width="400"
                         height="256"
