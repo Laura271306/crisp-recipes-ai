@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { StickyButton } from "@/components/sales/StickyButton";
 import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
 import { CheckCircle, Clock, Users, Utensils, Award, Shield, DollarSign, Zap, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
@@ -1141,13 +1140,6 @@ const SalesPage = () => {
           </div>
         </div>
       </section>
-
-      {/* Sticky Button Mobile */}
-      <StickyButton 
-        text="Quiero el kit ahora" 
-        price="US$ 5,50" 
-        onClick={handleCTAClick}
-      />
 
       {/* Footer */}
       <footer className="py-8 bg-muted">
