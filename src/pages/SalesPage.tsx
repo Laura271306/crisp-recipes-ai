@@ -24,20 +24,20 @@ import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
 import recipeBookMockup from "@/assets/recipe-book-mockup.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 // ADICIONAR: imports das imagens usadas no Carousel
-import airfryer-1 from "@/assets/airfryer-1.jpg";
-import airfryer-2 from "@/assets/airfryer-2.jpg";
-import airfryer-3 from "@/assets/airfryer-3.jpg";
-import airfryer-4 from "@/assets/airfryer-4.jpg";
-import airfryer-5 from "@/assets/airfryer-5.jpg";
-import airfryer-6 from "@/assets/airfryer-6.jpg";
-import airfryer-7 from "@/assets/airfryer-7.jpg";
-import airfryer-8 from "@/assets/airfryer-8.jpg";
-import airfryer-9 from "@/assets/airfryer-9.jpg";
-import airfryer-10 from "@/assets/airfryer-10.jpg";
-import airfryer-11 from "@/assets/airfryer-11.jpg";
-import airfryer-12 from "@/assets/airfryer-12.jpg";
-import airfryer-13 from "@/assets/airfryer-13.jpg";
-import airfryer-14 from "@/assets/airfryer-14.jpg";
+import airfryer1 from "@/assets/airfryer1.jpg";
+import airfryer2 from "@/assets/airfryer2.jpg";
+import airfryer3 from "@/assets/airfryer3.jpg";
+import airfryer4 from "@/assets/airfryer4.jpg";
+import airfryer5 from "@/assets/airfryer5.jpg";
+import airfryer6 from "@/assets/airfryer6.jpg";
+import airfryer7 from "@/assets/airfryer7.jpg";
+import airfryer8 from "@/assets/airfryer8.jpg";
+import airfryer9 from "@/assets/airfryer9.jpg";
+import airfryer10 from "@/assets/airfryer10.jpg";
+import airfryer11 from "@/assets/airfryer11.jpg";
+import airfryer12 from "@/assets/airfryer12.jpg";
+import airfryer13 from "@/assets/airfryer13.jpg";
+import airfryer14 from "@/assets/airfryer14.jpg";
 const SalesPage = () => {
   const handleCTAClick = () => {
     window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
@@ -126,7 +126,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-1} 
+                      src={airfryer1} 
                       alt="Volcanes de chocolate en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -138,7 +138,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-2} 
+                      src={airfryer2} 
                       alt="Pan de plátano en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -150,7 +150,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-3} 
+                      src={airfryer3} 
                       alt="Fideos con vegetales en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -162,7 +162,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-4} 
+                      src={airfryer4} 
                       alt="Bife jugoso en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -174,7 +174,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-5} 
+                      src={airfryer5} 
                       alt="Alitas de pollo glaseadas en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -186,7 +186,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-6} 
+                      src={airfryer6} 
                       alt="Papas fritas crujientes en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -198,7 +198,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-7} 
+                      src={airfryer7} 
                       alt="Pollo cremoso con champiñones en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -210,7 +210,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-8} 
+                      src={airfryer8} 
                       alt="Tostadas con champiñones en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -222,7 +222,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-9} 
+                      src={airfryer9} 
                       alt="Tostadas gratinadas en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -234,7 +234,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-10} 
+                      src={airfryer10} 
                       alt="Pollo con papas y vegetales en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -246,7 +246,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-11} 
+                      src={airfryer11} 
                       alt="Pechuga de pollo jugosa en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -258,7 +258,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-12} 
+                      src={airfryer12} 
                       alt="Repollo caramelizado en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -270,7 +270,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-13} 
+                      src={airfryer13} 
                       alt="Palitos de mozzarella crujientes en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
@@ -282,7 +282,7 @@ const SalesPage = () => {
                 <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                   <div className="rounded-xl overflow-hidden shadow-md">
                     <img 
-                      src={airfryer-14} 
+                      src={airfryer14} 
                       alt="Aros de cebolla crujientes en AirFryer" 
                       className="w-full h-48 md:h-64 object-cover"
                       loading="lazy"
