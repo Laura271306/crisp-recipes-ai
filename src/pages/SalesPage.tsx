@@ -169,16 +169,16 @@ const SalesPage = () => {
               Si te reconoces en esto, este kit es para ti:
             </h2>
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10">
-              <div className="p-6 bg-card rounded-lg border border-border text-left">
+              <div className="p-6 bg-card rounded-lg border border-border">
                 <p className="text-foreground font-medium">"Mi AirFryer deja la comida <strong>blanda o seca</strong>."</p>
               </div>
-              <div className="p-6 bg-card rounded-lg border border-border text-left">
+              <div className="p-6 bg-card rounded-lg border border-border">
                 <p className="text-foreground font-medium">"Paso más tiempo <strong>buscando</strong> que cocinando."</p>
               </div>
-              <div className="p-6 bg-card rounded-lg border border-border text-left">
+              <div className="p-6 bg-card rounded-lg border border-border">
                 <p className="text-foreground font-medium">"Repito las mismas 5 recetas y me <strong>aburro</strong>."</p>
               </div>
-              <div className="p-6 bg-card rounded-lg border border-border text-left">
+              <div className="p-6 bg-card rounded-lg border border-border">
                 <p className="text-foreground font-medium">"Termino pidiendo <strong>delivery</strong> entre semana."</p>
               </div>
             </div>
@@ -187,7 +187,7 @@ const SalesPage = () => {
             </Button>
           </div>
           
-          {/* Seção de Depoimentos Estilo WhatsApp - Optimized */}
+          {/* Seção de Depoimentos - Simplificada e Acessível */}
           <section className="py-16 px-4 bg-gradient-to-b from-white to-green-50">
             <div className="container mx-auto">
               <div className="max-w-6xl mx-auto">
@@ -195,177 +195,121 @@ const SalesPage = () => {
                 {/* Título */}
                 <div className="text-center mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-                    Lo que nos escriben nuestros clientes
+                    Lo que nuestros clientes dicen
                   </h2>
                   <p className="text-lg text-muted-foreground">
                     Mensajes reales de personas que transformaron su cocina
                   </p>
                 </div>
 
-                {/* Grid de Depoimentos WhatsApp - Simplified for performance */}
-                <div className="grid md:grid-cols-1 gap-6 max-w-4xl mx-auto">
+                {/* Grid de Depoimentos Simplificado */}
+                <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                   
                   {/* Depoimento 1 - Sofía */}
-                  <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
-                    {/* WhatsApp Header */}
-                    <div className="bg-[#075E54] text-white px-4 py-3 flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full flex items-center justify-center font-bold text-lg">
+                  <div className="bg-white rounded-xl shadow-md border border-border p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
                         S
                       </div>
-                      <div className="flex-1">
-                        <p className="font-semibold text-sm">Sofía L.</p>
-                        <p className="text-xs opacity-80">en línea</p>
+                      <div>
+                        <p className="font-semibold text-foreground">Sofía L.</p>
+                        <p className="text-sm text-muted-foreground">Mamá de dos • Santiago, Chile</p>
                       </div>
                     </div>
                     
-                    {/* Mensagem */}
-                    <div className="p-4 bg-[#ECE5DD]">
-                      <div className="bg-white rounded-lg rounded-tl-none p-4 shadow-sm mb-2 relative">
-                        <p className="text-gray-800 text-sm mb-3 leading-relaxed">
-                          <span className="font-bold text-gray-900">¡Salvó mis cenas entre semana!</span>
-                        </p>
-                        <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                          Mi freidora de aire era solo para papas fritas congeladas. Intenté hacer otras cosas, pero siempre quedaban secas o blandas. Como mamá de dos niños, no tengo tiempo para experimentar y fallar.
-                        </p>
-                        <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                          Este recetario cambió todo. Ahora hago pollo jugoso, vegetales crujientes y hasta postres en menos de 20 minutos. ¡Mi familia está comiendo más sano y delicioso que nunca! Totalmente recomendado. 🙌
-                        </p>
-                        <div className="flex items-center justify-between mt-3">
-                          <p className="text-xs text-gray-500 italic">
-                            Mamá de dos • Santiago, Chile 🇨🇱
-                          </p>
-                          <span className="text-xs text-gray-400">15:42</span>
-                        </div>
-                        <div className="flex gap-1 mt-2">
-                          <span>⭐</span>
-                          <span>⭐</span>
-                          <span>⭐</span>
-                          <span>⭐</span>
-                          <span>⭐</span>
-                        </div>
-                      </div>
+                    <div className="space-y-2">
+                      <p className="text-foreground font-medium">"¡Salvó mis cenas entre semana!"</p>
+                      <p className="text-muted-foreground text-sm">
+                        Mi freidora de aire era solo para papas fritas congeladas. Ahora hago pollo jugoso, vegetales crujientes y hasta postres en menos de 20 minutos. ¡Mi familia está comiendo más sano y delicioso que nunca!
+                      </p>
+                    </div>
+                    
+                    <div className="flex gap-1 mt-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-warning text-warning" />
+                      ))}
                     </div>
                   </div>
 
                   {/* Depoimento 2 - Javier */}
-                  <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
-                    {/* WhatsApp Header */}
-                    <div className="bg-[#075E54] text-white px-4 py-3 flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center font-bold text-lg">
+                  <div className="bg-white rounded-xl shadow-md border border-border p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold">
                         J
                       </div>
-                      <div className="flex-1">
-                        <p className="font-semibold text-sm">Javier R.</p>
-                        <p className="text-xs opacity-80">en línea</p>
+                      <div>
+                        <p className="font-semibold text-foreground">Javier R.</p>
+                        <p className="text-sm text-muted-foreground">Estudiante • Bogotá, Colombia</p>
                       </div>
                     </div>
                     
-                    {/* Mensagem */}
-                    <div className="p-4 bg-[#ECE5DD]">
-                      <div className="bg-white rounded-lg rounded-tl-none p-4 shadow-sm mb-2 relative">
-                        <p className="text-gray-800 text-sm mb-3 leading-relaxed">
-                          <span className="font-bold text-gray-900">Pensé que mi freidora no servía, ¡el que no servía era yo!</span>
-                        </p>
-                        <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                          Estaba a punto de regalar mi Air Fryer. Todo lo que cocinaba era un desastre. Compré este ebook sin mucha fe y ¡wow! 😱
-                        </p>
-                        <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                          El problema no era el aparato, era que no tenía idea de los tiempos y temperaturas. Las instrucciones son súper fáciles de seguir, a prueba de tontos. La semana pasada hice unas alitas de pollo que quedaron mejores que las de mi restaurante favorito. ¡Increíble! 🔥
-                        </p>
-                        <div className="flex items-center justify-between mt-3">
-                          <p className="text-xs text-gray-500 italic">
-                            Estudiante • Bogotá, Colombia 🇨🇴
-                          </p>
-                          <span className="text-xs text-gray-400">18:23</span>
-                        </div>
-                        <div className="flex gap-1 mt-2">
-                          <span>⭐</span>
-                          <span>⭐</span>
-                          <span>⭐</span>
-                          <span>⭐</span>
-                          <span>⭐</span>
-                        </div>
-                      </div>
+                    <div className="space-y-2">
+                      <p className="text-foreground font-medium">"Pensé que mi freidora no servía, ¡el que no servía era yo!"</p>
+                      <p className="text-muted-foreground text-sm">
+                        Estaba a punto de regalar mi Air Fryer. Las instrucciones son súper fáciles de seguir, a prueba de tontos. La semana pasada hice unas alitas de pollo que quedaron mejores que las de mi restaurante favorito.
+                      </p>
+                    </div>
+                    
+                    <div className="flex gap-1 mt-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-warning text-warning" />
+                      ))}
                     </div>
                   </div>
 
                   {/* Depoimento 3 - Isabella */}
-                  <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
-                    {/* WhatsApp Header */}
-                    <div className="bg-[#075E54] text-white px-4 py-3 flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center font-bold text-lg">
+                  <div className="bg-white rounded-xl shadow-md border border-border p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
                         I
                       </div>
-                      <div className="flex-1">
-                        <p className="font-semibold text-sm">Isabella G.</p>
-                        <p className="text-xs opacity-80">en línea</p>
+                      <div>
+                        <p className="font-semibold text-foreground">Isabella G.</p>
+                        <p className="text-sm text-muted-foreground">Entusiasta del fitness • Quito, Ecuador</p>
                       </div>
                     </div>
                     
-                    {/* Mensagem */}
-                    <div className="p-4 bg-[#ECE5DD]">
-                      <div className="bg-white rounded-lg rounded-tl-none p-4 shadow-sm mb-2 relative">
-                        <p className="text-gray-800 text-sm mb-3 leading-relaxed">
-                          <span className="font-bold text-gray-900">Mucho más que solo papas fritas.</span>
-                        </p>
-                        <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                          Compré la Air Fryer para comer más saludable, pero estaba aburrida de comer siempre lo mismo.
-                        </p>
-                        <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                          <span className="font-semibold text-cta-primary">Expres al Sabor</span> me abrió un mundo de posibilidades. He probado recetas de pescado, panes, quiches y hasta el pack sin gluten es fantástico. 💚
-                        </p>
-                        <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                          Las recetas son sabrosas y para nada aburridas. Por fin estoy usando mi freidora todos los días y disfrutando mi comida.
-                        </p>
-                        <div className="flex items-center justify-between mt-3">
-                          <p className="text-xs text-gray-500 italic">
-                            Entusiasta del fitness • Quito, Ecuador 🇪🇨
-                          </p>
-                          <span className="text-xs text-gray-400">12:08</span>
-                        </div>
-                        <div className="flex gap-1 mt-2">
-                          <span>⭐</span>
-                          <span>⭐</span>
-                          <span>⭐</span>
-                          <span>⭐</span>
-                          <span>⭐</span>
-                        </div>
-                      </div>
+                    <div className="space-y-2">
+                      <p className="text-foreground font-medium">"Mucho más que solo papas fritas."</p>
+                      <p className="text-muted-foreground text-sm">
+                        Compré la Air Fryer para comer más saludable, pero estaba aburrida de comer siempre lo mismo. Este recetario me abrió un mundo de posibilidades. He probado recetas de pescado, panes, quiches y hasta el pack sin gluten es fantástico.
+                      </p>
+                    </div>
+                    
+                    <div className="flex gap-1 mt-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-warning text-warning" />
+                      ))}
                     </div>
                   </div>
 
                 </div>
 
-               {/* Stats/Números */}
+                {/* Stats/Números */}
                 <div className="grid grid-cols-3 gap-3 md:gap-4 mt-8 md:mt-12 text-center max-w-3xl mx-auto">
                   <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
-                    <p className="text-2xl md:text-3xl font-bold text-[#25D366] mb-1">500+</p>
+                    <p className="text-2xl md:text-3xl font-bold text-success mb-1">500+</p>
                     <p className="text-xs md:text-sm text-muted-foreground leading-tight">Mensajes como estos</p>
                   </div>
                   <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
-                    <p className="text-2xl md:text-3xl font-bold text-[#25D366] mb-1">4.9★</p>
+                    <p className="text-2xl md:text-3xl font-bold text-success mb-1">4.9★</p>
                     <p className="text-xs md:text-sm text-muted-foreground leading-tight">Valoración promedio</p>
                   </div>
                   <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
-                    <p className="text-2xl md:text-3xl font-bold text-[#25D366] mb-1">100%</p>
+                    <p className="text-2xl md:text-3xl font-bold text-success mb-1">100%</p>
                     <p className="text-xs md:text-sm text-muted-foreground leading-tight">Recomiendan</p>
                   </div>
                 </div>
 
-               {/* CTA */}
+                {/* CTA */}
                 <div className="text-center mt-8 md:mt-10">
                   <Button 
                     variant="cta" 
                     size="2xl" 
                     onClick={handleCTAClick} 
-                    className="w-full md:w-auto text-sm md:text-base"
+                    className="w-full md:w-auto"
                   >
-                    <span className="block md:inline">
-                      Quiero resultados como estos
-                    </span>
-                    <span className="block md:inline md:ml-1">
-                      (US$ 5,50)
-                    </span>
+                    Quiero resultados como estos
                   </Button>
                 </div>
 
@@ -817,7 +761,7 @@ const SalesPage = () => {
               </div>
             </div>
 
-            <div className="text-center p-6 bg-success-light rounded-lg border border-success/20">
+            <div className="text-center p-6 md:p-8 bg-success-light rounded-lg border border-success/20">
               <p className="text-lg font-semibold text-foreground">
                 🎯 Compatible con <strong className="text-cta-primary">todas las marcas:</strong> Philips, Ninja, Cosori, Instant Pot y más
               </p>
