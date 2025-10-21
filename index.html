@@ -1,29 +1,47 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 7)</title>
-    <meta name="description" content="Más de 400 recetas por objetivo, menús semanales y tablas de tiempo/temperatura. Cocina en 10–15 min. Garantía 7 días." />
-    <meta name="author" content="AirFryer Perfecta" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     
-    <!-- Preconnect e preload para melhorar performance -->
-    <link rel="preconnect" href="https://connect.facebook.net" />
+    <!-- SEO e Descrição -->
+    <title>AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 5,50)</title>
+    <meta name="description" content="Más de 600 recetas por objetivo, menús semanales y tablas de tiempo/temperatura. Cocina en 10–15 min. Garantía 7 días." />
+    <meta name="author" content="AirFryer Perfecta" />
+    <meta name="theme-color" content="#FF6B35" />
+    
+    <!-- Acessibilidade -->
+    <meta name="color-scheme" content="light" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin />
+    
+    <!-- Performance - Preconnect crítico -->
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <link rel="preconnect" href="https://pay.kiwify.com" crossorigin />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
-    <link rel="preload" as="image" href="/src/assets/hero-kit-mockup.jpg" fetchpriority="high" />
+    <link rel="dns-prefetch" href="https://pay.kiwify.com" />
+    
+    <!-- Preload da imagem hero (primeira imagem) -->
+    <link rel="preload" as="image" href="/src/assets/hero-kit-mockup-new.jpg" fetchpriority="high" />
+    
+    <!-- Cache headers -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable" />
 
-    <meta property="og:title" content="AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 7)" />
-    <meta property="og:description" content="Más de 400 recetas por objetivo, menús semanales y tablas de tiempo/temperatura. Cocina en 10–15 min. Garantía 7 días." />
+    <!-- Open Graph - Redes Sociais -->
+    <meta property="og:title" content="AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 5,50)" />
+    <meta property="og:description" content="Más de 600 recetas por objetivo, menús semanales y tablas de tiempo/temperatura. Cocina en 10–15 min. Garantía 7 días." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://lovable.dev/" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    <link rel="canonical" href="https://lovable.dev/" />
+    <meta property="og:url" content="https://expresalsabor.lovable.app/" />
+    <meta property="og:image" content="https://expresalsabor.lovable.app/og-image.jpg" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="canonical" href="https://expresalsabor.lovable.app/" />
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:title" content="AirFryer Perfecta – Recetas rápidas con tiempos exactos" />
+    <meta name="twitter:description" content="Más de 600 recetas por objetivo, menús semanales y tablas de tiempo/temperatura." />
+    <meta name="twitter:image" content="https://expresalsabor.lovable.app/og-image.jpg" />
 
-    <!-- Facebook Pixel Code (carregamento otimizado) -->
+    <!-- Facebook Pixel Code (otimizado) -->
     <script>
       window.fbAsyncInit = function() {
         !function(f,b,e,v,n,t,s)
@@ -38,7 +56,6 @@
         fbq('track', 'PageView');
       };
       
-      // Carrega o pixel após o carregamento da página
       if (document.readyState === 'complete') {
         window.fbAsyncInit();
       } else {
@@ -46,14 +63,42 @@
       }
     </script>
     <!-- End Facebook Pixel Code -->
+
+    <!-- Structured Data para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "AirFryer Perfecta – Kit Maestro de Recetas",
+      "description": "Más de 600 recetas por objetivo, menús semanales y tablas de tiempo/temperatura exactas para Air Fryer",
+      "image": "https://expresalsabor.lovable.app/og-image.jpg",
+      "offers": {
+        "@type": "Offer",
+        "price": "5.50",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "500"
+      }
+    }
+    </script>
   </head>
 
   <body>
     <!-- Facebook Pixel Code (noscript) -->
     <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1473737967177792&ev=PageView&noscript=1"
+      alt=""
     /></noscript>
     <!-- End Facebook Pixel Code -->
+    
+    <!-- Skip to main content (Acessibilidade) -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:rounded">
+      Saltar al contenido principal
+    </a>
     
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
