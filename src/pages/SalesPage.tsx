@@ -24,20 +24,20 @@ import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
 import recipeBookMockup from "@/assets/recipe-book-mockup.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 // ADICIONAR: imports das imagens usadas no Carousel
-import airfryer1 from "@/assets/airfryer-1.jpg";
-import airfryer2 from "@/assets/airfryer-2.jpg";
-import airfryer3 from "@/assets/airfryer-3.jpg";
-import airfryer4 from "@/assets/airfryer-4.jpg";
-import airfryer5 from "@/assets/airfryer-5.jpg";
-import airfryer6 from "@/assets/airfryer-6.jpg";
-import airfryer7 from "@/assets/airfryer-7.jpg";
-import airfryer8 from "@/assets/airfryer-8.jpg";
-import airfryer9 from "@/assets/airfryer-9.jpg";
-import airfryer10 from "@/assets/airfryer-10.jpg";
-import airfryer11 from "@/assets/airfryer-11.jpg";
-import airfryer12 from "@/assets/airfryer-12.jpg";
-import airfryer13 from "@/assets/airfryer-13.jpg";
-import airfryer14 from "@/assets/airfryer-14.jpg";
+import airfryer-1 from "@/assets/airfryer-1.jpg";
+import airfryer-2 from "@/assets/airfryer-2.jpg";
+import airfryer-3 from "@/assets/airfryer-3.jpg";
+import airfryer-4 from "@/assets/airfryer-4.jpg";
+import airfryer-5 from "@/assets/airfryer-5.jpg";
+import airfryer-6 from "@/assets/airfryer-6.jpg";
+import airfryer-7 from "@/assets/airfryer-7.jpg";
+import airfryer-8 from "@/assets/airfryer-8.jpg";
+import airfryer-9 from "@/assets/airfryer-9.jpg";
+import airfryer-10 from "@/assets/airfryer-10.jpg";
+import airfryer-11 from "@/assets/airfryer-11.jpg";
+import airfryer-12 from "@/assets/airfryer-12.jpg";
+import airfryer-13 from "@/assets/airfryer-13.jpg";
+import airfryer-14 from "@/assets/airfryer-14.jpg";
 const SalesPage = () => {
   const handleCTAClick = () => {
     window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
