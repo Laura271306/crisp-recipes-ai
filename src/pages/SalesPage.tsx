@@ -440,7 +440,7 @@ const SalesPage = () => {
                     <div className="w-12 h-12 bg-cta-primary rounded-full flex items-center justify-center">
                       <Utensils className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-foreground">Produto Principal</h3>
+                    <h3 className="text-2xl font-bold text-foreground">Producto Principal</h3>
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-4">
@@ -448,7 +448,7 @@ const SalesPage = () => {
                       <div className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Coleção "Fundamentos + Guías Prácticas da Airfryer"</p>
+                          <p className="font-semibold text-foreground">Colección "Fundamentos + Guías Prácticas de la Airfryer"</p>
                         </div>
                       </div>
                     </div>
@@ -457,7 +457,7 @@ const SalesPage = () => {
                       <div className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Coleção "Receitas Rápidas & do Dia a Dia" (variadas)</p>
+                          <p className="font-semibold text-foreground">Colección "Recetas Rápidas & del Día a Día" (variadas)</p>
                         </div>
                       </div>
                     </div>
@@ -475,7 +475,7 @@ const SalesPage = () => {
                       <div className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Coleção "Proteínas & Comidas para a Família"</p>
+                          <p className="font-semibold text-foreground">Colección "Proteínas & Comidas para la Familia"</p>
                         </div>
                       </div>
                     </div>
@@ -484,7 +484,7 @@ const SalesPage = () => {
                       <div className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Coleção "Veggie, Fit & Sem Glúten" (opções saudáveis)</p>
+                          <p className="font-semibold text-foreground">Colección "Veggie, Fit & Sin Gluten" (opciones saludables)</p>
                         </div>
                       </div>
                     </div>
@@ -502,7 +502,7 @@ const SalesPage = () => {
                       <div className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Coleção "Postres & Snacks"</p>
+                          <p className="font-semibold text-foreground">Colección "Postres & Snacks"</p>
                         </div>
                       </div>
                     </div>
@@ -518,7 +518,7 @@ const SalesPage = () => {
                       <Award className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-foreground">Bônus e complementos</h3>
+                      <h3 className="text-2xl font-bold text-foreground">Bonos y complementos</h3>
                       <Badge variant="destructive" className="text-xs mt-1">Incluidos por tiempo limitado</Badge>
                     </div>
                   </div>
@@ -730,7 +730,7 @@ const SalesPage = () => {
                 <h3 className="font-bold text-center text-foreground mb-6">Stack de Valor</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span>Coleções (4)</span>
+                    <span>Colecciones (4)</span>
                     <span className="font-semibold">US$ 28</span>
                   </div>
                   <div className="flex justify-between">
