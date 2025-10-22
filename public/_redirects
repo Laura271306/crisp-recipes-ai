@@ -1,3 +1,5 @@
-# Redirect all routes to index.html for client-side routing
-# except for files that exist
-/*    /index.html   200
+/*
+  Netlify/Cloudflare Pages SPA Fallback
+  This ensures that all non-file paths are routed to index.html, allowing React Router to handle the routing.
+*/
+/  /index.html  200
