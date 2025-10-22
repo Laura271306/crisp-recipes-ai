@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
 import { BonusItem } from "@/components/sales/BonusItem";
 import { CheckCircle, Utensils, Award, Shield, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
