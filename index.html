@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     
     <!-- SEO e Descrição -->
-    <title>AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 5,50)</title>
+    <title>AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 6,50)</title>
     <meta name="description" content="Más de 600 recetas por objetivo, menús semanales y tablas de tiempo/temperatura. Cocina en 10–15 min. Garantía 7 días." />
     <meta name="author" content="AirFryer Perfecta" />
     <meta name="theme-color" content="#FF6B35" />
@@ -23,15 +23,14 @@
     <!-- Preload da imagem hero (primeira imagem) -->
     <link rel="preload" as="image" href="/src/assets/hero-kit-mockup-new.jpg" fetchpriority="high" />
     
-    <!-- Carregamento Assíncrono do CSS para evitar bloqueio de renderização -->
-    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+    <!-- Carregamento Síncrono do CSS para evitar FOUC e garantir LCP rápido -->
+    <link rel="stylesheet" href="/src/index.css">
     
     <!-- Cache headers -->
     <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable" />
 
     <!-- Open Graph - Redes Sociais -->
-    <meta property="og:title" content="AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 5,50)" />
+    <meta property="og:title" content="AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 6,50)" />
     <meta property="og:description" content="Más de 600 recetas por objetivo, menús semanales y tablas de tiempo/temperatura. Cocina en 10–15 min. Garantía 7 días." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://expresalsabor.lovable.app/" />
@@ -55,7 +54,7 @@
       "image": "https://expresalsabor.lovable.app/og-image.jpg",
       "offers": {
         "@type": "Offer",
-        "price": "5.50",
+        "price": "6.50",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
       },
