@@ -139,10 +139,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Volcanes de chocolate</h3>
-                        <p className="text-sm text-muted-foreground">10 min a 180°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -158,10 +154,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Pan de plátano</h3>
-                        <p className="text-sm text-muted-foreground">25 min a 160°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -177,10 +169,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Fideos con vegetales</h3>
-                        <p className="text-sm text-muted-foreground">8 min a 200°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -196,10 +184,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Bife perfecto</h3>
-                        <p className="text-sm text-muted-foreground">12 min a 200°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -215,10 +199,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Alitas glaseadas</h3>
-                        <p className="text-sm text-muted-foreground">15 min a 190°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -234,10 +214,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Papas súper crujientes</h3>
-                        <p className="text-sm text-muted-foreground">18 min a 200°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -253,10 +229,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Pollo cremoso</h3>
-                        <p className="text-sm text-muted-foreground">14 min a 180°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -272,10 +244,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Tostadas gourmet</h3>
-                        <p className="text-sm text-muted-foreground">8 min a 180°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -291,10 +259,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Tostadas gratinadas</h3>
-                        <p className="text-sm text-muted-foreground">6 min a 190°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -310,10 +274,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Plato completo</h3>
-                        <p className="text-sm text-muted-foreground">20 min a 190°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -329,10 +289,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Pechuga jugosa</h3>
-                        <p className="text-sm text-muted-foreground">16 min a 180°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -348,10 +304,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Repollo caramelizado</h3>
-                        <p className="text-sm text-muted-foreground">12 min a 200°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -367,10 +319,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Palitos de mozzarella</h3>
-                        <p className="text-sm text-muted-foreground">7 min a 180°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -386,10 +334,6 @@ const SalesPage = () => {
                         height="256"
                         loading="lazy"
                       />
-                      <div className="p-4 bg-card">
-                        <h3 className="font-bold text-foreground">Aros de cebolla</h3>
-                        <p className="text-sm text-muted-foreground">10 min a 190°C</p>
-                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
