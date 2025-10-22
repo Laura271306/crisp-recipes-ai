@@ -132,13 +132,13 @@ const SalesPage = () => {
             </div>
             
             {/* Seção de Depoimentos - Simplificada e Acessível */}
-            <section className="py-16 px-4 bg-gradient-to-b from-white to-green-50">
+            <section className="py-16 px-4 bg-gradient-to-b from-white to-green-50" role="region" aria-labelledby="testimonials-heading">
               <div className="container mx-auto">
                 <div className="max-w-6xl mx-auto">
                   
                   {/* Título */}
                   <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+                    <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-3">
                       Lo que nuestros clientes dicen
                     </h2>
                     <p className="text-lg text-muted-foreground">

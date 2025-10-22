@@ -27,18 +27,6 @@
   z-index: 9999;
 }
 
-/* Melhorar foco visível para navegação por teclado */
-*:focus-visible {
-  outline: 3px solid #FF6B35;
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* Remover outline apenas para mouse, manter para teclado */
-*:focus:not(:focus-visible) {
-  outline: none;
-}
-
 /* Transições suaves para melhor experiência */
 * {
   scroll-behavior: smooth;

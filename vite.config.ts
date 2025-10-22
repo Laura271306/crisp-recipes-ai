@@ -29,6 +29,10 @@ export default defineConfig(({ mode }) => ({
             if (id.includes('lucide-react')) {
               return 'lucide-react';
             }
+            // Agrupando bibliotecas grandes e não essenciais (como recharts, react-query, zod) em um chunk 'vendor'
+            if (id.includes('recharts') || id.includes('@tanstack/react-query') || id.includes('zod') || id.includes('react-hook-form')) {
+              return 'heavy-vendor';
+            }
             // Deixamos o Rollup/Vite agrupar o restante das dependências de UI e utilitários
             return 'vendor';
           }
