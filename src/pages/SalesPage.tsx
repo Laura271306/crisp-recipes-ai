@@ -561,7 +561,7 @@ const SalesPage = () => {
                       <div className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Guia de Compras Inteligentes / Economia mensal</p>
+                          <p className="font-semibold text-foreground">Guia de Compras Inteligentes / Ahorro mensual</p>
                         </div>
                       </div>
                     </div>
