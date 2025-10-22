@@ -77,7 +77,7 @@ const SalesPage = () => {
                 </p>
 
                 <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
-                  Quiero crocancia hoy (US$ 5,50)
+                  Compra ahora (US$ 6,50)
                 </Button>
               </div>
               <div className="relative">
@@ -127,7 +127,7 @@ const SalesPage = () => {
                 </div>
               </div>
               <Button variant="cta" size="2xl" onClick={handleCTAClick} className="mt-4 w-full md:w-auto">
-                Quiero una solución simple →
+                Compra ahora →
               </Button>
             </div>
             
@@ -253,7 +253,7 @@ const SalesPage = () => {
                       onClick={handleCTAClick} 
                       className="w-full md:w-auto"
                     >
-                      Quiero resultados como estos
+                      Compra ahora
                     </Button>
                   </div>
 
@@ -362,7 +362,7 @@ const SalesPage = () => {
 
               <div className="text-center mt-10">
                 <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
-                  Quiero tiempos exactos (US$ 5,50)
+                  Compra ahora (US$ 6,50)
                 </Button>
               </div>
             </div>
@@ -395,11 +395,11 @@ const SalesPage = () => {
                       </tr>
                       <tr className="border-b border-border">
                         <td className="py-4 text-foreground">Kit Maestro AirFryer Perfecta (único pago)</td>
-                        <td className="py-4 text-right font-bold text-cta-primary text-lg">US$ 5,50</td>
+                        <td className="py-4 text-right font-bold text-cta-primary text-lg">US$ 6,50</td>
                       </tr>
                       <tr>
                         <td className="pt-4 text-foreground font-semibold">Ahorro estimado (primer mes)</td>
-                        <td className="pt-4 text-right font-bold text-success text-xl">US$ 90–114</td>
+                        <td className="pt-4 text-right font-bold text-success text-xl">US$ 90–113</td>
                       </tr>
                     </tbody>
                   </table>
@@ -414,7 +414,7 @@ const SalesPage = () => {
 
               <div className="text-center mt-8">
                 <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
-                  Empezar a ahorrar hoy (US$ 5,50)
+                  Compra ahora (US$ 6,50)
                 </Button>
               </div>
             </div>
@@ -642,7 +642,7 @@ const SalesPage = () => {
 
             <div className="text-center mt-10">
               <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
-                Quiero todo esto ahora (US$ 5,50)
+                Compra ahora (US$ 6,50)
               </Button>
             </div>
           </div>
@@ -723,7 +723,7 @@ const SalesPage = () => {
                   Con 2 pedidos de delivery menos por semana
                 </h2>
                 <p className="text-lg md:text-xl text-muted-foreground">
-                  ahorras <span className="font-bold text-success">US$ 80–120/mes</span>. El kit cuesta <span className="font-bold text-cta-primary">US$ 5,50</span> y se paga <strong>hoy</strong>.
+                  ahorras <span className="font-bold text-success">US$ 80–120/mes</span>. El kit cuesta <span className="font-bold text-cta-primary">US$ 6,50</span> y se paga <strong>hoy</strong>.
                 </p>
               </div>
 
@@ -757,7 +757,7 @@ const SalesPage = () => {
                   </div>
                   <div className="flex justify-between text-2xl">
                     <span className="font-bold text-cta-primary">Hoy:</span>
-                    <span className="font-bold text-cta-primary">US$ 5,50</span>
+                    <span className="font-bold text-cta-primary">US$ 6,50</span>
                   </div>
                 </div>
               </div>
@@ -775,13 +775,13 @@ const SalesPage = () => {
               
               <div className="p-6 md:p-8 bg-card rounded-2xl border border-border shadow-xl mb-8">
                 <div className="text-4xl md:text-6xl font-bold text-cta-primary mb-4">
-                  US$ 5,50
+                  US$ 6,50
                 </div>
                 <p className="text-base md:text-lg text-muted-foreground mb-6">
                   Acceso inmediato y actualizaciones del kit.
                 </p>
                 <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto mb-4">
-                  Quiero mis recetas ahora (US$ 5,50)
+                  Compra ahora (US$ 6,50)
                 </Button>
                 
                 <div className="flex flex-wrap justify-center gap-3 mt-4">
@@ -840,7 +840,7 @@ const SalesPage = () => {
                 AirFryer Perfecta – Kit Maestro de Recetas
               </h2>
               <p className="text-lg md:text-xl mb-2">(Edición Premium)</p>
-              <div className="text-4xl md:text-5xl font-bold mb-6">US$ 5,50</div>
+              <div className="text-4xl md:text-5xl font-bold mb-6">US$ 6,50</div>
               <p className="text-lg md:text-xl mb-8">acceso inmediato</p>
               <Button 
                 variant="cta" 
@@ -848,7 +848,7 @@ const SalesPage = () => {
                 onClick={handleCTAClick}
                 className="bg-white text-accent hover:bg-white/90 hover:text-accent w-full md:w-auto shadow-2xl"
               >
-                Sí, quiero cocinar mejor hoy
+                Compra ahora
               </Button>
             </div>
           </div>

@@ -81,7 +81,7 @@ export const LazyCarouselSection = ({ handleCTAClick }: LazyCarouselSectionProps
               <strong className="text-cta-primary">600+ recetas como estas</strong> te esperan
             </p>
             <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
-              Quiero cocinar así (US$ 5,50)
+              Compra ahora (US$ 6,50)
             </Button>
           </div>
         </div>
