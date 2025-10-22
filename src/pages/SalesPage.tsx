@@ -8,7 +8,7 @@ import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
 import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
 import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
 import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
-import React, { Suspense } from "react";
+import * as React from "react";
 
 // Lazy Imports para componentes abaixo da dobra
 const LazyCarouselSection = React.lazy(() => import("@/components/sales/LazyCarouselSection").then(module => ({ default: module.LazyCarouselSection })));
@@ -28,7 +28,7 @@ const SalesPage = () => {
     window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
   };
 
-  const SuspenseFallback = <div className="text-center p-8 text-muted-foreground">Cargando contenido...</div>;
+  const SuspenseFallback = <div className="flex min-h-screen items-center justify-center text-muted-foreground">Cargando contenido...</div>;
 
   return (
     <div className="min-h-screen bg-background">
@@ -101,9 +101,9 @@ const SalesPage = () => {
         </section>
 
         {/* Carrossel de Resultados (Lazy Loaded) */}
-        <Suspense fallback={SuspenseFallback}>
+        <React.Suspense fallback={SuspenseFallback}>
           <LazyCarouselSection handleCTAClick={handleCTAClick} />
-        </Suspense>
+        </React.Suspense>
 
         {/* Dor do Avatar */}
         <section className="py-16 bg-muted/30">
@@ -825,9 +825,9 @@ const SalesPage = () => {
                   Preguntas Frecuentes
                 </h2>
               </div>
-              <Suspense fallback={SuspenseFallback}>
+              <React.Suspense fallback={SuspenseFallback}>
                 <LazyAccordion items={faqItems} />
-              </Suspense>
+              </React.Suspense>
             </div>
           </div>
         </section>
