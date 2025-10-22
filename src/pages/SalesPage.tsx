@@ -5,9 +5,6 @@ import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
 import { CheckCircle, Utensils, Award, Shield, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
 import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
-import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
-import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
-import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
 import React, { Suspense } from "react";
 import { LazyLoadWrapper } from "@/components/utils/LazyLoadWrapper.tsx"; // Importando o novo wrapper
 
@@ -360,21 +357,21 @@ const SalesPage = () => {
                   time="12 min"
                   temperature="190°C"
                   instructions="voltear a mitad"
-                  image={recipePolloParmesano}
+                  imagePath="@/assets/recipe-pollo-parmesano.jpg"
                 />
                 <RecipeCard
                   name="Camarones al ajo"
                   time="8 min"
                   temperature="180°C"
                   instructions="listo en una sola vez"
-                  image={recipeCamaronesAjo}
+                  imagePath="@/assets/recipe-camarones-ajo.jpg"
                 />
                 <RecipeCard
                   name="Chips de batata"
                   time="10-12 min"
                   temperature="200°C"
                   instructions="agitar a mitad"
-                  image={recipeChipsBatata}
+                  imagePath="@/assets/recipe-chips-batata.jpg"
                 />
               </div>
 
