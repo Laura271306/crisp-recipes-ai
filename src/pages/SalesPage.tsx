@@ -570,7 +570,7 @@ const SalesPage = () => {
                       <div className="flex items-start gap-3">
                         <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Guia Exprés: Limpeza e Manutenção</p>
+                          <p className="font-semibold text-foreground">Guia Exprés: Limpieza y Mantenimiento</p>
                         </div>
                       </div>
                     </div>
