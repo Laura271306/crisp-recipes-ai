@@ -5,7 +5,7 @@ import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
 import { BonusItem } from "@/components/sales/BonusItem";
 import { CheckCircle, Utensils, Award, Shield, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
-import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
+// Removido: import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
 import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
 import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
 import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
@@ -15,6 +15,8 @@ import { LazyLoadWrapper } from "@/components/utils/LazyLoadWrapper.tsx"; // Imp
 // Lazy Imports para componentes abaixo da dobra
 const LazyCarouselSection = React.lazy(() => import("@/components/sales/LazyCarouselSection").then(module => ({ default: module.LazyCarouselSection })));
 const LazyAccordion = React.lazy(() => import("@/components/sales/LazyAccordion").then(module => ({ default: module.LazyAccordion })));
+
+const heroKitMockupPath = "/hero-kit-mockup-new.jpg"; // Novo caminho estático
 
 const faqItems = [
   { value: "item-1", trigger: "¿Sirve para 3,5 L / 5,5 L?", content: "Sí. Indicamos ajustes por capacidad y potencia." },
@@ -115,7 +117,7 @@ const SalesPage = () => {
               </div>
               <div className="relative">
                 <img 
-                  src={heroKitMockup} 
+                  src={heroKitMockupPath} 
                   alt="Kit Maestro de Recetas AirFryer Perfecta con tablas de tiempo y temperatura exactas" 
                   className="w-full rounded-2xl shadow-[var(--shadow-hero)]"
                   width="800"
@@ -123,7 +125,8 @@ const SalesPage = () => {
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
-                  srcSet={`${heroKitMockup} 800w, ${heroKitMockup.replace('.jpg', '-400w.jpg')} 400w`}
+                  // Usamos o caminho estático para o srcset também, assumindo que as variantes estão na pasta public
+                  srcSet={`${heroKitMockupPath} 800w, ${heroKitMockupPath.replace('.jpg', '-400w.jpg')} 400w`}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-3 shadow-lg">

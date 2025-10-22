@@ -19,8 +19,15 @@
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="dns-prefetch" href="https://pay.kiwify.com" />
     
-    <!-- Otimização LCP: Preload da imagem LCP. REMOVIDO para evitar caminhos incorretos. -->
+    <!-- Otimização LCP: Preload da imagem LCP (Assumindo que está em /public) -->
+    <link rel="preload" href="/hero-kit-mockup-new.jpg" as="image" fetchpriority="high" />
     
+    <!-- Otimização de Performance: Pré-carregamento do módulo principal e CSS -->
+    <!-- O CSS é um recurso de bloqueio de renderização. Pré-carregá-lo ajuda. -->
+    <link rel="preload" href="/src/index.css" as="style" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="modulepreload" href="/src/main.tsx" />
+
     <!-- Structured Data para SEO -->
     <script type="application/ld+json">
     {
@@ -43,9 +50,6 @@
     }
     </script>
     
-    <!-- Otimização de Performance: Pré-carregamento do módulo principal -->
-    <link rel="modulepreload" href="/src/main.tsx" />
-
     <!-- Open Graph - Redes Sociais -->
     <meta property="og:title" content="AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 6,50)" />
     <meta property="og:description" content="Más de 600 recetas por objetivo, menús semanales y tablas de tiempo/temperatura. Cocina en 10–15 min. Garantia 7 días." />
