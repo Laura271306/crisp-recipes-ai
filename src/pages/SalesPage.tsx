@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { StickyButton } from "@/components/sales/StickyButton";
 import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
 import { CheckCircle, Clock, Users, Utensils, Award, Shield, DollarSign, Zap, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
@@ -1138,13 +1137,6 @@ const SalesPage = () => {
           </p>
         </div>
       </footer>
-      
-      {/* Sticky CTA Button for Mobile */}
-      <StickyButton 
-        onClick={handleCTAClick} 
-        price="US$ 5,50" 
-        text="Quiero crocancia hoy" 
-      />
     </div>
   );
 };
