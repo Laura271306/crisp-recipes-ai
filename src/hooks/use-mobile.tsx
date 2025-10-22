@@ -6,14 +6,24 @@ export function useIsMobile() {
   const [isMobile, setIsMobile] = React.useState<boolean | undefined>(undefined);
 
   React.useEffect(() => {
+    // Define a media query
     const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
+    
+    // Handler function
     const onChange = () => {
-      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+      setIsMobile(mql.matches);
     };
+    
+    // Initialize state based on current match
+    setIsMobile(mql.matches);
+
+    // Add listener
     mql.addEventListener("change", onChange);
-    setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    
+    // Cleanup
     return () => mql.removeEventListener("change", onChange);
   }, []);
 
-  return !!isMobile;
+  // Retorna false se ainda não foi determinado (SSR/primeiro render)
+  return isMobile ?? false;
 }
