@@ -19,6 +19,7 @@ export const RecipeCard = ({ name, time, temperature, instructions, image }: Rec
             height="128"
             loading="lazy"
             decoding="async"
+            sizes="(max-width: 768px) 100vw, 33vw"
           />
         </div>
       )}

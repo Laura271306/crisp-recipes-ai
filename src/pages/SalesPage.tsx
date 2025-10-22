@@ -23,12 +23,13 @@ const faqItems = [
   { value: "item-6", trigger: "¿Reembolso?", content: "Garantía Doble 7×7 dentro de 7 días." },
 ];
 
+// Fallback leve para Suspense
+const SuspenseFallback = <div className="flex items-center justify-center p-12 text-muted-foreground">Cargando contenido...</div>;
+
 const SalesPage = () => {
   const handleCTAClick = () => {
     window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
   };
-
-  const SuspenseFallback = <div className="flex min-h-screen items-center justify-center">Cargando...</div>;
 
   return (
     <div className="min-h-screen bg-background">
@@ -369,7 +370,7 @@ const SalesPage = () => {
           </div>
         </section>
 
-        {/* Economía Estimada */}
+        {/* Economia Estimada */}
         <section className="py-16 bg-gradient-to-br from-success-light to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -844,7 +845,6 @@ const SalesPage = () => {
               <p className="text-lg md:text-xl mb-8">acceso inmediato</p>
               <Button 
                 variant="cta" 
-                size="2xl" 
                 onClick={handleCTAClick}
                 className="bg-white text-accent hover:bg-white/90 hover:text-accent w-full md:w-auto shadow-2xl"
               >

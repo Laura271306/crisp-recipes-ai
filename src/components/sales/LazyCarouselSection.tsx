@@ -68,6 +68,7 @@ export const LazyCarouselSection = ({ handleCTAClick }: LazyCarouselSectionProps
                         height="256"
                         loading="lazy"
                         decoding="async"
+                        sizes="(max-width: 768px) 90vw, 33vw"
                       />
                     </Card>
                   </div>
