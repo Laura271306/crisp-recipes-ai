@@ -23,6 +23,10 @@
     <!-- Preload da imagem hero (primeira imagem) -->
     <link rel="preload" as="image" href="/src/assets/hero-kit-mockup-new.jpg" fetchpriority="high" />
     
+    <!-- Carregamento Assíncrono do CSS para evitar bloqueio de renderização -->
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+    
     <!-- Cache headers -->
     <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable" />
 
