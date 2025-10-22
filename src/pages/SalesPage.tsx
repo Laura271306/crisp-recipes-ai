@@ -17,7 +17,7 @@ const LazyAccordion = React.lazy(() => import("@/components/sales/LazyAccordion"
 const faqItems = [
   { value: "item-1", trigger: "¿Sirve para 3,5 L / 5,5 L?", content: "Sí. Indicamos ajustes por capacidad y potencia." },
   { value: "item-2", trigger: "¿Ingredientes caros?", content: "No: básicos del súper + sustitutos." },
-  { value: "item-3", trigger: "¿Opciones fit/sin gluten?", content: "Incluidas y <strong>marcadas</strong>." },
+  { value: "item-3", trigger: "¿Opciones fit/sin gluten?", content: <>Incluidas y <strong>marcadas</strong>.</> },
   { value: "item-4", trigger: "¿Cuánto tardo en organizarme?", content: "15 min con el calendario de 30 días." },
   { value: "item-5", trigger: "¿Formato y acceso?", content: "100% digital, PDF A4 y versión móvil. Acceso inmediato." },
   { value: "item-6", trigger: "¿Reembolso?", content: "Garantía Doble 7×7 dentro de 7 días." },

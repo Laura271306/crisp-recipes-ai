@@ -4,7 +4,7 @@ import React from "react";
 interface FAQItem {
   value: string;
   trigger: string;
-  content: string;
+  content: React.ReactNode; // Alterado para React.ReactNode
 }
 
 interface LazyAccordionProps {
