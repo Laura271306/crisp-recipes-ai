@@ -2,42 +2,59 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { StickyButton } from "@/components/sales/StickyButton";
 import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
 import { CheckCircle, Clock, Users, Utensils, Award, Shield, DollarSign, Zap, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
-import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
-import crispSystemInfographic from "@/assets/crisp-system-infographic.jpg";
-import recipeCollectionsIndex from "@/assets/recipe-collections-index.jpg";
-import recipeTimeTemperature from "@/assets/recipe-time-temperature.jpg";
-import weeklyMenuShopping from "@/assets/weekly-menu-shopping.jpg";
-import cleaningGuideVisual from "@/assets/cleaning-guide-visual.jpg";
-import airfryerChickenWings from "@/assets/airfryer-chicken-wings.jpg";
-import airfryerFrenchFries from "@/assets/airfryer-french-fries.jpg";
-import airfryerSalmon from "@/assets/airfryer-salmon.jpg";
-import airfryerVegetables from "@/assets/airfryer-vegetables.jpg";
-import airfryerMozzarellaSticks from "@/assets/airfryer-mozzarella-sticks.jpg";
-import airfryerEmpanadas from "@/assets/airfryer-empanadas.jpg";
-import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
-import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
-import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
-import recipeBookMockup from "@/assets/recipe-book-mockup.jpg";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-// ADICIONAR: imports das imagens usadas no Carousel
-import airfryer1 from "@/assets/airfryer1.jpg";
-import airfryer2 from "@/assets/airfryer2.jpg";
-import airfryer3 from "@/assets/airfryer3.jpg";
-import airfryer4 from "@/assets/airfryer4.jpg";
-import airfryer5 from "@/assets/airfryer5.jpg";
-import airfryer6 from "@/assets/airfryer6.jpg";
-import airfryer7 from "@/assets/airfryer7.jpg";
-import airfryer8 from "@/assets/airfryer8.jpg";
-import airfryer9 from "@/assets/airfryer9.jpg";
-import airfryer10 from "@/assets/airfryer10.jpg";
-import airfryer11 from "@/assets/airfryer11.jpg";
-import airfryer12 from "@/assets/airfryer12.jpg";
-import airfryer13 from "@/assets/airfryer13.jpg";
-import airfryer14 from "@/assets/airfryer14.jpg";
+import { lazy, Suspense } from "react";
+
+// Lazy load heavy components
+const Carousel = lazy(() => import("@/components/ui/carousel").then(module => ({ default: module.Carousel })));
+const CarouselContent = lazy(() => import("@/components/ui/carousel").then(module => ({ default: module.CarouselContent })));
+const CarouselItem = lazy(() => import("@/components/ui/carousel").then(module => ({ default: module.CarouselItem })));
+const CarouselNext = lazy(() => import("@/components/ui/carousel").then(module => ({ default: module.CarouselNext })));
+const CarouselPrevious = lazy(() => import("@/components/ui/carousel").then(module => ({ default: module.CarouselPrevious })));
+
+// Importar as imagens atualizadas
+const heroKitMockup = "/src/assets/hero-kit-mockup-new.jpg";
+const crispSystemInfographic = "/src/assets/crisp-system-infographic.jpg";
+const recipeCollectionsIndex = "/src/assets/recipe-collections-index.jpg";
+const recipeTimeTemperature = "/src/assets/recipe-time-temperature.jpg";
+const weeklyMenuShopping = "/src/assets/weekly-menu-shopping.jpg";
+const cleaningGuideVisual = "/src/assets/cleaning-guide-visual.jpg";
+const airfryerChickenWings = "/src/assets/airfryer-chicken-wings.jpg";
+const airfryerFrenchFries = "/src/assets/airfryer-french-fries.jpg";
+const airfryerSalmon = "/src/assets/airfryer-salmon.jpg";
+const airfryerVegetables = "/src/assets/airfryer-vegetables.jpg";
+const airfryerMozzarellaSticks = "/src/assets/airfryer-mozzarella-sticks.jpg";
+const airfryerEmpanadas = "/src/assets/airfryer-empanadas.jpg";
+const recipePolloParmesano = "/src/assets/recipe-pollo-parmesano.jpg";
+const recipeCamaronesAjo = "/src/assets/recipe-camarones-ajo.jpg";
+const recipeChipsBatata = "/src/assets/recipe-chips-batata.jpg";
+const recipeBookMockup = "/src/assets/recipe-book-mockup.jpg";
+
+// Carrossel de imagens atualizado
+const carouselImages = [
+  "/src/assets/airfryer1.jpg",
+  "/src/assets/airfryer2.jpg",
+  "/src/assets/airfryer3.jpg",
+  "/src/assets/airfryer4.jpg",
+  "/src/assets/airfryer5.jpg",
+  "/src/assets/airfryer6.jpg",
+  "/src/assets/airfryer7.jpg",
+  "/src/assets/airfryer8.jpg",
+  "/src/assets/airfryer9.jpg",
+  "/src/assets/airfryer10.jpg",
+  "/src/assets/airfryer11.jpg",
+  "/src/assets/airfryer12.jpg",
+  "/src/assets/airfryer13.jpg",
+  "/src/assets/airfryer14.jpg"
+];
+
+// Loading placeholder component
+const ImagePlaceholder = ({ className = "" }) => (
+  <div className={`bg-gray-200 animate-pulse rounded-lg ${className}`} />
+);
+
 const SalesPage = () => {
   const handleCTAClick = () => {
     window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
@@ -99,6 +116,7 @@ const SalesPage = () => {
                 height="600"
                 loading="eager"
                 fetchPriority="high"
+                decoding="async"
               />
               <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-3 shadow-lg">
                 <p className="text-sm font-medium text-foreground">📊 Tablas de tiempo exactas</p>
@@ -108,7 +126,7 @@ const SalesPage = () => {
         </div>
       </section>
 
-      {/* Carrossel de Resultados - Versão Mobile Otimizada */}
+      {/* Carrossel de Resultados - Lazy Loaded */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-cta-primary/5 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -121,179 +139,27 @@ const SalesPage = () => {
               </p>
             </div>
             
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent className="-ml-2 md:-ml-4">
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer1} 
-                      alt="Volcanes de chocolate en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer2} 
-                      alt="Pan de plátano en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer3} 
-                      alt="Fideos con vegetales en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer4} 
-                      alt="Bife jugoso en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer5} 
-                      alt="Alitas de pollo glaseadas en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer6} 
-                      alt="Papas fritas crujientes en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer7} 
-                      alt="Pollo cremoso con champiñones en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer8} 
-                      alt="Tostadas con champiñones en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer9} 
-                      alt="Tostadas gratinadas en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer10} 
-                      alt="Pollo con papas y vegetales en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer11} 
-                      alt="Pechuga de pollo jugosa en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer12} 
-                      alt="Repollo caramelizado en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer13} 
-                      alt="Palitos de mozzarella crujientes en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                  <div className="rounded-xl overflow-hidden shadow-md">
-                    <img 
-                      src={airfryer14} 
-                      alt="Aros de cebolla crujientes en AirFryer" 
-                      className="w-full h-48 md:h-64 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex" />
-              <CarouselNext className="hidden md:flex" />
-            </Carousel>
+            <Suspense fallback={<ImagePlaceholder className="h-64 w-full" />}>
+              <Carousel className="w-full max-w-5xl mx-auto">
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {carouselImages.map((src, index) => (
+                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
+                      <div className="rounded-xl overflow-hidden shadow-md">
+                        <img 
+                          src={src} 
+                          alt={`Receta AirFryer ${index + 1}`} 
+                          className="w-full h-48 md:h-64 object-cover"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
+              </Carousel>
+            </Suspense>
             
             <div className="text-center mt-8">
               <p className="text-base md:text-lg text-muted-foreground mb-4">
@@ -315,16 +181,16 @@ const SalesPage = () => {
               Si te reconoces en esto, este kit es para ti:
             </h2>
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-10">
-              <div className="p-6 bg-card rounded-lg border border-border text-left">
+              <div className="p-6 bg-card rounded-lg border border-border">
                 <p className="text-foreground font-medium">"Mi AirFryer deja la comida <strong>blanda o seca</strong>."</p>
               </div>
-              <div className="p-6 bg-card rounded-lg border border-border text-left">
+              <div className="p-6 bg-card rounded-lg border border-border">
                 <p className="text-foreground font-medium">"Paso más tiempo <strong>buscando</strong> que cocinando."</p>
               </div>
-              <div className="p-6 bg-card rounded-lg border border-border text-left">
+              <div className="p-6 bg-card rounded-lg border border-border">
                 <p className="text-foreground font-medium">"Repito las mismas 5 recetas y me <strong>aburro</strong>."</p>
               </div>
-              <div className="p-6 bg-card rounded-lg border border-border text-left">
+              <div className="p-6 bg-card rounded-lg border border-border">
                 <p className="text-foreground font-medium">"Termino pidiendo <strong>delivery</strong> entre semana."</p>
               </div>
             </div>
@@ -332,191 +198,136 @@ const SalesPage = () => {
               Quiero una solución simple →
             </Button>
           </div>
-          {/* Seção de Depoimentos Estilo WhatsApp */}
-      <section className="py-16 px-4 bg-gradient-to-b from-white to-green-50">
-        <div className="container mx-auto">
-          <div className="max-w-6xl mx-auto">
-            
-            {/* Título */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-                Lo que nos escriben nuestros clientes
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Mensajes reales de personas que transformaron su cocina
-              </p>
-            </div>
-
-            {/* Grid de Depoimentos WhatsApp */}
-            <div className="grid md:grid-cols-1 gap-6 max-w-4xl mx-auto">
-              
-              {/* Depoimento 1 - Sofía */}
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
-                {/* WhatsApp Header */}
-                <div className="bg-[#075E54] text-white px-4 py-3 flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full flex items-center justify-center font-bold text-lg">
-                    S
-                  </div>
-                  <div className="flex-1">
-                    <p className="font-semibold text-sm">Sofía L.</p>
-                    <p className="text-xs opacity-80">en línea</p>
-                  </div>
-                </div>
+          
+          {/* Seção de Depoimentos - Simplificada e Acessível */}
+          <section className="py-16 px-4 bg-gradient-to-b from-white to-green-50">
+            <div className="container mx-auto">
+              <div className="max-w-6xl mx-auto">
                 
-                {/* Mensagem */}
-                <div className="p-4 bg-[#ECE5DD]">
-                  <div className="bg-white rounded-lg rounded-tl-none p-4 shadow-sm mb-2 relative">
-                    <p className="text-gray-800 text-sm mb-3 leading-relaxed">
-                      <span className="font-bold text-gray-900">¡Salvó mis cenas entre semana!</span>
-                    </p>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                      Mi freidora de aire era solo para papas fritas congeladas. Intenté hacer otras cosas, pero siempre quedaban secas o blandas. Como mamá de dos niños, no tengo tiempo para experimentar y fallar.
-                    </p>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                      Este recetario cambió todo. Ahora hago pollo jugoso, vegetales crujientes y hasta postres en menos de 20 minutos. ¡Mi familia está comiendo más sano y delicioso que nunca! Totalmente recomendado. 🙌
-                    </p>
-                    <div className="flex items-center justify-between mt-3">
-                      <p className="text-xs text-gray-500 italic">
-                        Mamá de dos • Santiago, Chile 🇨🇱
+                {/* Título */}
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+                    Lo que nuestros clientes dicen
+                  </h2>
+                  <p className="text-lg text-muted-foreground">
+                    Mensajes reales de personas que transformaron su cocina
+                  </p>
+                </div>
+
+                {/* Grid de Depoimentos Simplificado */}
+                <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                  
+                  {/* Depoimento 1 - Sofía */}
+                  <div className="bg-white rounded-xl shadow-md border border-border p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
+                        S
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">Sofía L.</p>
+                        <p className="text-sm text-muted-foreground">Mamá de dos • Santiago, Chile</p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <p className="text-foreground font-medium">"¡Salvó mis cenas entre semana!"</p>
+                      <p className="text-muted-foreground text-sm">
+                        Mi freidora de aire era solo para papas fritas congeladas. Ahora hago pollo jugoso, vegetales crujientes y hasta postres en menos de 20 minutos. ¡Mi familia está comiendo más sano y delicioso que nunca!
                       </p>
-                      <span className="text-xs text-gray-400">15:42</span>
                     </div>
-                    <div className="flex gap-1 mt-2">
-                      <span>⭐</span>
-                      <span>⭐</span>
-                      <span>⭐</span>
-                      <span>⭐</span>
-                      <span>⭐</span>
+                    
+                    <div className="flex gap-1 mt-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-warning text-warning" />
+                      ))}
                     </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Depoimento 2 - Javier */}
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
-                {/* WhatsApp Header */}
-                <div className="bg-[#075E54] text-white px-4 py-3 flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center font-bold text-lg">
-                    J
-                  </div>
-                  <div className="flex-1">
-                    <p className="font-semibold text-sm">Javier R.</p>
-                    <p className="text-xs opacity-80">en línea</p>
-                  </div>
-                </div>
-                
-                {/* Mensagem */}
-                <div className="p-4 bg-[#ECE5DD]">
-                  <div className="bg-white rounded-lg rounded-tl-none p-4 shadow-sm mb-2 relative">
-                    <p className="text-gray-800 text-sm mb-3 leading-relaxed">
-                      <span className="font-bold text-gray-900">Pensé que mi freidora no servía, ¡el que no servía era yo!</span>
-                    </p>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                      Estaba a punto de regalar mi Air Fryer. Todo lo que cocinaba era un desastre. Compré este ebook sin mucha fe y ¡wow! 😱
-                    </p>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                      El problema no era el aparato, era que no tenía idea de los tiempos y temperaturas. Las instrucciones son súper fáciles de seguir, a prueba de tontos. La semana pasada hice unas alitas de pollo que quedaron mejores que las de mi restaurante favorito. ¡Increíble! 🔥
-                    </p>
-                    <div className="flex items-center justify-between mt-3">
-                      <p className="text-xs text-gray-500 italic">
-                        Estudiante • Bogotá, Colombia 🇨🇴
+                  {/* Depoimento 2 - Javier */}
+                  <div className="bg-white rounded-xl shadow-md border border-border p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold">
+                        J
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">Javier R.</p>
+                        <p className="text-sm text-muted-foreground">Estudiante • Bogotá, Colombia</p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <p className="text-foreground font-medium">"Pensé que mi freidora no servía, ¡el que no servía era yo!"</p>
+                      <p className="text-muted-foreground text-sm">
+                        Estaba a punto de regalar mi Air Fryer. Las instrucciones son súper fáciles de seguir, a prueba de tontos. La semana pasada hice unas alitas de pollo que quedaron mejores que las de mi restaurante favorito.
                       </p>
-                      <span className="text-xs text-gray-400">18:23</span>
                     </div>
-                    <div className="flex gap-1 mt-2">
-                      <span>⭐</span>
-                      <span>⭐</span>
-                      <span>⭐</span>
-                      <span>⭐</span>
-                      <span>⭐</span>
+                    
+                    <div className="flex gap-1 mt-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-warning text-warning" />
+                      ))}
                     </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Depoimento 3 - Isabella */}
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
-                {/* WhatsApp Header */}
-                <div className="bg-[#075E54] text-white px-4 py-3 flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center font-bold text-lg">
-                    I
-                  </div>
-                  <div className="flex-1">
-                    <p className="font-semibold text-sm">Isabella G.</p>
-                    <p className="text-xs opacity-80">en línea</p>
-                  </div>
-                </div>
-                
-                {/* Mensagem */}
-                <div className="p-4 bg-[#ECE5DD]">
-                  <div className="bg-white rounded-lg rounded-tl-none p-4 shadow-sm mb-2 relative">
-                    <p className="text-gray-800 text-sm mb-3 leading-relaxed">
-                      <span className="font-bold text-gray-900">Mucho más que solo papas fritas.</span>
-                    </p>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                      Compré la Air Fryer para comer más saludable, pero estaba aburrida de comer siempre lo mismo.
-                    </p>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                      <span className="font-semibold text-cta-primary">Expres al Sabor</span> me abrió un mundo de posibilidades. He probado recetas de pescado, panes, quiches y hasta el pack sin gluten es fantástico. 💚
-                    </p>
-                    <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                      Las recetas son sabrosas y para nada aburridas. Por fin estoy usando mi freidora todos los días y disfrutando mi comida.
-                    </p>
-                    <div className="flex items-center justify-between mt-3">
-                      <p className="text-xs text-gray-500 italic">
-                        Entusiasta del fitness • Quito, Ecuador 🇪🇨
+                  {/* Depoimento 3 - Isabella */}
+                  <div className="bg-white rounded-xl shadow-md border border-border p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
+                        I
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">Isabella G.</p>
+                        <p className="text-sm text-muted-foreground">Entusiasta del fitness • Quito, Ecuador</p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <p className="text-foreground font-medium">"Mucho más que solo papas fritas."</p>
+                      <p className="text-muted-foreground text-sm">
+                        Compré la Air Fryer para comer más saludable, pero estaba aburrida de comer siempre lo mismo. Este recetario me abrió un mundo de posibilidades. He probado recetas de pescado, panes, quiches y hasta el pack sin gluten es fantástico.
                       </p>
-                      <span className="text-xs text-gray-400">12:08</span>
                     </div>
-                    <div className="flex gap-1 mt-2">
-                      <span>⭐</span>
-                      <span>⭐</span>
-                      <span>⭐</span>
-                      <span>⭐</span>
-                      <span>⭐</span>
+                    
+                    <div className="flex gap-1 mt-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-warning text-warning" />
+                      ))}
                     </div>
                   </div>
+
                 </div>
-              </div>
 
-            </div>
+                {/* Stats/Números */}
+                <div className="grid grid-cols-3 gap-3 md:gap-4 mt-8 md:mt-12 text-center max-w-3xl mx-auto">
+                  <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
+                    <p className="text-2xl md:text-3xl font-bold text-success mb-1">500+</p>
+                    <p className="text-xs md:text-sm text-muted-foreground leading-tight">Mensajes como estos</p>
+                  </div>
+                  <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
+                    <p className="text-2xl md:text-3xl font-bold text-success mb-1">4.9★</p>
+                    <p className="text-xs md:text-sm text-muted-foreground leading-tight">Valoración promedio</p>
+                  </div>
+                  <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
+                    <p className="text-2xl md:text-3xl font-bold text-success mb-1">100%</p>
+                    <p className="text-xs md:text-sm text-muted-foreground leading-tight">Recomiendan</p>
+                  </div>
+                </div>
 
-           {/* Stats/Números */}
-            <div className="grid grid-cols-3 gap-3 md:gap-4 mt-8 md:mt-12 text-center max-w-3xl mx-auto">
-              <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
-                <p className="text-2xl md:text-3xl font-bold text-[#25D366] mb-1">500+</p>
-                <p className="text-xs md:text-sm text-muted-foreground leading-tight">Mensajes como estos</p>
-              </div>
-              <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
-                <p className="text-2xl md:text-3xl font-bold text-[#25D366] mb-1">4.9★</p>
-                <p className="text-xs md:text-sm text-muted-foreground leading-tight">Valoración promedio</p>
-              </div>
-              <div className="bg-white p-3 md:p-6 rounded-lg shadow-md border border-border">
-                <p className="text-2xl md:text-3xl font-bold text-[#25D366] mb-1">100%</p>
-                <p className="text-xs md:text-sm text-muted-foreground leading-tight">Recomiendan</p>
+                {/* CTA */}
+                <div className="text-center mt-8 md:mt-10">
+                  <Button 
+                    variant="cta" 
+                    size="2xl" 
+                    onClick={handleCTAClick} 
+                    className="w-full md:w-auto"
+                  >
+                    Quiero resultados como estos
+                  </Button>
+                </div>
+
               </div>
             </div>
-
-           {/* CTA */}
-            <div className="text-center mt-8 md:mt-10">
-              <Button 
-                variant="cta" 
-                size="2xl" 
-                onClick={handleCTAClick} 
-                className="w-full md:w-auto text-sm md:text-base"
-              >
-                <span className="block md:inline">
-                  Quiero resultados como estos
-                </span>
-                <span className="block md:inline md:ml-1">
-                  (US$ 5,50)
-                </span>
-              </Button>
-            </div>
-
-          </div>
-        </div>
-      </section>
+          </section>
         </div>
       </section>
 
@@ -691,14 +502,14 @@ const SalesPage = () => {
               </p>
             </div>
 
-            {/* Producto Principal */}
+            {/* Produto Principal */}
             <div className="mb-10">
               <div className="bg-gradient-to-br from-cta-primary/10 to-cta-primary/5 rounded-xl p-6 md:p-8 border-2 border-cta-primary/30 mb-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-cta-primary rounded-full flex items-center justify-center">
                     <Utensils className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Producto Principal</h3>
+                  <h3 className="text-2xl font-bold text-foreground">Produto Principal</h3>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-4">
@@ -971,8 +782,6 @@ const SalesPage = () => {
         </div>
       </section>
 
-
-
       {/* Economía y Valor */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -1068,7 +877,7 @@ const SalesPage = () => {
                 Garantía Doble 7×7
               </h2>
               <p className="text-lg md:text-xl text-foreground">
-                Si en 7 días no ahorras tiempo en la cocina o no mejoras la textura (crujiente por fuera, jugoso por dentro), <strong>te devolvemos el dinero. Sin preguntas.</strong>
+                Si en 7 días no ahorras tiempo en la cocina o no mejoras la textura (crocancia por fuera, jugoso por dentro), <strong>te devolvemos el dinero. Sin preguntas.</strong>
               </p>
             </div>
           </div>
@@ -1141,13 +950,6 @@ const SalesPage = () => {
           </div>
         </div>
       </section>
-
-      {/* Sticky Button Mobile */}
-      <StickyButton 
-        text="Quiero el kit ahora" 
-        price="US$ 5,50" 
-        onClick={handleCTAClick}
-      />
 
       {/* Footer */}
       <footer className="py-8 bg-muted">

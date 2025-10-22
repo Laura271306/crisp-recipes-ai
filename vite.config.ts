@@ -24,6 +24,16 @@ export default defineConfig(({ mode }) => ({
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-toast'],
+          'lucide-react': ['lucide-react'],
+          'tailwind-vendor': ['tailwindcss', 'tailwindcss-animate'],
+        },
+        chunkFileNames: (chunkInfo) => {
+          const facadeModuleId = chunkInfo.facadeModuleIdByChunkName?.[chunkInfo.name];
+          if (facadeModuleId) {
+            const fileName = facadeModuleId.split('/').pop() || 'chunk';
+            return `assets/${fileName}.js`;
+          }
+          return 'assets/[name]-[hash].js';
         },
       },
     },
@@ -33,5 +43,8 @@ export default defineConfig(({ mode }) => ({
         drop_debugger: mode === 'production',
       },
     },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom', 'lucide-react'],
   },
 }));
