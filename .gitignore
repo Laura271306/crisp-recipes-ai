@@ -23,9 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 .env
-
-# Não ignorar imagens
-!src/assets/*.jpg
-!src/assets/*.png
-!src/assets/*.gif
-!src/assets/*.webp
