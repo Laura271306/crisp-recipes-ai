@@ -19,11 +19,9 @@
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="dns-prefetch" href="https://pay.kiwify.com" />
     
-    <!-- Otimização LCP: Preload da imagem LCP (Assumindo que está em /public) -->
-    <link rel="preload" href="/hero-kit-mockup-new.jpg" as="image" fetchpriority="high" />
+    <!-- Otimização LCP: Preload da imagem LCP REMOVIDO. O Vite deve injetar o preload correto. -->
     
     <!-- Otimização de Performance: Pré-carregamento do módulo principal e CSS -->
-    <!-- O CSS é um recurso de bloqueio de renderização. Pré-carregá-lo ajuda. -->
     <link rel="preload" href="/src/index.css" as="style" />
     <link rel="stylesheet" href="/src/index.css" />
     <link rel="modulepreload" href="/src/main.tsx" />

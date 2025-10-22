@@ -12,11 +12,14 @@ import React, { Suspense } from "react";
 import { LazyLoadWrapper } from "@/components/utils/LazyLoadWrapper.tsx"; // Importando o novo wrapper
 import { Skeleton } from "@/components/ui/skeleton"; // Importando Skeleton
 
+// Importação da imagem LCP (Assumindo que o arquivo original era 'hero-kit-mockup-new.jpg' e estava em assets)
+import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg"; 
+
 // Lazy Imports para componentes abaixo da dobra
 const LazyCarouselSection = React.lazy(() => import("@/components/sales/LazyCarouselSection").then(module => ({ default: module.LazyCarouselSection })));
 const LazyAccordion = React.lazy(() => import("@/components/sales/LazyAccordion").then(module => ({ default: module.LazyAccordion })));
 
-const heroKitMockupPath = "/hero-kit-mockup-new.jpg"; // Caminho estático (assumindo que foi movido para public)
+const heroKitMockupPath = heroKitMockup; // Usando o caminho resolvido pelo Vite
 
 const faqItems = [
   { value: "item-1", trigger: "¿Sirve para 3,5 L / 5,5 L?", content: "Sí. Indicamos ajustes por capacidad y potencia." },
@@ -58,6 +61,20 @@ const SalesPage = () => {
   const handleCTAClick = () => {
     window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
   };
+
+  // Função auxiliar para gerar srcset, usando o caminho resolvido pelo Vite
+  const generateHeroSrcSet = (src: string) => {
+    if (!src.endsWith('.jpg')) return undefined;
+    
+    // Assumindo que existem variantes - 400w e 800w
+    // Nota: O Vite pode não resolver automaticamente as variantes se elas não forem importadas.
+    // Para garantir que o srcset funcione, estamos usando a string de substituição.
+    const base = src.replace(/\.jpg$/, '');
+    return `${base}-400w.jpg 400w, ${src} 800w`;
+  };
+  
+  const heroSrcSet = generateHeroSrcSet(heroKitMockupPath);
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -125,8 +142,7 @@ const SalesPage = () => {
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
-                  // Usamos o caminho estático para o srcset também, assumindo que as variantes estão na pasta public
-                  srcSet={`${heroKitMockupPath} 800w, ${heroKitMockupPath.replace('.jpg', '-400w.jpg')} 400w`}
+                  srcSet={heroSrcSet}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-3 shadow-lg">
@@ -262,7 +278,7 @@ const SalesPage = () => {
                         <div className="space-y-2">
                           <p className="text-foreground font-medium">"Mucho más que solo papas fritas."</p>
                           <p className="text-muted-foreground text-sm">
-                            Compré la Air Fryer para comer más saludable, pero estaba aburrida de comer siempre lo mismo. Este recetario me abrió un mundo de posibilidades. He probado recetas de pescado, panes, quiches y hasta el pack sin gluten es fantástico.
+                            Compré la Air Fryer para comer más saludable, pero estaba aburrida de comer sempre lo mismo. Este recetario me abrió un mundo de posibilidades. He probado recetas de pescado, panes, quiches y hasta el pack sin gluten es fantástico.
                           </p>
                         </div>
                         
