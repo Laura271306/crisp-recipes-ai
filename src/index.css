@@ -239,6 +239,11 @@ All colors MUST be HSL.
   .overflow-y-auto {
     -webkit-overflow-scrolling: touch;
   }
+
+  /* Otimização de CSS/Reflow: Usar containment em seções principais */
+  section {
+    contain: layout;
+  }
 }
 
 /* Reduzir movimento para usuários que preferem */
