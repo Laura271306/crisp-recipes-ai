@@ -28,7 +28,7 @@ const SalesPage = () => {
     window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
   };
 
-  const SuspenseFallback = <div className="text-center p-8 text-muted-foreground">Cargando contenido...</div>;
+  const SuspenseFallback = <div className="flex min-h-screen items-center justify-center">Cargando...</div>;
 
   return (
     <div className="min-h-screen bg-background">
@@ -54,8 +54,7 @@ const SalesPage = () => {
                   <span className="text-cta-primary">La solución definitiva para activar el "Modo Chef" de tu freidora</span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-8">
-                  {/* Frase removida: "¿Cansado (a) de que todo en tu Air Fryer quede blando y sin sabor?" */}
-                  <strong>Te entendemos. Aquí está la solución definitiva para activar el "Modo Chef" de tu freidora.</strong>
+                  Crocancia perfecta, jugosidad garantizada y cero ensayo-error.
                 </p>
                 
                 <div className="space-y-3 mb-8">

@@ -136,10 +136,41 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    /* Performance: Smooth scroll */
+    scroll-behavior: smooth;
   }
 
   body {
     @apply bg-background text-foreground;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Acessibilidade: Skip to content link */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sr-only:focus {
+    position: fixed;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    z-index: 9999;
   }
 
   /* Garantir espaçamento adequado entre elementos clicáveis */
@@ -147,24 +178,18 @@ All colors MUST be HSL.
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
   }
 
-  /* Acessibilidade: Garantir tamanho mínimo de área de toque (48x48px recomendado) */
+  /* Acessibilidade: Garantir tamanho mínimo de área de toque (44x44px recomendado) */
   button:not(.h-auto):not(.w-auto), 
   a:not(.h-auto):not(.w-auto), 
   [role="button"]:not(.h-auto):not(.w-auto) {
-    min-height: 48px;
-    min-width: 48px;
+    min-height: 44px;
+    min-width: 44px;
     touch-action: manipulation;
   }
 
   /* Melhorar legibilidade do texto */
   p, li, td {
     @apply leading-relaxed;
-  }
-
-  /* Garantir tamanhos mínimos de texto */
-  body {
-    font-size: 16px;
-    line-height: 1.6;
   }
 
   /* Otimizações de performance */
@@ -192,5 +217,38 @@ All colors MUST be HSL.
   img[loading="lazy"].loaded {
     animation: none;
     background: none;
+  }
+  
+  /* Performance - Otimizar animações */
+  .transition-all,
+  .transition-shadow,
+  .hover\:shadow-xl {
+    will-change: transform, opacity;
+  }
+
+  /* Otimizar renderização de sombras */
+  .shadow-lg,
+  .shadow-xl,
+  .shadow-2xl {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* Melhorar performance de scroll */
+  .overflow-auto,
+  .overflow-y-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Reduzir movimento para usuários que preferem */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
