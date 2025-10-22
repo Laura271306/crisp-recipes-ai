@@ -8,7 +8,7 @@ import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
 import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
 import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
 import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
-import * as React from "react";
+import React, { Suspense } from "react";
 
 // Lazy Imports para componentes abaixo da dobra
 const LazyCarouselSection = React.lazy(() => import("@/components/sales/LazyCarouselSection").then(module => ({ default: module.LazyCarouselSection })));
@@ -28,7 +28,7 @@ const SalesPage = () => {
     window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
   };
 
-  const SuspenseFallback = <div className="flex min-h-screen items-center justify-center text-muted-foreground">Cargando contenido...</div>;
+  const SuspenseFallback = <div className="text-center p-8 text-muted-foreground">Cargando contenido...</div>;
 
   return (
     <div className="min-h-screen bg-background">
@@ -51,10 +51,10 @@ const SalesPage = () => {
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div>
                 <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
-                  <span className="text-cta-primary">Aquí está la solución definitiva para activar el "Modo Chef" de tu freidora</span>
+                  <span className="text-cta-primary">¿Cansada de que todo en tu Air Fryer quede blando y sin sabor?</span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-8">
-                  <strong>El secreto para usar bien tu AirFryer (y no fallar más)</strong>
+                  <strong>Te entendemos. Aquí está la solución definitiva para activar el "Modo Chef" de tu freidora.</strong>
                 </p>
                 
                 <div className="space-y-3 mb-8">
@@ -101,9 +101,9 @@ const SalesPage = () => {
         </section>
 
         {/* Carrossel de Resultados (Lazy Loaded) */}
-        <React.Suspense fallback={SuspenseFallback}>
+        <Suspense fallback={SuspenseFallback}>
           <LazyCarouselSection handleCTAClick={handleCTAClick} />
-        </React.Suspense>
+        </Suspense>
 
         {/* Dor do Avatar */}
         <section className="py-16 bg-muted/30">
@@ -825,9 +825,9 @@ const SalesPage = () => {
                   Preguntas Frecuentes
                 </h2>
               </div>
-              <React.Suspense fallback={SuspenseFallback}>
+              <Suspense fallback={SuspenseFallback}>
                 <LazyAccordion items={faqItems} />
-              </React.Suspense>
+              </Suspense>
             </div>
           </div>
         </section>

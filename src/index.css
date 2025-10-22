@@ -140,9 +140,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    /* Adicionando text-size-adjust para compatibilidade móvel */
-    text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
   }
 
   /* Garantir espaçamento adequado entre elementos clicáveis */
@@ -172,7 +169,6 @@ All colors MUST be HSL.
 
   /* Otimizações de performance */
   img {
-    /* Corrigindo image-rendering para Edge */
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
   }

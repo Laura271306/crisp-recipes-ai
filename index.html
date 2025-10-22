@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     
     <!-- SEO e Descrição -->
     <title>AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 6,50)</title>
@@ -12,12 +12,16 @@
     
     <!-- Acessibilidade -->
     <meta name="color-scheme" content="light" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin />
     
     <!-- Performance - Preconnect crítico -->
     <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
     <link rel="preconnect" href="https://pay.kiwify.com" crossorigin />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="dns-prefetch" href="https://pay.kiwify.com" />
+    
+    <!-- Preload da imagem hero (primeira imagem) -->
+    <link rel="preload" as="image" href="/src/assets/hero-kit-mockup-new.jpg" fetchpriority="high" />
     
     <!-- Carregamento Síncrono do CSS para evitar FOUC e garantir LCP rápido -->
     <link rel="stylesheet" href="/src/index.css">
