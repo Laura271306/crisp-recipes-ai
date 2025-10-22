@@ -5,18 +5,18 @@ import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
 import { BonusItem } from "@/components/sales/BonusItem";
 import { CheckCircle, Utensils, Award, Shield, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
-// Removido: import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
 import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
 import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
 import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
 import React, { Suspense } from "react";
 import { LazyLoadWrapper } from "@/components/utils/LazyLoadWrapper.tsx"; // Importando o novo wrapper
+import { Skeleton } from "@/components/ui/skeleton"; // Importando Skeleton
 
 // Lazy Imports para componentes abaixo da dobra
 const LazyCarouselSection = React.lazy(() => import("@/components/sales/LazyCarouselSection").then(module => ({ default: module.LazyCarouselSection })));
 const LazyAccordion = React.lazy(() => import("@/components/sales/LazyAccordion").then(module => ({ default: module.LazyAccordion })));
 
-const heroKitMockupPath = "/hero-kit-mockup-new.jpg"; // Novo caminho estático
+const heroKitMockupPath = "/hero-kit-mockup-new.jpg"; // Caminho estático (assumindo que foi movido para public)
 
 const faqItems = [
   { value: "item-1", trigger: "¿Sirve para 3,5 L / 5,5 L?", content: "Sí. Indicamos ajustes por capacidad y potencia." },
@@ -52,7 +52,7 @@ const bonusItems = [
 ];
 
 // Fallback leve para Suspense
-const SuspenseFallback = <div className="flex items-center justify-center p-12 text-muted-foreground">Cargando contenido...</div>;
+const SuspenseFallback = <Skeleton className="w-full h-[300px] flex items-center justify-center p-12 text-muted-foreground" />;
 
 const SalesPage = () => {
   const handleCTAClick = () => {
@@ -138,14 +138,14 @@ const SalesPage = () => {
         </section>
 
         {/* Carrossel de Resultados (Lazy Loaded) */}
-        <LazyLoadWrapper rootMargin="500px">
+        <LazyLoadWrapper rootMargin="500px" minHeight="350px">
           <Suspense fallback={SuspenseFallback}>
             <LazyCarouselSection handleCTAClick={handleCTAClick} />
           </Suspense>
         </LazyLoadWrapper>
 
         {/* Dor do Avatar + Depoimentos */}
-        <LazyLoadWrapper rootMargin="500px">
+        <LazyLoadWrapper rootMargin="500px" minHeight="800px">
           <section className="py-16 bg-muted/30">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
@@ -312,7 +312,7 @@ const SalesPage = () => {
         </LazyLoadWrapper>
 
         {/* Solução + Mecanismo C.R.I.S.P. */}
-        <LazyLoadWrapper rootMargin="500px">
+        <LazyLoadWrapper rootMargin="500px" minHeight="400px">
           <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
@@ -374,7 +374,7 @@ const SalesPage = () => {
         </LazyLoadWrapper>
 
         {/* Prueba en 24h */}
-        <LazyLoadWrapper rootMargin="500px">
+        <LazyLoadWrapper rootMargin="500px" minHeight="500px">
           <section className="py-16 bg-muted/30">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
@@ -428,7 +428,7 @@ const SalesPage = () => {
         </LazyLoadWrapper>
 
         {/* Economia Estimada */}
-        <LazyLoadWrapper rootMargin="500px">
+        <LazyLoadWrapper rootMargin="500px" minHeight="450px">
           <section className="py-16 bg-gradient-to-br from-success-light to-background">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
@@ -488,7 +488,7 @@ const SalesPage = () => {
         </LazyLoadWrapper>
 
         {/* Todo lo que recibes - Principal + Bônus */}
-        <LazyLoadWrapper rootMargin="500px">
+        <LazyLoadWrapper rootMargin="500px" minHeight="700px">
           <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
@@ -569,7 +569,7 @@ const SalesPage = () => {
         </LazyLoadWrapper>
 
         {/* Universal y fácil de aplicar */}
-        <LazyLoadWrapper rootMargin="500px">
+        <LazyLoadWrapper rootMargin="500px" minHeight="500px">
           <section className="py-16 bg-gradient-to-br from-cta-primary/5 to-background">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
@@ -637,7 +637,7 @@ const SalesPage = () => {
         </LazyLoadWrapper>
 
         {/* Economía y Valor */}
-        <LazyLoadWrapper rootMargin="500px">
+        <LazyLoadWrapper rootMargin="500px" minHeight="600px">
           <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
@@ -690,7 +690,7 @@ const SalesPage = () => {
         </LazyLoadWrapper>
 
         {/* Oferta Especial */}
-        <LazyLoadWrapper rootMargin="500px">
+        <LazyLoadWrapper rootMargin="500px" minHeight="400px">
           <section className="py-16 bg-gradient-to-br from-cta-primary/10 to-cta-secondary/10">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
@@ -732,7 +732,7 @@ const SalesPage = () => {
         </LazyLoadWrapper>
 
         {/* Garantía */}
-        <LazyLoadWrapper rootMargin="500px">
+        <LazyLoadWrapper rootMargin="500px" minHeight="300px">
           <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
@@ -751,7 +751,7 @@ const SalesPage = () => {
         </LazyLoadWrapper>
 
         {/* FAQ (Lazy Loaded) */}
-        <LazyLoadWrapper rootMargin="500px">
+        <LazyLoadWrapper rootMargin="500px" minHeight="500px">
           <section className="py-16 bg-muted/30">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">

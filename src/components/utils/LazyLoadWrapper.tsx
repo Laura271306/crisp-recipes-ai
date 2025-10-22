@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect, ReactNode } from 'react';
+import { Skeleton } from '@/components/ui/skeleton'; // Importando Skeleton
 
 interface LazyLoadWrapperProps {
   children: ReactNode;
   rootMargin?: string;
+  minHeight?: string; // Permitir altura mínima customizada
 }
 
 /**
@@ -11,7 +13,8 @@ interface LazyLoadWrapperProps {
  */
 export const LazyLoadWrapper: React.FC<LazyLoadWrapperProps> = ({ 
   children, 
-  rootMargin = '200px' 
+  rootMargin = '200px',
+  minHeight = '200px'
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -39,9 +42,14 @@ export const LazyLoadWrapper: React.FC<LazyLoadWrapperProps> = ({
     };
   }, [rootMargin]);
 
+  if (isVisible) {
+    return <>{children}</>;
+  }
+
+  // Placeholder visual enquanto espera
   return (
-    <div ref={containerRef} style={{ minHeight: isVisible ? 'auto' : '200px' }}>
-      {isVisible ? children : null}
+    <div ref={containerRef} style={{ minHeight }}>
+      <Skeleton className="w-full" style={{ height: minHeight }} />
     </div>
   );
 };
