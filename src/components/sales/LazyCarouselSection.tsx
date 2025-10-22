@@ -41,6 +41,8 @@ interface LazyCarouselSectionProps {
   handleCTAClick: () => void;
 }
 
+// Função auxiliar para gerar srcset REMOVIDA.
+
 // Componente para renderizar a imagem (agora sem srcset manual)
 const CarouselImage = ({ src, alt, width, height, sizes }: { src: string, alt: string, width: string, height: string, sizes: string }) => {
   // const srcset = generateSrcSet(src); // Removido
