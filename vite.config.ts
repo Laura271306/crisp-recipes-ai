@@ -37,15 +37,10 @@ export default defineConfig(({ mode }) => ({
             return 'vendor';
           }
         },
-        chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleId;
-          if (facadeModuleId) {
-            // Extrai o nome do arquivo do caminho completo
-            const fileName = facadeModuleId.split('/').pop()?.split('.')[0] || 'chunk';
-            return `assets/${fileName}.js`;
-          }
-          return 'assets/[name]-[hash].js';
-        },
+        // Simplificando a nomeação de chunks para evitar erros de caminho
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
     terserOptions: {
