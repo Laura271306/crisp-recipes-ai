@@ -1,46 +1,48 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-// Definindo os caminhos das imagens para importação dinâmica
+// Importações estáticas para garantir que o Vite resolva os caminhos
+import airfryer1 from "@/assets/airfryer1.jpg";
+import airfryer2 from "@/assets/airfryer2.jpg";
+import airfryer3 from "@/assets/airfryer3.jpg";
+import airfryer4 from "@/assets/airfryer4.jpg";
+import airfryer5 from "@/assets/airfryer5.jpg";
+import airfryer6 from "@/assets/airfryer6.jpg";
+import airfryer7 from "@/assets/airfryer7.jpg";
+import airfryer8 from "@/assets/airfryer8.jpg";
+import airfryer9 from "@/assets/airfryer9.jpg";
+import airfryer10 from "@/assets/airfryer10.jpg";
+import airfryer11 from "@/assets/airfryer11.jpg";
+import airfryer12 from "@/assets/airfryer12.jpg";
+import airfryer13 from "@/assets/airfryer13.jpg";
+import airfryer14 from "@/assets/airfryer14.jpg";
+
+// Definindo os caminhos das imagens
 const imagePaths = [
-  { path: "@/assets/airfryer1.jpg", alt: "Volcanes de chocolate hechos en AirFryer" },
-  { path: "@/assets/airfryer2.jpg", alt: "Pan de plátano hecho en AirFryer" },
-  { path: "@/assets/airfryer3.jpg", alt: "Fideos con vegetales hechos en AirFryer" },
-  { path: "@/assets/airfryer4.jpg", alt: "Bife jugoso hecho en AirFryer" },
-  { path: "@/assets/airfryer5.jpg", alt: "Alitas de pollo glaseadas hechas en AirFryer" },
-  { path: "@/assets/airfryer6.jpg", alt: "Papas fritas crujientes feitas em AirFryer" },
-  { path: "@/assets/airfryer7.jpg", alt: "Pollo cremoso con champiñones hecho en AirFryer" },
-  { path: "@/assets/airfryer8.jpg", alt: "Tostadas con champiñones hechas en AirFryer" },
-  { path: "@/assets/airfryer9.jpg", alt: "Tostadas gratinadas hechas en AirFryer" },
-  { path: "@/assets/airfryer10.jpg", alt: "Pollo con papas y vegetales feito em AirFryer" },
-  { path: "@/assets/airfryer11.jpg", alt: "Pechuga de pollo jugosa hecha en AirFryer" },
-  { path: "@/assets/airfryer12.jpg", alt: "Repollo caramelizado hecho en AirFryer" },
-  { path: "@/assets/airfryer13.jpg", alt: "Palitos de mozzarella crujientes hechos en AirFryer" },
-  { path: "@/assets/airfryer14.jpg", alt: "Aros de cebolla crujientes hechos en AirFryer" },
+  { src: airfryer1, alt: "Volcanes de chocolate hechos en AirFryer" },
+  { src: airfryer2, alt: "Pan de plátano hecho en AirFryer" },
+  { src: airfryer3, alt: "Fideos con vegetales hechos en AirFryer" },
+  { src: airfryer4, alt: "Bife jugoso hecho en AirFryer" },
+  { src: airfryer5, alt: "Alitas de pollo glaseadas hechas en AirFryer" },
+  { src: airfryer6, alt: "Papas fritas crujientes feitas em AirFryer" },
+  { src: airfryer7, alt: "Pollo cremoso con champiñones hecho en AirFryer" },
+  { src: airfryer8, alt: "Tostadas con champiñones hechas en AirFryer" },
+  { src: airfryer9, alt: "Tostadas gratinadas hechas en AirFryer" },
+  { src: airfryer10, alt: "Pollo con papas y vegetales feito em AirFryer" },
+  { src: airfryer11, alt: "Pechuga de pollo jugosa hecha en AirFryer" },
+  { src: airfryer12, alt: "Repollo caramelizado hecho en AirFryer" },
+  { src: airfryer13, alt: "Palitos de mozzarella crujientes hechos en AirFryer" },
+  { src: airfryer14, alt: "Aros de cebolla crujientes hechos en AirFryer" },
 ];
 
 interface LazyCarouselSectionProps {
   handleCTAClick: () => void;
 }
 
-// Componente para carregar a imagem individualmente
-const LazyImage = ({ path, alt, width, height, sizes }: { path: string, alt: string, width: string, height: string, sizes: string }) => {
-  const [src, setSrc] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Importação dinâmica da imagem
-    import(/* @vite-ignore */ path)
-      .then(module => setSrc(module.default))
-      .catch(err => console.error("Failed to load image:", path, err));
-  }, [path]);
-
-  if (!src) {
-    // Placeholder enquanto carrega
-    return <div className="w-full h-64 bg-muted animate-pulse" style={{ width, height }}></div>;
-  }
-
+// Componente para renderizar a imagem (agora com src resolvido)
+const CarouselImage = ({ src, alt, width, height, sizes }: { src: string, alt: string, width: string, height: string, sizes: string }) => {
   return (
     <img 
       src={src} 
@@ -76,8 +78,8 @@ export const LazyCarouselSection = ({ handleCTAClick }: LazyCarouselSectionProps
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-2">
                     <Card className="overflow-hidden border-2 border-border">
-                      <LazyImage 
-                        path={item.path} 
+                      <CarouselImage 
+                        src={item.src} 
                         alt={item.alt} 
                         width="400"
                         height="256"
