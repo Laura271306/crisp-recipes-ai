@@ -62,18 +62,8 @@ const SalesPage = () => {
     window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
   };
 
-  // Função auxiliar para gerar srcset, usando o caminho resolvido pelo Vite
-  const generateHeroSrcSet = (src: string) => {
-    if (!src.endsWith('.jpg')) return undefined;
-    
-    // Assumindo que existem variantes - 400w e 800w
-    // Nota: O Vite pode não resolver automaticamente as variantes se elas não forem importadas.
-    // Para garantir que o srcset funcione, estamos usando a string de substituição.
-    const base = src.replace(/\.jpg$/, '');
-    return `${base}-400w.jpg 400w, ${src} 800w`;
-  };
-  
-  const heroSrcSet = generateHeroSrcSet(heroKitMockupPath);
+  // Removendo a função generateHeroSrcSet
+  const heroSrcSet = undefined;
 
 
   return (
@@ -316,7 +306,7 @@ const SalesPage = () => {
                         className="w-full md:w-auto"
                         aria-label="Compra ahora el Kit Maestro de Recetas"
                       >
-                        Compra ahora
+                        Compra ahora →
                       </Button>
                     </div>
 
