@@ -28,9 +28,11 @@ export default defineConfig(({ mode }) => ({
           'tailwind-vendor': ['tailwindcss', 'tailwindcss-animate'],
         },
         chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleIdByChunkName?.[chunkInfo.name];
+          // Correção: Usar chunkInfo.facadeModuleId diretamente
+          const facadeModuleId = chunkInfo.facadeModuleId;
           if (facadeModuleId) {
-            const fileName = facadeModuleId.split('/').pop() || 'chunk';
+            // Extrai o nome do arquivo do caminho completo
+            const fileName = facadeModuleId.split('/').pop()?.split('.')[0] || 'chunk';
             return `assets/${fileName}.js`;
           }
           return 'assets/[name]-[hash].js';
