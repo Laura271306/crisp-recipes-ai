@@ -2,44 +2,42 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { StickyButton } from "@/components/sales/StickyButton";
 import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
 import { CheckCircle, Clock, Users, Utensils, Award, Shield, DollarSign, Zap, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
+import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
+import crispSystemInfographic from "@/assets/crisp-system-infographic.jpg";
+import recipeCollectionsIndex from "@/assets/recipe-collections-index.jpg";
+import recipeTimeTemperature from "@/assets/recipe-time-temperature.jpg";
+import weeklyMenuShopping from "@/assets/weekly-menu-shopping.jpg";
+import cleaningGuideVisual from "@/assets/cleaning-guide-visual.jpg";
+import airfryerChickenWings from "@/assets/airfryer-chicken-wings.jpg";
+import airfryerFrenchFries from "@/assets/airfryer-french-fries.jpg";
+import airfryerSalmon from "@/assets/airfryer-salmon.jpg";
+import airfryerVegetables from "@/assets/airfryer-vegetables.jpg";
+import airfryerMozzarellaSticks from "@/assets/airfryer-mozzarella-sticks.jpg";
+import airfryerEmpanadas from "@/assets/airfryer-empanadas.jpg";
+import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
+import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
+import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
+import recipeBookMockup from "@/assets/recipe-book-mockup.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-
-// Importar as novas imagens atualizadas
-const heroKitMockup = "/src/assets/hero-kit-mockup-new.jpg";
-const crispSystemInfographic = "/src/assets/crisp-system-infographic.jpg";
-const recipeCollectionsIndex = "/src/assets/recipe-collections-index.jpg";
-const recipeTimeTemperature = "/src/assets/recipe-time-temperature.jpg";
-const weeklyMenuShopping = "/src/assets/weekly-menu-shopping.jpg";
-const cleaningGuideVisual = "/src/assets/cleaning-guide-visual.jpg";
-const airfryerChickenWings = "/src/assets/airfryer-chicken-wings.jpg";
-const airfryerFrenchFries = "/src/assets/airfryer-french-fries.jpg";
-const airfryerSalmon = "/src/assets/airfryer-salmon.jpg";
-const airfryerVegetables = "/src/assets/airfryer-vegetables.jpg";
-const airfryerMozzarellaSticks = "/src/assets/airfryer-mozzarella-sticks.jpg";
-const airfryerEmpanadas = "/src/assets/airfryer-empanadas.jpg";
-const recipePolloParmesano = "/src/assets/recipe-pollo-parmesano.jpg";
-const recipeCamaronesAjo = "/src/assets/recipe-camarones-ajo.jpg";
-const recipeChipsBatata = "/src/assets/recipe-chips-batata.jpg";
-const recipeBookMockup = "/src/assets/recipe-book-mockup.jpg";
-
-// Definindo variáveis individuais para as imagens do carrossel (substituindo o array carouselImages)
-const airfryer1 = "/src/assets/airfryer1.jpg";
-const airfryer2 = "/src/assets/airfryer2.jpg";
-const airfryer3 = "/src/assets/airfryer3.jpg";
-const airfryer4 = "/src/assets/airfryer4.jpg";
-const airfryer5 = "/src/assets/airfryer5.jpg";
-const airfryer6 = "/src/assets/airfryer6.jpg";
-const airfryer7 = "/src/assets/airfryer7.jpg";
-const airfryer8 = "/src/assets/airfryer8.jpg";
-const airfryer9 = "/src/assets/airfryer9.jpg";
-const airfryer10 = "/src/assets/airfryer10.jpg";
-const airfryer11 = "/src/assets/airfryer11.jpg";
-const airfryer12 = "/src/assets/airfryer12.jpg";
-const airfryer13 = "/src/assets/airfryer13.jpg";
-const airfryer14 = "/src/assets/airfryer14.jpg";
+// ADICIONAR: imports das imagens usadas no Carousel
+import airfryer1 from "@/assets/airfryer1.jpg";
+import airfryer2 from "@/assets/airfryer2.jpg";
+import airfryer3 from "@/assets/airfryer3.jpg";
+import airfryer4 from "@/assets/airfryer4.jpg";
+import airfryer5 from "@/assets/airfryer5.jpg";
+import airfryer6 from "@/assets/airfryer6.jpg";
+import airfryer7 from "@/assets/airfryer7.jpg";
+import airfryer8 from "@/assets/airfryer8.jpg";
+import airfryer9 from "@/assets/airfryer9.jpg";
+import airfryer10 from "@/assets/airfryer10.jpg";
+import airfryer11 from "@/assets/airfryer11.jpg";
+import airfryer12 from "@/assets/airfryer12.jpg";
+import airfryer13 from "@/assets/airfryer13.jpg";
+import airfryer14 from "@/assets/airfryer14.jpg";
 
 
 const SalesPage = () => {
@@ -1140,6 +1138,13 @@ const SalesPage = () => {
           </p>
         </div>
       </footer>
+      
+      {/* Sticky CTA Button for Mobile */}
+      <StickyButton 
+        onClick={handleCTAClick} 
+        price="US$ 5,50" 
+        text="Quiero crocancia hoy" 
+      />
     </div>
   );
 };
