@@ -9,6 +9,7 @@ import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
 import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
 import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
 import React, { Suspense } from "react";
+import { LazyLoadWrapper } from "@/components/utils/LazyLoadWrapper.tsx"; // Importando o novo wrapper
 
 // Lazy Imports para componentes abaixo da dobra
 const LazyCarouselSection = React.lazy(() => import("@/components/sales/LazyCarouselSection").then(module => ({ default: module.LazyCarouselSection })));
@@ -91,6 +92,7 @@ const SalesPage = () => {
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
+                  srcSet={`${heroKitMockup} 800w, ${heroKitMockup.replace('.jpg', '-400w.jpg')} 400w`}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-3 shadow-lg">
@@ -102,9 +104,11 @@ const SalesPage = () => {
         </section>
 
         {/* Carrossel de Resultados (Lazy Loaded) */}
-        <Suspense fallback={SuspenseFallback}>
-          <LazyCarouselSection handleCTAClick={handleCTAClick} />
-        </Suspense>
+        <LazyLoadWrapper rootMargin="500px">
+          <Suspense fallback={SuspenseFallback}>
+            <LazyCarouselSection handleCTAClick={handleCTAClick} />
+          </Suspense>
+        </LazyLoadWrapper>
 
         {/* Dor do Avatar */}
         <section className="py-16 bg-muted/30">
@@ -818,20 +822,22 @@ const SalesPage = () => {
         </section>
 
         {/* FAQ (Lazy Loaded) */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  Preguntas Frecuentes
-                </h2>
+        <LazyLoadWrapper rootMargin="500px">
+          <section className="py-16 bg-muted/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-10">
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    Preguntas Frecuentes
+                  </h2>
+                </div>
+                <Suspense fallback={SuspenseFallback}>
+                  <LazyAccordion items={faqItems} />
+                </Suspense>
               </div>
-              <Suspense fallback={SuspenseFallback}>
-                <LazyAccordion items={faqItems} />
-              </Suspense>
             </div>
-          </div>
-        </section>
+          </section>
+        </LazyLoadWrapper>
 
         {/* CTA Final */}
         <section className="py-16 bg-gradient-to-br from-cta-primary to-cta-secondary">
