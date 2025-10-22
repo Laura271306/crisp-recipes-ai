@@ -51,10 +51,11 @@ const SalesPage = () => {
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div>
                 <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
-                  <span className="text-cta-primary">¿Cansado (a) de que todo en tu Air Fryer quede blando y sin sabor?</span>
+                  <span className="text-cta-primary">La solución definitiva para activar el "Modo Chef" de tu freidora</span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-8">
-                  <strong>Te entendemos. Aquí está la solución definitiva para activar el "Modo Chef" de tu freidora.</strong>
+                  {/* Frase removida: "Te entendemos. Aquí está la solución definitiva para activar el "Modo Chef" de tu freidora." */}
+                  ¿Cansado (a) de que todo en tu Air Fryer quede blando y sin sabor?
                 </p>
                 
                 <div className="space-y-3 mb-8">
