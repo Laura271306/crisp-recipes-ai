@@ -78,7 +78,13 @@ const SalesPage = () => {
                   Con más de <strong className="text-cta-primary font-bold">600 recetas</strong> AirFryer por objetivo, garantizamos cero ensayo-error desde el primer día.
                 </p>
 
-                <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
+                <Button 
+                  variant="cta" 
+                  size="2xl" 
+                  onClick={handleCTAClick} 
+                  className="w-full md:w-auto"
+                  aria-label="Compra ahora el Kit Maestro de Recetas por US$ 6,50"
+                >
                   Compra ahora (US$ 6,50)
                 </Button>
               </div>
@@ -131,7 +137,13 @@ const SalesPage = () => {
                   <p className="text-foreground font-medium">"Termino pidiendo <strong>delivery</strong> entre semana."</p>
                 </div>
               </div>
-              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="mt-4 w-full md:w-auto">
+              <Button 
+                variant="cta" 
+                size="2xl" 
+                onClick={handleCTAClick} 
+                className="mt-4 w-full md:w-auto"
+                aria-label="Compra ahora el Kit Maestro de Recetas"
+              >
                 Compra ahora →
               </Button>
             </div>
@@ -257,6 +269,7 @@ const SalesPage = () => {
                       size="2xl" 
                       onClick={handleCTAClick} 
                       className="w-full md:w-auto"
+                      aria-label="Compra ahora el Kit Maestro de Recetas"
                     >
                       Compra ahora
                     </Button>
@@ -366,7 +379,13 @@ const SalesPage = () => {
               </div>
 
               <div className="text-center mt-10">
-                <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
+                <Button 
+                  variant="cta" 
+                  size="2xl" 
+                  onClick={handleCTAClick} 
+                  className="w-full md:w-auto"
+                  aria-label="Compra ahora el Kit Maestro de Recetas por US$ 6,50"
+                >
                   Compra ahora (US$ 6,50)
                 </Button>
               </div>
@@ -418,7 +437,13 @@ const SalesPage = () => {
               </div>
 
               <div className="text-center mt-8">
-                <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
+                <Button 
+                  variant="cta" 
+                  size="2xl" 
+                  onClick={handleCTAClick} 
+                  className="w-full md:w-auto"
+                  aria-label="Compra ahora el Kit Maestro de Recetas por US$ 6,50"
+                >
                   Compra ahora (US$ 6,50)
                 </Button>
               </div>
@@ -646,7 +671,13 @@ const SalesPage = () => {
             </div>
 
             <div className="text-center mt-10">
-              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
+              <Button 
+                variant="cta" 
+                size="2xl" 
+                onClick={handleCTAClick} 
+                className="w-full md:w-auto"
+                aria-label="Compra ahora el Kit Maestro de Recetas por US$ 6,50"
+              >
                 Compra ahora (US$ 6,50)
               </Button>
             </div>
@@ -785,7 +816,13 @@ const SalesPage = () => {
                 <p className="text-base md:text-lg text-muted-foreground mb-6">
                   Acceso inmediato y actualizaciones del kit.
                 </p>
-                <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto mb-4">
+                <Button 
+                  variant="cta" 
+                  size="2xl" 
+                  onClick={handleCTAClick} 
+                  className="w-full md:w-auto mb-4"
+                  aria-label="Compra ahora el Kit Maestro de Recetas por US$ 6,50"
+                >
                   Compra ahora (US$ 6,50)
                 </Button>
                 
@@ -853,6 +890,7 @@ const SalesPage = () => {
                 variant="cta" 
                 onClick={handleCTAClick}
                 className="bg-white text-accent hover:bg-white/90 hover:text-accent w-full md:w-auto shadow-2xl"
+                aria-label="Compra ahora el Kit Maestro de Recetas"
               >
                 Compra ahora
               </Button>

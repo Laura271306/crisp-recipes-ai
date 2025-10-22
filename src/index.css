@@ -146,6 +146,8 @@ All colors MUST be HSL.
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Otimização de Fonte: Garante que o texto seja visível imediatamente */
+    font-display: swap; 
   }
 
   /* Acessibilidade: Skip to content link */
