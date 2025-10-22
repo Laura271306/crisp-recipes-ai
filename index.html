@@ -83,7 +83,10 @@
 
     <!-- Facebook Pixel Code (otimizado) - MOVIDO PARA O FINAL DO BODY -->
     <script>
-      window.fbAsyncInit = function() {
+      // Função para carregar o Pixel
+      function loadFbPixel() {
+        if (window.fbq) return; // Já carregado
+        
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -92,15 +95,30 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
+        
         fbq('init', '1473737967177792');
         fbq('track', 'PageView');
-      };
-      
-      if (document.readyState === 'complete') {
-        window.fbAsyncInit();
-      } else {
-        window.addEventListener('load', window.fbAsyncInit);
       }
+
+      // Estratégia de Lazy Loading: Carregar após a primeira interação ou 5 segundos
+      let pixelLoaded = false;
+      const loadPixelOnInteraction = () => {
+        if (pixelLoaded) return;
+        pixelLoaded = true;
+        loadFbPixel();
+        // Remover listeners após o carregamento
+        document.removeEventListener('scroll', loadPixelOnInteraction);
+        document.removeEventListener('mousemove', loadPixelOnInteraction);
+        document.removeEventListener('touchstart', loadPixelOnInteraction);
+      };
+
+      // Adicionar listeners para interações
+      document.addEventListener('scroll', loadPixelOnInteraction, { once: true });
+      document.addEventListener('mousemove', loadPixelOnInteraction, { once: true });
+      document.addEventListener('touchstart', loadPixelOnInteraction, { once: true });
+
+      // Fallback: Carregar após 5 segundos se não houver interação
+      setTimeout(loadPixelOnInteraction, 5000);
     </script>
     <!-- End Facebook Pixel Code -->
   </body>
