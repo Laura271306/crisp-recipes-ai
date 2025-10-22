@@ -34,7 +34,7 @@ const SalesPage = () => {
     <div className="min-h-screen bg-background">
       
       {/* O conteúdo principal da página deve estar dentro da tag <main> */}
-      <main id="main-content" tabIndex={-1}>
+      <main id="main-content" tabIndex={-1} role="main">
 
         {/* Micro-provas */}
         <section className="py-4 bg-success/10 border-b border-success/20">
@@ -856,7 +856,7 @@ const SalesPage = () => {
       </main>
 
       {/* Footer */}
-      <footer className="py-8 bg-muted">
+      <footer className="py-8 bg-muted" role="contentinfo">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
             © 2025 AirFryer Perfecta. Todos los derechos reservados.
