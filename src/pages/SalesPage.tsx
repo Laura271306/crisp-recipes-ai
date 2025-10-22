@@ -101,6 +101,7 @@ const SalesPage = () => {
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
+                sizes="(max-width: 768px) 100vw, 50vw" // Adicionado sizes para otimização de LCP
               />
               <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-3 shadow-lg">
                 <p className="text-sm font-medium text-foreground">📊 Tablas de tiempo exactas</p>
@@ -274,7 +275,7 @@ const SalesPage = () => {
                     <Card className="overflow-hidden border-2 border-border">
                       <img 
                         src={airfryer10} 
-                        alt="Pollo con papas y vegetales hecho en AirFryer" 
+                        alt="Pollo con papas y vegetales feito em AirFryer" 
                         className="w-full h-64 object-cover"
                         width="400"
                         height="256"
@@ -991,7 +992,7 @@ const SalesPage = () => {
               <h3 className="font-bold text-center text-foreground mb-6">Stack de Valor</h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span>Colecciones (4)</span>
+                  <span>Coleções (4)</span>
                   <span className="font-semibold">US$ 28</span>
                 </div>
                 <div className="flex justify-between">

@@ -16,19 +16,24 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    target: 'esnext', // Alterado de 'es2015' para 'esnext'
+    target: 'esnext',
     minify: 'terser',
     cssMinify: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-toast'],
-          'lucide-react': ['lucide-react'],
-          'tailwind-vendor': ['tailwindcss', 'tailwindcss-animate'],
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('lucide-react')) {
+              return 'lucide-react';
+            }
+            // Deixamos o Rollup/Vite agrupar o restante das dependências de UI e utilitários
+            return 'vendor';
+          }
         },
         chunkFileNames: (chunkInfo) => {
-          // Correção: Usar chunkInfo.facadeModuleId diretamente
           const facadeModuleId = chunkInfo.facadeModuleId;
           if (facadeModuleId) {
             // Extrai o nome do arquivo do caminho completo
