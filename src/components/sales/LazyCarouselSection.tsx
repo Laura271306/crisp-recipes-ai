@@ -25,7 +25,7 @@ const carouselImages = [
   { src: airfryer3, alt: "Fideos con vegetales hechos en AirFryer" },
   { src: airfryer4, alt: "Bife jugoso hecho en AirFryer" },
   { src: airfryer5, alt: "Alitas de pollo glaseadas hechas en AirFryer" },
-  { src: airfryer6, alt: "Papas fritas crujientes hechas en AirFryer" },
+  { src: airfryer6, alt: "Papas fritas crujientes feitas em AirFryer" },
   { src: airfryer7, alt: "Pollo cremoso con champiñones hecho en AirFryer" },
   { src: airfryer8, alt: "Tostadas con champiñones hechas en AirFryer" },
   { src: airfryer9, alt: "Tostadas gratinadas hechas en AirFryer" },
