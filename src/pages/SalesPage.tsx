@@ -135,6 +135,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -150,6 +151,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -165,6 +167,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -180,6 +183,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -195,6 +199,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -210,6 +215,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -225,6 +231,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -240,6 +247,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -255,6 +263,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -270,6 +279,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -285,6 +295,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -300,6 +311,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -315,6 +327,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>
@@ -330,6 +343,7 @@ const SalesPage = () => {
                         width="400"
                         height="256"
                         loading="lazy"
+                        decoding="async"
                       />
                     </Card>
                   </div>

@@ -18,6 +18,7 @@ export const RecipeCard = ({ name, time, temperature, instructions, image }: Rec
             width="400"
             height="128"
             loading="lazy"
+            decoding="async"
           />
         </div>
       )}

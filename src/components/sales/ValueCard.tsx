@@ -21,6 +21,7 @@ export const ValueCard = ({ icon, title, description, value, highlight, image }:
             width="400"
             height="128"
             loading="lazy"
+            decoding="async"
           />
         </div>
       )}
