@@ -1,48 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
 import { CheckCircle, Clock, Users, Utensils, Award, Shield, DollarSign, Zap, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
 import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
-import crispSystemInfographic from "@/assets/crisp-system-infographic.jpg";
-import recipeCollectionsIndex from "@/assets/recipe-collections-index.jpg";
-import recipeTimeTemperature from "@/assets/recipe-time-temperature.jpg";
-import weeklyMenuShopping from "@/assets/weekly-menu-shopping.jpg";
-import cleaningGuideVisual from "@/assets/cleaning-guide-visual.jpg";
-import airfryerChickenWings from "@/assets/airfryer-chicken-wings.jpg";
-import airfryerFrenchFries from "@/assets/airfryer-french-fries.jpg";
-import airfryerSalmon from "@/assets/airfryer-salmon.jpg";
-import airfryerVegetables from "@/assets/airfryer-vegetables.jpg";
-import airfryerMozzarellaSticks from "@/assets/airfryer-mozzarella-sticks.jpg";
-import airfryerEmpanadas from "@/assets/airfryer-empanadas.jpg";
 import recipePolloParmesano from "@/assets/recipe-pollo-parmesano.jpg";
 import recipeCamaronesAjo from "@/assets/recipe-camarones-ajo.jpg";
 import recipeChipsBatata from "@/assets/recipe-chips-batata.jpg";
-import recipeBookMockup from "@/assets/recipe-book-mockup.jpg";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-// ADICIONAR: imports das imagens usadas no Carousel
-import airfryer1 from "@/assets/airfryer1.jpg";
-import airfryer2 from "@/assets/airfryer2.jpg";
-import airfryer3 from "@/assets/airfryer3.jpg";
-import airfryer4 from "@/assets/airfryer4.jpg";
-import airfryer5 from "@/assets/airfryer5.jpg";
-import airfryer6 from "@/assets/airfryer6.jpg";
-import airfryer7 from "@/assets/airfryer7.jpg";
-import airfryer8 from "@/assets/airfryer8.jpg";
-import airfryer9 from "@/assets/airfryer9.jpg";
-import airfryer10 from "@/assets/airfryer10.jpg";
-import airfryer11 from "@/assets/airfryer11.jpg";
-import airfryer12 from "@/assets/airfryer12.jpg";
-import airfryer13 from "@/assets/airfryer13.jpg";
-import airfryer14 from "@/assets/airfryer14.jpg";
+import React, { Suspense } from "react";
 
+// Lazy Imports para componentes abaixo da dobra
+const LazyCarouselSection = React.lazy(() => import("@/components/sales/LazyCarouselSection").then(module => ({ default: module.LazyCarouselSection })));
+const LazyAccordion = React.lazy(() => import("@/components/sales/LazyAccordion").then(module => ({ default: module.LazyAccordion })));
+
+const faqItems = [
+  { value: "item-1", trigger: "¿Sirve para 3,5 L / 5,5 L?", content: "Sí. Indicamos ajustes por capacidad y potencia." },
+  { value: "item-2", trigger: "¿Ingredientes caros?", content: "No: básicos del súper + sustitutos." },
+  { value: "item-3", trigger: "¿Opciones fit/sin gluten?", content: "Incluidas y <strong>marcadas</strong>." },
+  { value: "item-4", trigger: "¿Cuánto tardo en organizarme?", content: "15 min con el calendario de 30 días." },
+  { value: "item-5", trigger: "¿Formato y acceso?", content: "100% digital, PDF A4 y versión móvil. Acceso inmediato." },
+  { value: "item-6", trigger: "¿Reembolso?", content: "Garantía Doble 7×7 dentro de 7 días." },
+];
 
 const SalesPage = () => {
   const handleCTAClick = () => {
     window.open("https://pay.kiwify.com/0h3yyq8", "_blank");
   };
+
+  const SuspenseFallback = <div className="text-center p-8 text-muted-foreground">Cargando contenido...</div>;
 
   return (
     <div className="min-h-screen bg-background">
@@ -101,7 +87,7 @@ const SalesPage = () => {
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                sizes="(max-width: 768px) 100vw, 50vw" // Adicionado sizes para otimização de LCP
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg p-3 shadow-lg">
                 <p className="text-sm font-medium text-foreground">📊 Tablas de tiempo exactas</p>
@@ -111,260 +97,10 @@ const SalesPage = () => {
         </div>
       </section>
 
-      {/* Carrossel de Resultados */}
-      <section className="py-16 bg-gradient-to-br from-cta-primary/5 to-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Esto es lo que puedes lograr con tu AirFryer
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                Resultados reales, crocancia perfecta en minutos
-              </p>
-            </div>
-            
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer1} 
-                        alt="Volcanes de chocolate hechos en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer2} 
-                        alt="Pan de plátano hecho en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer3} 
-                        alt="Fideos con vegetales hechos en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer4} 
-                        alt="Bife jugoso hecho en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer5} 
-                        alt="Alitas de pollo glaseadas hechas en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-                
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer6} 
-                        alt="Papas fritas crujientes hechas en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer7} 
-                        alt="Pollo cremoso con champiñones hecho en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer8} 
-                        alt="Tostadas con champiñones hechas en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer9} 
-                        alt="Tostadas gratinadas hechas en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer10} 
-                        alt="Pollo con papas y vegetales feito em AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer11} 
-                        alt="Pechuga de pollo jugosa hecha en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer12} 
-                        alt="Repollo caramelizado hecho en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer13} 
-                        alt="Palitos de mozzarella crujientes hechos en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <Card className="overflow-hidden border-2 border-border">
-                      <img 
-                        src={airfryer14} 
-                        alt="Aros de cebolla crujientes hechos en AirFryer" 
-                        className="w-full h-64 object-cover"
-                        width="400"
-                        height="256"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </Card>
-                  </div>
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex" />
-              <CarouselNext className="hidden md:flex" />
-            </Carousel>
-            
-            <div className="text-center mt-8">
-              <p className="text-lg text-muted-foreground mb-4">
-                <strong className="text-cta-primary">600+ recetas como estas</strong> te esperan
-              </p>
-              <Button variant="cta" size="2xl" onClick={handleCTAClick} className="w-full md:w-auto">
-                Quiero cocinar así (US$ 5,50)
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Carrossel de Resultados (Lazy Loaded) */}
+      <Suspense fallback={SuspenseFallback}>
+        <LazyCarouselSection handleCTAClick={handleCTAClick} />
+      </Suspense>
 
       {/* Dor do Avatar */}
       <section className="py-16 bg-muted/30">
@@ -1077,7 +813,7 @@ const SalesPage = () => {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* FAQ (Lazy Loaded) */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -1086,38 +822,9 @@ const SalesPage = () => {
                 Preguntas Frecuentes
               </h2>
             </div>
-
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              <AccordionItem value="item-1" className="bg-card rounded-lg border border-border px-6">
-                <AccordionTrigger className="font-semibold text-foreground">¿Sirve para 3,5 L / 5,5 L?</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">Sí. Indicamos ajustes por capacidad y potencia.</AccordionContent>
-              </AccordionItem>
-              
-              <AccordionItem value="item-2" className="bg-card rounded-lg border border-border px-6">
-                <AccordionTrigger className="font-semibold text-foreground">¿Ingredientes caros?</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">No: básicos del súper + sustitutos.</AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-3" className="bg-card rounded-lg border border-border px-6">
-                <AccordionTrigger className="font-semibold text-foreground">¿Opciones fit/sin gluten?</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">Incluidas y <strong>marcadas</strong>.</AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-4" className="bg-card rounded-lg border border-border px-6">
-                <AccordionTrigger className="font-semibold text-foreground">¿Cuánto tardo en organizarme?</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">15 min con el calendario de 30 días.</AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-5" className="bg-card rounded-lg border border-border px-6">
-                <AccordionTrigger className="font-semibold text-foreground">¿Formato y acceso?</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">100% digital, PDF A4 y versión móvil. Acceso inmediato.</AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-6" className="bg-card rounded-lg border border-border px-6">
-                <AccordionTrigger className="font-semibold text-foreground">¿Reembolso?</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">Garantía Doble 7×7 dentro de 7 días.</AccordionContent>
-              </AccordionItem>
-            </Accordion>
+            <Suspense fallback={SuspenseFallback}>
+              <LazyAccordion items={faqItems} />
+            </Suspense>
           </div>
         </div>
       </section>
