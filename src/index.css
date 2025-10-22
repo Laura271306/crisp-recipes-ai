@@ -147,6 +147,15 @@ All colors MUST be HSL.
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
   }
 
+  /* Acessibilidade: Garantir tamanho mínimo de área de toque (48x48px recomendado) */
+  button:not(.h-auto):not(.w-auto), 
+  a:not(.h-auto):not(.w-auto), 
+  [role="button"]:not(.h-auto):not(.w-auto) {
+    min-height: 48px;
+    min-width: 48px;
+    touch-action: manipulation;
+  }
+
   /* Melhorar legibilidade do texto */
   p, li, td {
     @apply leading-relaxed;
