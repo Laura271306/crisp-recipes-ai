@@ -41,8 +41,18 @@ interface LazyCarouselSectionProps {
   handleCTAClick: () => void;
 }
 
+// Função auxiliar para gerar srcset, assumindo que o Vite resolve o caminho base
+const generateSrcSet = (src: string) => {
+  if (!src.endsWith('.jpg')) return undefined;
+  
+  // Assumindo que existem variantes - 200w e 400w
+  const base = src.replace(/\.jpg$/, '');
+  return `${base}-200w.jpg 200w, ${base}-400w.jpg 400w, ${src} 600w`;
+};
+
 // Componente para renderizar a imagem (agora com src resolvido)
 const CarouselImage = ({ src, alt, width, height, sizes }: { src: string, alt: string, width: string, height: string, sizes: string }) => {
+  const srcset = generateSrcSet(src);
   return (
     <img 
       src={src} 
@@ -53,6 +63,7 @@ const CarouselImage = ({ src, alt, width, height, sizes }: { src: string, alt: s
       loading="lazy"
       decoding="async"
       sizes={sizes}
+      srcSet={srcset}
     />
   );
 };
