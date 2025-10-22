@@ -14,7 +14,7 @@ const CarouselItem = lazy(() => import("@/components/ui/carousel").then(module =
 const CarouselNext = lazy(() => import("@/components/ui/carousel").then(module => ({ default: module.CarouselNext })));
 const CarouselPrevious = lazy(() => import("@/components/ui/carousel").then(module => ({ default: module.CarouselPrevious })));
 
-// Importar as imagens atualizadas
+// Importar as novas imagens atualizadas
 const heroKitMockup = "/src/assets/hero-kit-mockup-new.jpg";
 const crispSystemInfographic = "/src/assets/crisp-system-infographic.jpg";
 const recipeCollectionsIndex = "/src/assets/recipe-collections-index.jpg";
@@ -147,7 +147,7 @@ const SalesPage = () => {
                       <div className="rounded-xl overflow-hidden shadow-md">
                         <img 
                           src={src} 
-                          alt={`Receta AirFryer ${index + 1}`} 
+                          alt={`AirFryer ${index + 1}`} 
                           className="w-full h-48 md:h-64 object-cover"
                           loading="lazy"
                           decoding="async"
