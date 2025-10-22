@@ -21,11 +21,31 @@ export default defineConfig(({ mode }) => ({
     cssMinify: true,
     rollupOptions: {
       output: {
-        // Removendo a lógica manual de manualChunks para deixar o Rollup/Vite
-        // lidar com a divisão de código automaticamente, o que é mais seguro
-        // para evitar o erro 'createContext'.
-        manualChunks: undefined, 
-        chunkFileNames: 'assets/[name]-[hash].js',
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('lucide-react')) {
+              return 'lucide-react';
+            }
+            // Agrupando bibliotecas grandes e não essenciais (como recharts, react-query, zod) em um chunk 'vendor'
+            if (id.includes('recharts') || id.includes('@tanstack/react-query') || id.includes('zod') || id.includes('react-hook-form')) {
+              return 'heavy-vendor';
+            }
+            // Deixamos o Rollup/Vite agrupar o restante das dependências de UI e utilitários
+            return 'vendor';
+          }
+        },
+        chunkFileNames: (chunkInfo) => {
+          const facadeModuleId = chunkInfo.facadeModuleId;
+          if (facadeModuleId) {
+            // Extrai o nome do arquivo do caminho completo
+            const fileName = facadeModuleId.split('/').pop()?.split('.')[0] || 'chunk';
+            return `assets/${fileName}.js`;
+          }
+          return 'assets/[name]-[hash].js';
+        },
       },
     },
     terserOptions: {

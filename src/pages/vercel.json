@@ -10,7 +10,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(jpg|jpeg|png|gif|webp|svg|ico|js|css|woff2|json|ttf|otf|eot))",
+      "source": "/(.*\\.(jpg|jpeg|png|gif|webp|svg|ico|js|css))",
       "headers": [
         {
           "key": "Cache-Control",
@@ -23,15 +23,9 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=604800, must-revalidate"
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }

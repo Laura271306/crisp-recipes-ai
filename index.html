@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     
     <!-- SEO e Descrição -->
     <title>AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 6,50)</title>
@@ -12,6 +12,7 @@
     
     <!-- Acessibilidade -->
     <meta name="color-scheme" content="light" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin />
     
     <!-- Performance - Preconnect crítico -->
     <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
@@ -19,12 +20,29 @@
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="dns-prefetch" href="https://pay.kiwify.com" />
     
-    <!-- Otimização LCP: Preload da imagem LCP REMOVIDO. O Vite deve injetar o preload correto. -->
+    <!-- Preload da imagem hero (primeira imagem) -->
+    <link rel="preload" as="image" href="/src/assets/hero-kit-mockup-new.jpg" fetchpriority="high" />
     
-    <!-- Otimização de Performance: Pré-carregamento do módulo principal e CSS -->
-    <link rel="preload" href="/src/index.css" as="style" />
-    <link rel="stylesheet" href="/src/index.css" />
-    <link rel="modulepreload" href="/src/main.tsx" />
+    <!-- Carregamento Síncrono do CSS para evitar FOUC e garantir LCP rápido -->
+    <link rel="stylesheet" href="/src/index.css">
+    
+    <!-- Cache headers -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable" />
+
+    <!-- Open Graph - Redes Sociais -->
+    <meta property="og:title" content="AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 6,50)" />
+    <meta property="og:description" content="Más de 600 recetas por objetivo, menús semanales y tablas de tiempo/temperatura. Cocina en 10–15 min. Garantía 7 días." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://expresalsabor.lovable.app/" />
+    <meta property="og:image" content="https://expresalsabor.lovable.app/og-image.jpg" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="canonical" href="https://expresalsabor.lovable.app/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AirFryer Perfecta – Recetas rápidas con tiempos exactos" />
+    <meta name="twitter:description" content="Más de 600 recetas por objetivo, menús semanales y tablas de tiempo/temperatura." />
+    <meta name="twitter:image" content="https://expresalsabor.lovable.app/og-image.jpg" />
 
     <!-- Structured Data para SEO -->
     <script type="application/ld+json">
@@ -47,21 +65,6 @@
       }
     }
     </script>
-    
-    <!-- Open Graph - Redes Sociais -->
-    <meta property="og:title" content="AirFryer Perfecta – Recetas rápidas con tiempos exactos (US$ 6,50)" />
-    <meta property="og:description" content="Más de 600 recetas por objetivo, menús semanales y tablas de tiempo/temperatura. Cocina en 10–15 min. Garantia 7 días." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://expresalsabor.lovable.app/" />
-    <meta property="og:image" content="https://expresalsabor.lovable.app/og-image.jpg" />
-    <meta property="og:locale" content="es_ES" />
-    <link rel="canonical" href="https://expresalsabor.lovable.app/" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AirFryer Perfecta – Recetas rápidas con tiempos exactos" />
-    <meta name="twitter:description" content="Más de 600 recetas por objetivo, menús semanales y tablas de tiempo/temperatura." />
-    <meta name="twitter:image" content="https://expresalsabor.lovable.app/og-image.jpg" />
   </head>
 
   <body>
@@ -83,10 +86,7 @@
 
     <!-- Facebook Pixel Code (otimizado) - MOVIDO PARA O FINAL DO BODY -->
     <script>
-      // Função para carregar o Pixel
-      function loadFbPixel() {
-        if (window.fbq) return; // Já carregado
-        
+      window.fbAsyncInit = function() {
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -95,30 +95,15 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        
         fbq('init', '1473737967177792');
         fbq('track', 'PageView');
-      }
-
-      // Estratégia de Lazy Loading: Carregar após a primeira interação ou 5 segundos
-      let pixelLoaded = false;
-      const loadPixelOnInteraction = () => {
-        if (pixelLoaded) return;
-        pixelLoaded = true;
-        loadFbPixel();
-        // Remover listeners após o carregamento
-        document.removeEventListener('scroll', loadPixelOnInteraction);
-        document.removeEventListener('mousemove', loadPixelOnInteraction);
-        document.removeEventListener('touchstart', loadPixelOnInteraction);
       };
-
-      // Adicionar listeners para interações
-      document.addEventListener('scroll', loadPixelOnInteraction, { once: true });
-      document.addEventListener('mousemove', loadPixelOnInteraction, { once: true });
-      document.addEventListener('touchstart', loadPixelOnInteraction, { once: true });
-
-      // Fallback: Carregar após 5 segundos se não houver interação
-      setTimeout(loadPixelOnInteraction, 5000);
+      
+      if (document.readyState === 'complete') {
+        window.fbAsyncInit();
+      } else {
+        window.addEventListener('load', window.fbAsyncInit);
+      }
     </script>
     <!-- End Facebook Pixel Code -->
   </body>
