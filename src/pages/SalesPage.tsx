@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ValueCard } from "@/components/sales/ValueCard";
 import { RecipeCard } from "@/components/sales/RecipeCard";
+import { BonusItem } from "@/components/sales/BonusItem";
 import { CheckCircle, Utensils, Award, Shield, Star, Timer, ThermometerSun, ChefHat, ShoppingCart } from "lucide-react";
 import heroKitMockup from "@/assets/hero-kit-mockup-new.jpg";
 import React, { Suspense } from "react";
@@ -19,6 +20,30 @@ const faqItems = [
   { value: "item-4", trigger: "¿Cuánto tardo en organizarme?", content: "15 min con el calendario de 30 días." },
   { value: "item-5", trigger: "¿Formato y acceso?", content: "100% digital, PDF A4 y versión móvil. Acceso inmediato." },
   { value: "item-6", trigger: "¿Reembolso?", content: "Garantía Doble 7×7 dentro de 7 días." },
+];
+
+const mainProductItems = [
+  "Coleção 'Fundamentos + Guías Prácticas da Airfryer'",
+  "Coleção 'Receitas Rápidas & do Dia a Dia' (variadas)",
+  "365 recetas en tu freidora de aire",
+  "Coleção 'Proteínas & Comidas para a Família'",
+  "Coleção 'Veggie, Fit & Sem Glúten' (opções saudáveis)",
+  "15 Postres Fit",
+  "Coleção 'Postres & Snacks'",
+];
+
+const bonusItems = [
+  'Checklist "10 Errores que arruinan tus recetas en la Airfryer"',
+  '15 Postres Fit — dulce sin culpa',
+  'Calendario sencillo de cocina (30 días)',
+  'Guia de Compras Inteligentes / Economia mensal',
+  'Guia Exprés: Limpeza e Manutenção',
+  'Mis mejores recetas en freidora de aire',
+  'Receta de la Freidora de Aire / Air Fryer Cookbook',
+  'Libro de cocina AirFryer',
+  'El Libro de Cocina de la Freidora de Aire',
+  '100+ Recetas Airfryer',
+  '100 Deliciosas Recetas',
 ];
 
 // Fallback leve para Suspense
@@ -472,68 +497,9 @@ const SalesPage = () => {
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Coleção "Fundamentos + Guías Prácticas da Airfryer"</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Coleção "Receitas Rápidas & do Dia a Dia" (variadas)</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">365 recetas en tu freidora de aire</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Coleção "Proteínas & Comidas para a Família"</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Coleção "Veggie, Fit & Sem Glúten" (opções saudáveis)</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">15 Postres Fit</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Coleção "Postres & Snacks"</p>
-                        </div>
-                      </div>
-                    </div>
+                    {mainProductItems.map((item, index) => (
+                      <BonusItem key={index} content={item} />
+                    ))}
                   </div>
                 </div>
               </div>
@@ -558,104 +524,9 @@ const SalesPage = () => {
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Checklist "10 Errores que arruinan tus recetas en la Airfryer"</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">15 Postres Fit — dulce sin culpa</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Calendario sencillo de cocina (30 días)</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Guia de Compras Inteligentes / Economia mensal</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Guia Exprés: Limpeza e Manutenção</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Mis mejores recetas en freidora de aire</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Receta de la Freidora de Aire / Air Fryer Cookbook</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">Libro de cocina AirFryer</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">El Libro de Cocina de la Freidora de Aire</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">100+ Recetas Airfryer</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4 bg-card rounded-lg border border-border">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-success mt-1 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold text-foreground">100 Deliciosas Recetas</p>
-                        </div>
-                      </div>
-                    </div>
+                    {bonusItems.map((item, index) => (
+                      <BonusItem key={index} content={item} />
+                    ))}
                   </div>
                   
                   <div className="mt-6 text-center p-4 bg-success/10 rounded-lg">
