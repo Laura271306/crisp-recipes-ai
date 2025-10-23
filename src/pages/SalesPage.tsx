@@ -53,7 +53,7 @@ const SalesPage = () => {
                   <span className="text-cta-primary">Aquí está la solución definitiva para activar el "Modo Chef" de tu freidora</span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-8">
-                  <strong>Te entendemos. Aquí está la solución definitiva para activar el "Modo Chef" de tu freidora.</strong>
+                  <strong>El secreto para usar bien tu AirFryer (y no fallar más)</strong>
                 </p>
                 
                 <div className="space-y-3 mb-8">
